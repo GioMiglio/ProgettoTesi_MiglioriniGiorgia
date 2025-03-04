@@ -63,7 +63,7 @@ body {
     position: absolute;
     top: 0;
     left: 50%;
-
+    display: none;
     background-color: rgba(255, 254, 254, 0.95);  /* Background traslucido */
     color: rgb(0, 0, 0);
     padding: 20px;
@@ -76,6 +76,7 @@ body {
 }
 
 #nav.show {
+    display: block;
     opacity: 0.9;  /* Aggiungi l'opacità quando viene mostrato */
     transform: translateX(0%); /* Posiziona il nav sulla destra con una transizione */
     right: 0; /* Muovi il nav a destra */
