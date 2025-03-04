@@ -1,0 +1,1684 @@
+<!DOCTYPE HTML>
+<html xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="stile.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script type="text/javascript" src="ProgettoTesi_MG.js"></script><title>La fabbrica illuminata: per un'analisi e codifica del testo</title>
+   </head>
+   <body>
+      <div id="frontpage"><img src="CarmiLisetta_Italsider4.jpg" alt="Carmi Lisetta dentro l'Italsider"><h2>La fabbrica illuminata</h2>
+         <div id="nav">
+            <h3>LA FABBRICA ILLUMINATA</h3>
+            <ul>
+               <li><a href="#ilprogetto">Il progetto</a></li>
+               <li><a href="#sez4">Le fonti</a></li>
+               <li><a href="#lettera1">Luigi Nono - Lettera agli operai dell'Italsider</a></li>
+               <li><a href="#lettera2">Giuliano Scabia - Chi è la folle?</a></li>
+               <li><a href="#imangiatoridinebbia">Giuliano Scabia - I mangiatori di Nebbia</a></li>
+               <li><a href="#tavole_fonetiche">Dal Diario italiano: Coro - I vivi e i morti del Vajont</a></li>
+               <li><a href="#fb_provvisorie">La fabbrica illuminata (stesure I-V)</a></li>
+               <li><a href="#fb_definitiva">La fabbrica illuminata (stesura definitiva)</a></li>
+            </ul>
+         </div>
+      </div>
+      <div id="ilprogetto">
+         <div id="MainTit">
+            <h2>La Fabbrica Illuminata</h2>
+            <h3>Integrazione degli Standard TEI e MEI nell'Analisi e Codifica del Testo</h3>
+            <p><b>Realizzato da  grazie al supporto di: </b>Università di Pisa
+               <text> &nbsp;&nbsp;</text>Fondazione Scabia
+               <text> &nbsp;&nbsp;</text>
+            </p>
+            <p><b>Edizione digitale a carattere didattico -  
+                  aprile 2025 
+                  </b><br><b>Responsabile di codifica -</b> Giorgia Migliorini<br><b>Referente universitario -</b> Angelo Mario Del Grosso<br><b>Referente universitario -</b> Cristina Savettieri<br></p>
+            <p><i>Documento con disponibilità di accesso libero (Università di Pisa)</i></p><img id="i1" src="logofondazione.png" alt="Unipi"><img id="i2" src="Logo-UNIIPI-nero.png" alt="Unipi"></div>
+         <div id="sez1">
+            <div id="text_sez1">
+               <p>
+                  
+                  <p><span class="zone" id="">
+                        L'attività di codifica, qui documentata nei suoi risultati, ha interessato alcuni
+                        dei testi 
+                        redatti dal poeta <span class="persone"><a href="https://fondazionegiulianoscabia.it">Giuliano Scabia</a></span> nel contesto della collaborazione artistica con il compositore
+                        <span class="persone"><a href="https://www.luiginono.it">Luigi Nono</a></span>. Nonostante i primi brani introduttivi (le due lettere), aggiunti in sostegno
+                        dell'apparato critico e teorico situato nei capitoli primo e secondo dell'elaborato
+                        di tesi, i testi 
+                        poetici successivi (I mangiatori di nebbia, I morti del Vajont e le stesure della
+                        Fabbrica illuminata) 
+                        hanno sollecitato la ricerca di possibilità alternative di codifica.<br>
+                        <br>
+                        Fine principale del progetto, infatti, è quello di offrire una codifica il quanto
+                        più attinente possibile
+                        alla natura dei testi, alla loro composizione, per come essa è stata discussa.<br>
+                        <br>   
+                        Oltre al repertorio <span class="org"><a href="https://www.tei-c.org">TEI (Text Encoding Initiative)</a></span>, infatti, la codifica ha usufruito anche dei moduli e degli elementi 
+                        <span class="org"><a href="https://music-encoding.org/guidelines/v5/content/">MEI (Music Encoding Initiative)</a></span> sperimentando una integrazione tra le due. Ciò si è reso necessario al fine di 
+                        preservare la natura significante della forma poetica raggiunta dall'autore, nel contesto
+                        della sfumatura
+                        interpretativa proposta in questa dissertazione.<br> 
+                        <br>
+                        La codifica è stata intrapresa attingengo alla documentazione offerta dalle linee
+                        guida <span class="org"><a href="https://www.tei-c.org">TEI</a></span> e <span class="org"><a href="https://music-encoding.org/guidelines/v5/content/">MEI</a></span>.
+                        Sono stati consultati anche i documenti concernenti possibili integrazioni tra gli
+                        schemi delle due Iniziative di Codifica
+                        frutto del lavoro del <span class="org"><a href="https://github.com/TEI-Music-SIG/tei-mei">TEI-MUSIC-SIG</a></span> (TEI's Special Intrest Group in Music).<br> 
+                        A partire dalle specifiche grammaticali sperimentate dai membri del <span class="org"><a href="https://github.com/TEI-Music-SIG/tei-mei">TEI-MUSIC-SIG</a></span>, sono state poi 
+                        aggiunte nuove customizzazioni necessarie ad adattare la codifica alla natura e alla
+                        interpretazione dei 
+                        testi poetici. In alcuni casi, si è rivelato necessario anche un semplice aggiornamento
+                        della documentazione 
+                        consultata dovuto alle modifiche recenti di <span class="org"><a href="https://www.tei-c.org">TEI</a></span> e di <span class="org"><a href="https://music-encoding.org/guidelines/v5/content/">MEI</a></span>, successivi all'attività più datata sulla loro integrazione. 
+                        </span></p>
+                  </p>
+            </div><img src="CarmiLisetta_Italsider2.png" alt="Lisetta Carmi visita L'Italsider"></div>
+         <div id="sez2"><img src="CarmiLisetta_Italsider1.png" alt="Lisetta Carmi visita L'Italsider"><div id="text_sez2">
+               <p>
+                  
+                  <p><span class="zone" id="">
+                        <b>SULLA SELEZIONE DEI TESTI</b><br>
+                        <br>
+                        La selezione dei testi è funzionale alla comprensione delle interpretazioni critiche
+                        esposte nell'elaborato di tesi 
+                        poiché costituiscono un esempio concreto di quanto discusso. La codifica delle due
+                        lettere iniziali consente di mettere in evidenza
+                        il metodo di lavoro artistico di <span class="persone"><a href="https://fondazionegiulianoscabia.it">Giuliano Scabia</a></span> e l'influenza su di esso della personalità di Luigi Nono.<br>
+                        I testi successivi, invece, introducono gradualmente alla codifica della stesura definitiva
+                        della <i>Fabbrica illuminata</i> e alla sua comprensione.
+                        Le tavole fonetiche che costituiscono una sezione della parte corale della V° scena
+                        del <i>Diario italiano</i> determinano la base delle soluzioni formali 
+                        addottate per il coro della <i>Fabbrica illuminata</i> e segnano lo sviluppo artistico del poeta.<br> 
+                        I mangiatori di nebbia - testo che precede le sei versioni della <i>Fabbrica illuminata</i> nella raccolta Padrone&amp;Servo - 
+                        mostra come la crescita di Scabia non fosse circoscritta alla sola attività e collaborazione
+                        con Nono, bensì come essa si relazionasse
+                        anche con altri aspetti e momenti della sua riflessione poetica.<br>
+                        La codifica delle cinque versioni della <i>Fabbrica illuminata</i> precedenti a quella definitiva, invece, è stata aggiunta per ricostruire il percorso
+                        graduale 
+                        del testo dal Diario italiano fino alla forma autonoma a cui è giunta, mettendo in
+                        evidenza i punti di continuità e di distanza.   
+                        </span></p>
+                  </p>
+            </div>
+         </div>
+         <div id="sez3">
+            <div id="text_sez3">
+               <p>
+                  
+                  <p><span class="zone" id="">La codifica delle due lettere iniziali ha messo in evidenza eventuali errori ortografici
+                        - in prevalenza
+                        dovuti alla trascrizione a macchina dei testi manoscritti originali - offrendo delle
+                        alternative di marcatura
+                        consultabili. Sono state riportate, inoltre, le correzioni aggiunte dagli autori stessi.</span></p>
+                  </p>
+               <p>
+                  
+                  <p><span class="zone" id="">
+                        I testi in prosa sono stati codificati ricalcando la struttura gerarchica reale, senza
+                        modifiche tipografiche.
+                        Le porzioni testuali sono divise in frasi (distinte da punto) e in paragrafi (distinti
+                        da battute a capo).<br>
+                        I testi poetici sono stati suddivisi per <i>lines groups</i> sulla base delle divisioni
+                        intraprese dall'autore.
+                        Il testo del coro <i>I morti del Vajont</i> è considerato come una poesia, dunque, codificato 
+                        secondo le soluzioni adottate per il resto dei testi poetici. Interni agli elementi
+                        <i>l</i>
+                        sono stati inseriti i <i>verse</i> e le <i>syl</i> che costituiscono le 
+                        porzioni del verso interessate dalla deflagrazione fonetica.
+                        </span></p>
+                  </p>
+               <h2><b>Interpretazione e scelte di codifica</b></h2>
+            </div>
+            <div id="text_sez3">
+               <p>
+                  
+                  <p><span class="zone" id="">
+                        Il tag <i>term</i> con attributo <i>type</i> è stato utilizzato nel primo testo:<br>
+                        - Per mettere in evidenza i riferimenti alla condizione lavorativa operaia e le espressioni
+                        evocative associate a essa<br>
+                        - Per sottolineare la dialettica tra mittente (Luigi Nono), destinatario principale
+                        (operai) e destinatario secondario (gli intellettuali impegnati)<br>
+                        
+                        Nel secondo testo:<br> 
+                        - Per evidenziare le locuzioni tecniche provenienti dalla disciplina della psicologia
+                        e, dunque, l'interesse per la descrizione della vita interna del personaggio<br>
+                        - Per identificare la varia natura (sociale, religiosa, economica) delle tappe biografiche
+                        ripercorse dall'autore<br>
+                        nella caratterizzazione della figura<br>
+                        
+                        Nei testi poetici:<br>
+                        - Per mettere in evidenza la natura eterogenea del materiale linguistico utilizzato.
+                        Sono stati marcati tecnicismi, temrini specifici<br>
+                        espressioni tratte dalla quitidianità, colloquiali, dialettali o forestierismi che
+                        nella loro totalità possono offrire
+                        un'idea di quella <i>stralingua</i> ricercata dall'autore
+                        - Per sottolineare elementi di interesse nell'analisi contenutistica dei testi (es.
+                        tematiche)<br>
+                        
+                        <br>
+                        Dal reperorio <span class="org"><a href="https://music-encoding.org/guidelines/v5/content/">MEI</a></span>, integrati all'interno del contesto di struttura <span class="org"><a href="https://www.tei-c.org">TEI</a></span>:<br>
+                        - <i>section</i>, <i>measure</i>, <i>staff</i>, <i>layer</i> sono stati utilizzati
+                        nel caso dei frammenti di partiture musicali inseriti nel testo poetico, per identificarne
+                        la struttura<br>
+                        - <i>beam</i> è stato utilizzato per sottolineare la presenza di più eventi sonori, sia collegati
+                        da
+                        legature di portamento, sia eseguiti in simultaneo (<i>chord</i>)<br>
+                        - <i>note</i> per segnalare un unico evento sonoro. L'evento può essere occupato anche dalla presenza
+                        di una
+                        sillaba, parola o frazione di parola, codificata sempre come <i>syl</i> e allo stesso tempo come parte del verso contenitore <i>l</i><br>
+                        - <i>breath</i> è utilizzato per segnalare un momento di pausa visiva e uditiva<br>
+                        - <i>dir</i> è tra gli elementi di marcatura più impiegati nel progetto; esso risulta fondamentale
+                        per
+                        identificare le direttive tecniche inserite dall'autore nel testo al fine di procedere
+                        verso un allargamento scenografico
+                        </span></p>
+                  </p>
+            </div>
+            <div id="all_img"><img src="GiulianoScabia.jpg" alt="GS"><img src="GiulianoScabia2.jpg" alt="GS"><img src="GiulianoScabia3.jpg" alt="GS"></div>
+         </div>
+         <div id="sez4">
+            <div id="text_sez4">
+               <h2><b>Le fonti</b></h2>
+               <div id="bibl1"><b>Lettera agli operai dell'Italsider di Genova-Cornigliano</b><br>Luigi Nono<br><br>Nuova Musica Nuovo Teatro, Andrea Mancini, La conchiglia di Santiago, 2024, pp. 94-95<br><br><i>
+                     La lettura della lettera è avvenuta in occasione dell'esecuzione della Fabbrica illuminata
+                     presso l'Italsider di Genova-Cornigliano, organizzata nel 1965 da una delegazione
+                     di operai
+                     iscritti al partito comunista. In seguito a questo primo incontro, l'opera è stata
+                     eseguita
+                     in altre fabbriche italiane e all'interno di centri di riunione politico-sociale,
+                     creando 
+                     numerose occasioni di confronto tra il compositore e gli operai.
+                     </i></div>
+               <div id="bibl2"><b>Chi è la folle?</b><br>Giuliano Scabia<br><br>
+                  La lettera appartiene allo scambio epistolare che Giuliano Scabia e Luigi Nono hanno
+                  
+                  intrapreso nel 1961 e mantenuto fino al 1966. La lettera è conservata, insieme alle
+                  altre, presso 
+                  l'Archivio Scabia a Firenze.
+                  Oltre al messaggio contenuto nel corpo dell'epistola, essa presenta un testo allegato
+                  redatto in un momento diverso,
+                  precedente a quello della lettera stessa.
+                  <br><br><i>Luogo di spedizione: MilanoDestinatario: <span class="persone"><a href="https://www.luiginono.it">Luigi Nono</a></span></i></div>
+               <div id="bibl3"><b>È stato un massacro</b><br><b>Coro. I vivi e i morti del Vajont</b><br>Giuliano Scabia<br>Luigi Nono<br>Nuova Musica Nuovo Teatro, Andrea Mancini, La conchiglia di Santiago, 2024, pp. 42-45<br><br><i>Il brano costituisce la prima sezione del coro III, situato nella V scena del Diario
+                     italiano, mai concluso.
+                     L'attività di codifica ne prende in considerazione la versione trascritta e pubblicata
+                     nel volume Nuova Musica Nuovo Teatro.</i></div>
+               <div id="bibl4"><b>I mangiatori di nebbia</b><br>Giuliano Scabia<br><br>Padrone&amp;Servo, Sciascia, Giuliano Scabia, 1965, 56-63<br><br><i>Il testo appare per la prima volta sulla rivista <span class="org"><a href="https://it.wikipedia.org/wiki/Nuova_Corrente">Nuova Corrente</a></span>
+                     e solo in seguito è inserito nella raccolta poetica. La prima versione conteneva anche
+                     una sezione B, poi 
+                     eliminata.</i></div>
+               <div id="bibl5"><b>La fabbrica illuminata</b><br><b>I stesura - Cinque donne. Sogno e incubo</b><br><b>II stesura - Una donna e coro di donne. Sogno e incubo</b><br><b>IV stesura - Una donna e cori di donne e uomini contrapposti</b><br><b>V stesura - A contrasto. Una donna. Coro di donne. Coro di uomini</b><br><br><br>Padrone e Servo, Sciascia, Giuliano Scabia, 1965, 82-93<br><br><i>La terza stesura non è stata mai aggiunta alla raccolta. Essa è presente, in varie
+                     forme mai 
+                     concluse, all'interno delle lettere che i due autori si scambiavano.</i></div>
+               <div id="bibl6"><b>Stesura definitiva</b><br><br><br>La fabbrica illuminata, per soprano e nastro magnetico a quattro piste (1964), Luca Cossettini, Casa Ricordi, 1967, p. 35<br><br><i>La codifica della stesura definitiva della Fabbrica illuminata prende in considerazione
+                     
+                     la versione pubblicata da Casa Ricordi all'interno dell'edizione critica del 1967.</i></div>
+            </div>
+         </div>
+      </div>
+      <div id="all_text">
+         <div id="bottoni">
+            <h2>Fenomeni Notevoli</h2>
+            <p>Le lettere</p><button id="persone" class="red">Persone</button><button id="comunità" class="yellow">Comunità</button><button id="Luoghi_countries" class="DeepPink">Paesi e Regioni</button><button id="Luoghi_settlements" class="Pink">Città e Villaggi</button><button id="ref_bibl" class="orange">Referenze bibliografiche</button><button id="org" class="Maroon">Organizzazioni</button><button id="Date" class="LawnGreen">Date</button><button id="sic" class="DarkGreen">Errori e correzioni</button><button id="destinatario" class="DarkSalmon">Chi è il destinatario?</button><button id="quotes" class="Salmon">Quotes</button><button id="condizionidilavoro" class="Blue">Condizione operaia</button><button id="socioeconomic" class="cyan">Condizione socio-economica</button><button id="psy" class="Olive">Tecnicismi psicologici</button><button id="eventistorici" class="DarkOrange">Eventi Storici</button><button id="epithet_rolenames" class="DarkCyan">Epiteti e Apposizioni</button><button id="manoscritte" class="Indigo">Correzioni manoscritte</button><button id="abbr" class="Teal">Abbreviazioni</button><button id="uncl" class="Tomato">Interpretazione incerta</button><p>Testi poetici</p><button id="not_mus" class="Blue">Frammenti musicali</button><button id="tecnicismi" class="brown"><i>La stralingua</i></button><button id="umano" class="red">L'uomo</button><button id="fabbrica" class="yellow">La fabbrica</button><button id="acuto" class="DeepPink">Direttive: <i>Cantus firmus</i> / Sincronia sonora</button><button id="pausa" class="DeepPink">Direttive: Pause</button><button id="scenografia" class="orange">Direttive: Scenografia</button><button id="battute" class="Maroon">Direttive: Battute</button><button id="quotes2" class="Salmon">Materiale tratto dall'Inchiesta</button><button id="solo" class="Olive">Direttive: Solista</button><button id="spazi" class="Teal">Direttive: Pieni sonori</button><button id="quotes3" class="Salmon">Versi di Cesare Pavese</button><button id="iniz" class="Maroon">Attacco</button><button id="tenut" class="Maroon">Tenuta melodica</button><button id="ferm" class="Maroon">Fermata</button></div>
+         <div id="all_img2"><img src="FabbricaIll_1.jpeg" alt="GS"><img src="Fabbricaill_4.jpg" alt="GS"><img src="FabbricaIll_3.jpg" alt="GS"></div>
+         <div id="lettera1">
+            <h2>
+               LUIGI NONO 
+               Lettera agli operai dell'Italsider di Genova-Cornigliano
+               </h2>
+            <h3></h3>
+            <h3></h3>
+            <div class="column_sx">
+               <p><span class="zone" id="paragrafo1_t1">
+                     
+                     <br>cari compagni dell'<span class="org"><a href="https://it.wikipedia.org/wiki/Acciaierie_di_Cornigliano">Italsider</a></span>
+                     <br>
+                     <br>giovedì pomeriggio nella vostra sezione di <span class="Luoghi_settlements">Cornigliano</span> insieme ascolteremo <i>La fabbrica illumi-
+                        <br>nata</i> e insieme anche al <span class="persone"><span class="socioeconomic">compagno</span><span class="popup" id="popup_n1">Termine impiegato tra i membri del Partito Comunista, a cui è iscritto anche Luigi
+                           Nono.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n1">[2]</a> Luigi Pestalozza</span> ne discuteremo. <span class="sic">questa</span><span class="correzioni" style="display:none;"><b>Questa</b></span> mia musica è nata da
+                     <br>un nostro primo incontro avvenuto all'<span class="org"><a href="https://it.wikipedia.org/wiki/Acciaierie_di_Cornigliano">Italsider</a></span> di <span class="Luoghi_settlements">Cornigliano</span> nel <span class="Date">maggio del '64</span>, dalle vostre
+                     <br>parole e dalla vostra complessa <span class="condizionidilavoro">lotta</span>; è a <span class="destinatario">voi</span> dedicata come partecipazione e scelta determinata
+                     <br>da un <span class="persone"><a href="https://www.luiginono.it"><span class="socioeconomic">compagno</span><span class="popup" id="popup_n1">Termine impiegato tra i membri del Partito Comunista, a cui è iscritto anche Luigi
+                              Nono.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n1">[3]</a></a></span> verso chi lo ha ispirato: non madonne né santi né altre spiritualità
+                     <br>astratte (ma quanto interessate!) della <span class="socioeconomic">classe borghese</span>, bensì la <span class="socioeconomic">classe operaia</span>, fulcro determinan-
+                     <br>te e rivoluzionario del nostro tempo, sia pur in un drammatico momento attuale di
+                     massimo
+                     <br>sforzo del <span class="socioeconomic">neo-capitalismo</span>, che tende a imprigionare la spinta a trasformare il mondo.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo2_t1">
+                     
+                                      
+                     <br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <span class="quotes">"fabbrica dei morti la chiamavano"</span> 
+                     <br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <span class="quotes">"su otto ore solo due ne intasca l'operaio"</span>
+                     <br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <span class="quotes">"relazioni umane per accelerare i tempi"</span>
+                     <br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <span class="quotes">"quanti minuti-uomo per morire"<span class="popup" id="popup_n2">Le espressioni riportate tra virgolette fanno parte del materiale linguistico registrato
+                           durante l'esperienza di visita 
+                           all'accaieria Italsider di Genova-Cornigliano, condotto dall'autore nel 1964, o tratto
+                           da giornali e testi d'inchiesta.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n2">[4]</a></span>
+                     
+                      
+                     </span></p>
+               <p><span class="zone" id="paragrafo3_t1">
+                     
+                     <br><span class="sic">ecco</span><span class="correzioni" style="display:none;"><b>Ecco</b></span> alcuni temi dello sfruttamento che cinicamente il <span class="socioeconomic">grande capitale</span> esercita su di <span class="destinatario">voi</span>, contro
+                     <br><span class="destinatario">voi</span>, e che formano il testo stesso del giovane <span class="epithet_rolenames">poeta</span> <span class="persone"><a href="https://fondazionegiulianoscabia.it">Giuliano Scabia</a></span>.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo4_t1">
+                     
+                     <br><span class="quotes">"fabbrica come lager"</span><span class="popup" id="popup_n3">L'espressione è tratta dal poeta Giuliano Scabia da un articolo di giornale. 
+                        Essa, inizialmente impiegata per i testi della raccolta Padrone&amp;Servo, è divenuta
+                        centrale all'interno della Fabbrica illuminata.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n3">[5]</a>: nella <span class="condizionidilavoro">realtà tumultuosa e incandescente</span> dei laminatoi a caldo e a freddo e
+                     <br>negli altoforni, mi sconvolse la violenza con cui in quei luoghi mi si manifestò la <span class="socioeconomic">presenza reale
+                        <br>operaia</span> nella sua <span class="condizionidilavoro">drammatica condizione</span>, e mi colpì violentemente la divisione esistente tra <span class="destinatario">voi
+                        <br>operai</span>, sottoposti a <span class="condizionidilavoro">un'oppressione disumana</span>, finalisticamente razionalizzata.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo5_t1">
+                     
+                     
+                     <br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <span class="quotes">“fabbrica — appunto — come lager”.<span class="popup" id="popup_n2">Le espressioni riportate tra virgolette fanno parte del materiale linguistico registrato
+                           durante l'esperienza di visita 
+                           all'accaieria Italsider di Genova-Cornigliano, condotto dall'autore nel 1964, o tratto
+                           da giornali e testi d'inchiesta.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n2">[6]</a></span>
+                     
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo6_t1">
+                     
+                     <br>il <span class="socioeconomic">capitalismo</span> e l'<span class="socioeconomic">imperialismo</span> colpiscono dove e come possono;
+                     <br>anche per un'equivoca concezione della coesistenza.
+                               
+                     </span></p>
+               <p><span class="zone" id="paragrafo7_t1">
+                     
+                     <br>Napalm<span class="popup" id="popup_n4">Il napalm è un derivato dell'acido naftenico e dell'acido palmitico 
+                        utilizzato per costruire bombe e mine incendiarie, oltre che come combustibile per
+                        lanciafiamme.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n4">[7]</a> nel <span class="Luoghi_countries">Vietnam</span>, nel <span class="Luoghi_countries">Cile</span>, assassini e torture in <span class="Luoghi_countries"><span class="abbr">S.</span><span class="espansioni" style="display:none;"><b>Santo</b></span> Domingo</span>, nell'<span class="Luoghi_countries">Angola</span>, nel <span class="Luoghi_countries">Congo</span>, nel
+                     <br><span class="Luoghi_countries">Venezuela</span>, intervento economico <span class="Luoghi_countries">americano</span> — sempre quello — come alla <span class="org"><a href=""><span class="abbr">S.</span><span class="espansioni" style="display:none;"><b>San</b></span> Giorgio</a></span> vostra,
+                     <br> <span class="condizionidilavoro">licenziamenti</span> <span class="condizionidilavoro">intimidazioni</span> <span class="condizionidilavoro">discriminazioni</span> come sotto l'attuale apparentemente fallito <span class="org">governo</span>
+                     <br>di <span class="socioeconomic">centro-sinistra</span>.<span class="popup" id="popup_n5">L'autore, come mostrato dalle prime versioni del Diario italiano e della successiva
+                        Fabbrica italiana, muove 
+                        delle critiche nei confronti dell'attività della sinistra stessa.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n5">[8]</a>
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo8_t1">
+                     <br><span class="sic">il</span><span class="espansioni" style="display:none;"><b>Il</b></span> <span class="Luoghi_countries">Vietnam</span> oggi è anche in ogni <span class="comunità">nostra</span> <span class="org">fabbrica</span>.
+                     </span></p>
+               <p><span class="zone" id="paragrafo9_t1">
+                     
+                     <br><span class="sic">la</span><span class="correzioni" style="display:none;"><b>La</b></span> lotta eroica dei <span class="org">partigiani</span> e del <span class="org"><span class="abbr">FNL</span><span class="espansioni" style="display:none;"><b>Fronte di Liberazione Nazionale</b></span></span> <span class="Luoghi_countries">vietnamita</span> è anche in ogni <span class="org">fabbrica</span> <span class="comunità">nostra</span>, dove si con-
+                     <br>trasta e si contesta il <span class="socioeconomic">potere del capitale</span>.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo10_t1">
+                     
+                     <br><span class="sic">e</span><span class="correzioni" style="display:none;"><b>E</b></span> come nel <span class="Luoghi_countries">Vietnam</span>, così da ogni <span class="org">fabbrica</span> <span class="comunità">nostra</span> (e dall'<span class="org"><a href="https://it.wikipedia.org/wiki/Acciaierie_di_Cornigliano">Italsider</a></span>, esempio 'illuminato' di
+                     <br><span class="condizionidilavoro">oppressione operaia</span>) si indica e si prepara la vera <span class="socioeconomic">condizione comunista</span> dell'uomo finalmente
+                     <br> libero.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo11_t1">
+                     
+                     <br><span class="sic">momenti</span><span class="correzioni" style="display:none;"><b>Momenti</b></span> di dubbio di incertezza e di sconforto sono purtroppo possibili: l'intimidatrice
+                     e
+                     <br>ricattatoria pressione degli attuali <span class="epithet_rolenames">governanti</span>, che sempre più vilmente si inchinano al volere
+                     <br>dell'attuale direzione degli <span class="Luoghi_countries">Stati Uniti</span>, possono determinarli.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo12_t1">
+                     
+                     <br><span class="sic">ma</span><span class="correzioni" style="display:none;"><b>Ma</b></span> in ogni momento <span class="comunità">manteniamo</span> vivo e <span class="comunità">portiamo</span> avanti l'insegnamento della grande <span class="eventistorici">rivolu-
+                        <br>zione bolscevica</span> del '17 e della gloriosa <span class="eventistorici">rivoluzione cinese</span>.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo13_t1">
+                     
+                     <br><span class="org"><span class="sic">fabbrica</span><span class="correzioni" style="display:none;"><b>Fabbrica</b></span></span> e <span class="socioeconomic">internazionalismo operaio</span> come fonte di libertà.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo15_t1">
+                     
+                     <br><span class="sic">questa</span><span class="correzioni" style="display:none;"><b>Questa</b></span> non può non essere la convinzione del <span class="socioeconomic">compagno</span> musicista<span class="popup" id="popup_n6">Compagno musicista o compagno compositore sono le espressioni che Nono utilizza per
+                        parlare della propria ricerca e, dunque, 
+                        per rivolgersi all'artista contemporaneo, impegnato.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n6">[9]</a>.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo16_t1">
+                     
+                     <br><span class="sic">una</span><span class="correzioni" style="display:none;"><b>Una</b></span> vittoria o una sconfitta di una <span class="condizionidilavoro">lotta operaia</span> è nello stesso tempo una vittoria o una sconfitta
+                     <br>per la <span class="socioeconomic">cultura rivoluzionaria</span> (ed è implicitamente in ogni caso un fatto di <span class="socioeconomic">cultura rivoluziona-
+                        <br>ria</span>), così l'affermarsi o la difficoltà di una posizione artistica, se rivoluzionaria,
+                     è nello stesso
+                     <br>tempo affermazione o difficoltà anche per quell'operaio o contadino o tecnico, ai
+                     quali ancora
+                     <br>oggi è reso difficile poter sapere di musica di pittura o di poesia.
+                     
+                     </span></p>
+            </div>
+            <div class="column_sx">
+               <p><span class="zone" id="paragrafo17_t1">
+                     
+                     <br><span class="sic">certo</span><span class="correzioni" style="display:none;"><b>Certo</b></span> è possibile chiedere cosa può la musica in tempo di <span class="condizionidilavoro">conflitti sindacali</span>, di <span class="condizionidilavoro">rivendicazioni
+                        <br>salariali</span>, di <span class="condizionidilavoro">lotta di classe</span>?
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo18_t1">
+                     
+                     <br><span class="persone"><a href="https://it.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart">Mozart</a></span><span class="persone"><a href="https://it.wikipedia.org/wiki/Ludwig_van_Beethoven"> Beethoven</a></span><span class="persone"><a href="https://it.wikipedia.org/wiki/Giuseppe_Verdi"> Verdi</a></span>, <span class="persone"><a href="https://it.wikipedia.org/wiki/Modest_Petrovi%C4%8D_Musorgskij">Musorgskij</a></span> <span class="persone"><a href="https://cs.wikipedia.org/wiki/Leo%C5%A1_Jan%C3%A1%C4%8Dek">Janáček</a></span> <span class="persone"><a href="https://it.wikipedia.org/wiki/B%C3%A9la_Bart%C3%B3k">Bartók</a></span> <span class="persone"><a href="https://it.wikipedia.org/wiki/Arnold_Sch%C3%B6nberg">Schömberg</a></span> <span class="persone"><a href="https://it.wikipedia.org/wiki/Luigi_Dallapiccola">Dallapiccola</a></span> possono contri-
+                     <br>buire a rispondere a tale domanda, rapportata al <span class="socioeconomic">mondo borghese</span>: impegno e partecipazione
+                     <br>attiva allo sviluppo storico.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo19_t1">
+                     
+                     <br><span class="sic">e</span><span class="correzioni" style="display:none;"><b>E</b></span> oggi?
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo20_t1">
+                     
+                     <br><span class="persone"><a href="https://it.wikipedia.org/wiki/Sergej_Sergeevi%C4%8D_Prokof%27ev">Prokof'ev</a></span> e soprattutto <span class="persone"><a href="https://it.wikipedia.org/wiki/Dmitrij_Dmitrievi%C4%8D_%C5%A0ostakovi%C4%8D">Šostakovič</a></span> hanno avanzato alcune proposte e realizzazioni, da considera-
+                     <br>re naturalmente nella loro storia culturale politica.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo21_t1">
+                     
+                     <br><span class="sic">in</span><span class="correzioni" style="display:none;"><b>In</b></span> settembre a <span class="Luoghi_settlements">Varsavia</span> il <span class="epithet_rolenames">compositore</span> <span class="Luoghi_countries">cinese</span> <span class="persone"><a href="">Go-Jen</a></span> di <span class="Luoghi_settlements">Shangai</span> mi raccontava la sua esperienza
+                     <br>a diretto contatto con i contadini: a lui raccontai la mia esperienza diretta con
+                     <span class="destinatario">voi</span>, <span class="socioeconomic">operai</span> dell'<span class="org"><a href="https://it.wikipedia.org/wiki/Acciaierie_di_Cornigliano">I-
+                           <br>talsider</a></span>, per la nascita de <i>La fabbrica illuminata</i> .
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo22_t1">
+                     
+                     <br><span class="sic">ritengo</span><span class="correzioni" style="display:none;"><b>Ritengo</b></span> che il rapporto diretto con <span class="destinatario">voi operai contadini e nuovi tecnici</span> sia il punto di partenza
+                     <br>per il <span class="socioeconomic">compagno</span> <span class="epithet_rolenames">compositore</span>.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo23_t1">
+                     
+                     <br><span class="sic">ciò</span><span class="correzioni" style="display:none;"><b>Ciò</b></span> da solo naturalmente non garantisce la validità di una musica, ma ne è la condizione
+                     fon-
+                     <br>damentale: per il <span class="epithet_rolenames">musicista</span> da realizzare con i propri mezzi linguistici, che solo a lui in quanto
+                     <br><span class="epithet_rolenames">musicista</span> è possibile, esattamente come il <span class="socioeconomic">sindacalista operaio</span> opera nella propria organizzazione
+                     <br>e non in un'altra.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo24_t1">
+                     
+                     <br>Due momenti, altrimenti realizzati, di una stessa situazione o scelta o <span class="condizionidilavoro">lotta</span>, reciproci tra loro,
+                     <br>fino alla compensazione tra loro nella <span class="condizionidilavoro">lotta comune</span>.
+                     
+                      
+                     proprio nel potenziale culturale che la
+                     <br><span class="socioeconomic">struttura neocapitalista</span> tende ad addormentare (mezzi di comunicazione nuovi radio-televi-
+                     <br>sione-pubblicazioni di massa: la cui camera dei bottoni rappresenta un adeguamento,
+                     non una
+                     <br>trasformazione radicale di struttura) e su cui anche <span class="comunità">noi</span> <span class="socioeconomic">comunisti</span><span class="popup" id="popup_n7">La dimensione plurale (noi) a cui Nono fa più volte riferimento si accosta per la
+                        prima volta alla comunità socio-politica comunista, 
+                        la quale si rivela come ulteriore desitinaraio del messaggio.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n7">[10]</a>, bisogna dirlo, non <span class="comunità">operiamo</span>
+                     <br>con sufficiente inventiva e prospettiva rivoluzionaria.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo25_t1">
+                     
+                     <br>anche il <span class="socioeconomic">compagno</span> <span class="epithet_rolenames">musicista</span> opera condizionato, ma la tensione è sempre verso il <span class="comunità">nostro</span> otto-
+                     <br>bre rivoluzionario, verso la <span class="eventistorici">lunga marcia</span>, verso la <span class="comunità">nostra</span> <span class="Luoghi_countries">Sierra</span>. <span class="popup" id="popup_n8">Sono citati esempi di momenti storici in cui l'impegno sociale di sinistra si è tradotto
+                        in rivoluzione, in vera e propria lotta.
+                        Si sottolinea, qui, il profilo di Luigi Nono come artista e intellettuali impegnato.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n8">[11]</a>
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo26_t1">
+                     
+                     <br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     insieme uniti, <span class="socioeconomic">compagni</span>!
+                     
+                     </span></p>
+            </div>
+            <p id="back">
+               (<span class="Date"><span class="Luoghi_settlements">Venezia</span> <span class="Date">21 novembre 1965</span></span>)
+               </p>
+         </div>
+         <div id="lettera2">
+            <h2>
+               Da Giuliano Scabia a Luigi Nono 
+               </h2>
+            <h3>
+               Milano/23/2/64 - ore 11
+               </h3>
+            <h3></h3>
+            <div class="column_sx">
+               <p><span class="zone" id="paragrafo1_t2">
+                     
+                     <br>caro <span class="persone"><a href="https://www.luiginono.it">Nono</a></span>
+                     <br>
+                     <br>eccoti finalmente la folle<span class="popup" id="popup_n10">La folle è una dei cinque personaggi femminili delineati da Scabia per le scene del
+                        Diario italiano.
+                        Il testo ne riporta la storia nelle sue tappe fondamentali.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n10">[12]</a> con storia(controllata su manuali di psichiatria, ma 
+                     <br>tutta inventata per le esigenze "politiche"), e alcune possibili paro- 
+                     <br>le. 
+                     
+                     
+                     Sono frasi di una autentica schizofrenica, facilmente adattabili a
+                     <br>un discorso anche sulla società(<span class="org">il Sistema</span>).
+                     
+                     
+                     <span class="sic">Lo</span><span class="correzioni" style="display:none;"><b>Le</b></span> ho soltanto un <span class="sic">pò</span><span class="correzioni" style="display:none;"><b>po'</b></span> mont-
+                     <br>montate.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo2_t2">
+                     
+                     <br>Delle altre donne<span class="popup" id="popup_n11">Oltre alla folle: l'amorosa, la rassegnata, la violenta e la cosciente.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n11">[13]</a> mi sono limitato a tracciare un profilo generale.
+                     
+                     
+                     Non
+                     <br>so se ti andranno.
+                     
+                     
+                     Precisando questi profi<span class="manoscritte">l</span>ini, stabilendo <span class="sic">cioé</span><span class="correzioni" style="display:none;"><b>cioè</b></span> le "radici"
+                     <br>delle donne, si dovrebbero precisare meglio i frammenti di parole che
+                     <br>dovrebbero restare, residui, cose che affiorano<span class="popup" id="popup_n12">I personaggi sono restituiti nel testo poetico tramite frammenti di espressioni, accostamenti
+                        evocativi di parole e suoni.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n12">[14]</a>; noi dobbiamo arrivare a 
+                     <br>dei momenti caratterizzanti, che lascino intravedere l'arco possibile
+                     <br>di una vicenda: <span class="manoscritte">una</span><span class="correzioni_manoscritte" style="display:none;"><b>xxx</b></span> situazione<span class="popup" id="popup_n13">La presenza del termine sartriano di 'situazione' nelle lettere, mostra l'influenza
+                        che
+                        esso e il concetto che rappresenta hanno avuto sul lavoro poetico di Giuliano Scabia.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n13">[15]</a> di un personaggio, che però abbiamo anche
+                     <br>costruito, appunto per graffiarlo.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo3_t2">
+                     
+                     <br>Il coro II<span class="correzioni_manoscritte" style="display:none;"><b>I</b></span> non ho anco<span class="manoscritte">r</span>a riprovato.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo4_t2">
+                     
+                     <br>Ti accludo uno schema fatto prima della telefonata di stanotte. 
+                     
+                     
+                     Ho visto
+                     <br>che però lo stai superando e stai prendendo in mano tutto.
+                     
+                     
+                     <span class="correzioni_manoscritte" style="display:none;"><b>Xxxxxxx xxxx</b></span>
+                     <br><span class="correzioni_manoscritte" style="display:none;"><b>xxxx</b></span>C'è un pericolo a questo punto, di contaminare troppe cose diverse,
+                     <br>stili e toni, che faceva un <span class="sic">pò</span><span class="correzioni" style="display:none;"><b>po'</b></span> la debolezza del testo di <span class="ref_bibl">Intolleranza</span>.
+                     
+                     
+                     <br>Ne <span class="manoscritte">pa</span>rleremo anche martedì.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo5_t2">
+                     
+                     <br>Mi pare ottimo le donne nel grem<span class="manoscritte">b</span>o del coro, come in nicchie sonore<span class="popup" id="popup_n14">L'idea di un cantus firmus circondato da un coro - dunque di una polivocalità - è
+                        
+                        fondamentale nella costruzione del testo della Fabbrica illuminata.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n14">[16]</a>, tenute 
+                     <br>dentro. 
+                     
+                     
+                     O no?E gli<span class="manoscritte">o</span> uomini, o l'uomo?
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo6_t2">
+                     
+                     <br>Ancora non ho pensato alla festa che vuoi:mi sembra difficile, ma fatti- 
+                     <br>bile<span class="popup" id="popup_n15">La festa si riferisce alla scena prevista per la quarta situazione del Diario italiano,
+                        Correndo risalire vivere.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n15">[17]</a>.
+                     
+                     
+                     Per<span class="manoscritte">ic</span>olo del personaggio positivo e negativo., di nefasta memoria <span class="manoscritte">n</span><span class="correzioni_manoscritte" style="display:none;"><b> </b></span> uno 
+                     <br>dei comandamenti <span class="persone"><a href="https://it.wikipedia.org/wiki/Andrej_Aleksandrovi%C4%8D_%C5%BDdanov">zdanoviani</a></span>.
+                     
+                     
+                     Si potrebbe fare però una roba da matti, affi- 
+                     <br>data soprattutto a una gioia smisurata degli strumenti, con una pioggia
+                     <br>festosa di immagini tipo <span class="persone"><a href="">Picasso</a></span> la pace, la colomba, le marine, certe
+                     <br>donne <span class="abbr">ecc.</span><span class="espansioni" style="display:none;"><b>eccetera</b></span>.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo7_t2">
+                     
+                     <br>Moltissime cose giuste nella tua lettera, a proposito del mio lavoro di
+                     <br>poesie. Va bene.
+                     
+                     </span></p>
+            </div>
+            <p id="back">
+               <br>Non ho fatto in tempo a riprendere in mano le donne. <span class="uncl">Tante le
+                  <br>belle</span> - a domani -
+               <br>
+               Giuliano
+               <br>ciao a <span class="epithet_rolenames"><a href="">Nu</a></span>e <span class="epithet_rolenames">Di</span>
+               </p>
+         </div>
+         <div id="all_img3"><img src="figure.tif" alt="GS"><img src="Figure2.tif" alt="GS"><img src="Figure3.tif" alt="GS"></div>
+         <div id="chièlafolle">
+            <h2>
+               Chi è la folle?
+               </h2>
+            <h3></h3>
+            <h3>
+               
+               Il testo redatto da Giuliano Scabia  è analizzato in qualità di materiale allegato
+               alla lettera del 23 febbraio 1964.
+               
+               </h3>
+            <div class="column_sx">
+               <p><span class="zone" id="paragrafo1_t3">
+                     
+                     <br><span class="sic">questa</span><span class="correzioni" style="display:none;"><b>Questa</b></span> donna può avere, ora, 30 anni. 
+                     
+                     
+                     <span class="sic">E'</span><span class="correzioni" style="display:none;"><b>È</b></span> una <span class="psy">schizofr<span class="manoscritte">e</span>nica</span> giunta pro- 
+                     <br>gressivamente alla <span class="psy">schizofrenia</span>.
+                     
+                     
+                     <span class="sic">la</span><span class="correzioni" style="display:none;"><b>La</b></span> sua condizione però non <span class="sic">é</span><span class="correzioni" style="display:none;"><b>è</b></span> defini- 
+                     <br>tiva:ha la possibilità di tornare <span class="psy">sana di mente</span>, di rientrare nella vi- 
+                     <br>ta normale.
+                     
+                     
+                     In lei <span class="sic">c'é</span><span class="correzioni" style="display:none;"><b>c'è</b></span> il terrore di qualcosa di incombente(<span class="org">il Sistema</span>),
+                     <br>ma anche la <span class="underline">coscienza</span> di essere inseguita, e quindi di potersi sgarncia- 
+                     <br>re dall'inseg<span class="manoscritte">u</span>imento.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo2_t3">
+                     
+                     <br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <span class="sic">di</span> <span class="correzioni" style="display:none;"><b>Di</b></span> che cosa è conseguenza la sua follia?
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo3_t3">
+                     
+                     <br>Si tratta di una <span class="psy">follia</span> che sarebbe stata evitabile se fattori familia- 
+                     <br>ri e sociali non l<span class="manoscritte">'</span> avessero condott<span class="uncl">a</span> <span class="correzioni_manoscritte" style="display:none;"><b>la donna</b></span> all'attuale <span class="psy">stato di dissociazione</span>.
+                     
+                     
+                     <br>Ecco le tappe della sua vita<span class="popup" id="popup_n15">La festa si riferisce alla scena prevista per la quarta situazione del Diario italiano,
+                        Correndo risalire vivere.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n15">[18]</a>:
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo4_t3">
+                     
+                     <br><span class="sic">é</span><span class="correzioni" style="display:none;"><b>È</b></span> una donna della <span class="Luoghi_countries">campagna italiana</span>, del <span class="Luoghi_countries">Veneto</span>.
+                     
+                     
+                     L'infanzia e la giovinez-
+                     <br>za sono rivissuti come un succedersi di cambiamenti di residenza, al se- 
+                     <br>guito dei genitori, per motivi di lavoro; i gentori non hanno avuto il 
+                     <br>tempo di curarsi di lei, e di tutta la sua giovinezza le rimane soltanto un
+                     <br><span class="psy">senso di instabilità e di inadattamento</span>: i genitori sono <span class="socioeconomic">cattolici</span><span class="manoscritte">,</span> come 
+                     <br>lo possono essere i <span class="socioeconomic">contadini veneti</span>: cercano di educare la figlia secon- 
+                     <br>do le regole della <span class="socioeconomic">parrocchia</span> di campagna; 
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo5_t3">
+                     
+                     <br>la figlia ha coscienza della limitatezza ideale di quel <span class="Luoghi_countries">mondo contadino</span>;
+                     <br>nell'<span class="Luoghi_countries">emigrazione</span> viene in contatto con un altro mondo, e finisce per en- 
+                     <br>trare nella dimensione della ribellione alla vita del <span class="Luoghi_countries">mondo <span class="socioeconomic">cattolico</span>
+                        <br>contadino</span>;
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo6_t3">
+                     
+                     <br>da quando capisce questo fatto - se ne rende conto dapprima inconscia- 
+                     <br>mente - la sua vita entra in una dimensione nuova; ha le prime esperienze
+                     <br>sessuali, dapprima con un <span class="psy">senso di colpa</span>, poi imp<span class="manoscritte">a</span>rando a sentire il sesso 
+                     <br>in maniera positiva - acquista una notevole <span class="psy">sicurezza di donna</span><span class="correzioni_manoscritte" style="display:none;"><b>;</b></span> - il tra- 
+                     <br>passo da <span class="socioeconomic">contadina emigrante</span> <span class="socioeconomic">cattolica</span> <span class="psy">angosciata dal senso di colpa</span>, al- 
+                     <br>la scoperta della vita libera, avviene fra i 17 e i 20 anni.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo7_t3">
+                     
+                     <br><span class="sic">si</span><span class="correzioni" style="display:none;"><b>Si</b></span> innamora di un giovane dirigente operaio; vita in coppia per alcuni
+                     <br>mesi; la ragazza non giunge a una precisa coscienza politica: percepisce
+                     <br>e vive una <span class="psy">dimensione di liberazione dai tab<span class="manoscritte">ù</span> sessuali e religiosi</span>; espe- 
+                     <br>rienza di <span class="underline">assestamento umano</span> che sembra definitivo.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo8_t3">
+                     
+                     <br><span class="sic">ma</span><span class="correzioni" style="display:none;"><b>Ma</b></span> un giorno il <span class="socioeconomic">giovane dirigente operaio</span> viene ucciso durante una di- 
+                     <br>mostrazione - dalla <span class="org">polizia</span> 
+                     
+                     
+                     <span class="sic">la</span> <span class="correzioni" style="display:none;"><b>La</b></span> ragazza si trova completamente sola; osti- 
+                     <br>lità dei genitori; ricompare il <span class="psy">senso di colpa latente</span>; dopo qualche tem-
+                     <br>po<span class="correzioni_manoscritte" style="display:none;"><b> </b></span>si lega a un giovane del suo paese, amico fin dall'infanzia; <span class="sic">é</span><span class="correzioni" style="display:none;"><b>è</b></span> <span class="Luoghi_countries"> con- 
+                        <br>tadino cattolico</span>, rappresenta il vecchio mondo <span class="underline">da cui la ragazza viene;</span>
+                     <br>ma il trauma della morte del <span class="socioeconomic">giovane dirigente</span>(che era l'amore e il
+                     <br>nuovo mondo), la ributta indietro, anziché darle la forza di fare il pas- 
+                     <br>so decisivo e diventare una <span class="socioeconomic">dirigente rivoluzionaria</span>; 
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo9_t3">
+                     
+                     <br>ritorna il <span class="psy">senso di colpa per la libertà sessuale fruita</span> - <span class="psy">bisogno di 
+                        <br>affetto</span>: trova affetto nel <span class="socioeconomic">giovane contadino</span>.
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo10_t3">
+                     
+                     <br><span class="sic">si</span><span class="correzioni" style="display:none;"><b>Si</b></span> sposano: tornano al paese;
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo11_t3">
+                     
+                     <br>qui però si sente guardata, perseg<span class="manoscritte">u</span>itata - anche il marito le rinfaccia
+                     <br>la sua vita libera; i genitori di lui non le perdonano di essere stata
+                     <br>la donna di un <span class="socioeconomic">dirigente rivoluzionario</span>; il <span class="socioeconomic">giovane contadino</span> si sente
+                     <br>redentore, inquisitore, p<span class="manoscritte">u</span>rificatore;
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo12_t3">
+                     
+                     <br>la donna vive nel <span class="psy">conflitto fra gioia</span> provata nel periodo "rivoluziona- 
+                     <br>rio"(e di scoperta sessuale), e l'attuale <span class="psy">condizione di colpa</span> in cui è 
+                     <br>stata fatta riprecipitare;
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo13_t3">
+                     
+                     <br>questo conflitto, e la <span class="psy">repressione violenta</span>, <span class="psy">traumatica</span>, della vita di li- 
+                     <br>bertà e d'amore vissuta per breve tempo, la portano alla <span class="psy">dissociazione</span>, 
+                     <br><span class="psy">nevrosi</span>, <span class="psy">stato di schizofrenia</span> -
+                     
+                     </span></p>
+               <p><span class="zone" id="paragrafo14_t3">
+                     
+                     <br>ritrovando quel <span class="underline">momento</span>, quell'atmosfera di liberazione sessuale e poli- 
+                     <br>tica, potrebbe ritornare normale.
+                     
+                     </span></p>
+            </div>
+            <p id="back"></p>
+         </div>
+         <div id="imangiatoridinebbia">
+            <h2>
+               I MANGIATORI DI NEBBIA
+               </h2>
+            <p id="dir"><span class="scenografia">A</span></p>
+            <p class="sezione">chi sei, <span class="tecnicismi">numero di targa</span>, <span class="tecnicismi">telefono</span>, millennio:  chi<br>quando come e sempre questi incontri sfai<br>dove accendi una furia <span class="tecnicismi">benzinara</span> <span class="pausa"><b>—</b></span> dove<br>sempre perché quieto passivo quasi umano<br>fili dritto <span class="pausa"><b>—</b></span> denso di legami <span class="pausa"><b>—</b></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; smara<br><br>la breve estasi, con <span class="tecnicismi">clacson</span>, dopogiorno:<br>(domande che nascono. <i>come</i> essere umani?<br>un tappo, legni, carte; alla deriva. lei che<br>si spazzola, a poca acqua, pocolontano. lei<br>che si specchia, in piedi, nera sottoveste, sul poco<br>lago)<br><br>in quest'epoca calcistico cristiana - bei giorni,<br></p>
+            <p id="dir"><span class="scenografia">C</span></p>
+            <p class="sezione">1.<br>nell'aria rattrappita lentamente <span class="pausa"><b>—</b></span> si smorza<br>il rimbombo dell'ultimo galoppo <span class="pausa"><b>—</b></span> la rosa degli<br>elementi <span class="pausa"><b>—</b></span> in seno alle <span class="tecnicismi">società professionistiche</span>,<br>una bella sorpresa:  della gente sfiorata d'orgasmo,<br>lieve come toccare nel <span class="tecnicismi">tram</span> un seno, e <br>che quasi ci stia, tra le fermate <span class="pausa"><b>—</b></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; da tutte le parti,<br>in vista della partita con: è un gran bel giocatore,<br>tenace e grintoso, a <span class="tecnicismi">controcampo</span>, in palla;<br>via <span class="pausa"><b>—</b></span> e le donne a vederne ventidue (l'arbitro<br>no <span class="pausa"><b>—</b></span> fa schifo), che bellissimi e, SEI UN DIO<br>pomeriggi dissacrati <span class="pausa"><b>—</b></span> accesi a una funzione<br>degli <span class="tecnicismi">stadi</span> <span class="pausa"><b>—</b></span> bei disseminati ristoranti <span class="pausa"><b>—</b></span><br>intestino e mente della settimana <span class="pausa"><b>—</b></span> festa <span class="pausa"><b>—</b></span><br><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; una tesa versione<br>di gesti sacri, di <span class="tecnicismi">rimbalzi d'apparizioni</span>:  qui<br>al <span class="tecnicismi">video</span> la testa, la mano, bocca canora o piede<br>che insacca:<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               è tutto un apparire, un succedersi,<br>su chi vede corrono brividi, un soffio sul fango;<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el <span class="tecnicismi">madùra, macelàr</span><br><span class="tecnicismi">el madùra</span>, E piede a scarpa, viene, e infilalo!,<br>alla <span class="tecnicismi">rete</span> con forza con violenza, <span class="tecnicismi">AUUUUUUUU</span><br><span class="tecnicismi">GREGOOOOOOTEGOOOOREEEEEEEEEEEEEEEEE</span><br><span class="tecnicismi">OREEEEEELLLOOOOEEEEOOOOOLLLLLTEEEEEEEEEE</span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <i>uno a zero</i> <span class="tecnicismi">(teletrasmessa)</span> <i>per i padroni di casa</i><br><i>i padroni di casa:</i><br>fanno un gioco molto coperto, con molta<br>disciplina tattica, ben sorretti in difesa <span class="pausa"><b>—</b></span> senza<br><span class="tecnicismi">luci abbaglianti</span>: ma fulmineo un negro salta<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sorge<br>infila<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               e tutto vibra urla che SEI UN DIO<br>per la seconda volta, DIO, astuzia e <span class="tecnicismi">tiro fulmineo</span><br>APPARSO:<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               ma forse drogati, in questo <span class="tecnicismi">girone</span>,<br>la <span class="tecnicismi">scimmia cronista</span>, il regno dei morti, il piede biforcuto<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portano bandiere, rossoblù<br>nerazzurre rossonere <span class="pausa"><b>—</b></span> attesa, centomila <span class="pausa"><b>—</b></span><br>lo stadio, formato, leticante, <span class="tecnicismi">mucosa</span><br>saranno le quindici, limitare della digestione:<br><br>2.<br><span class="pausa"><b>—</b></span> i pivellini <span class="pausa"><b>—</b></span> che <span class="tecnicismi">tiri sìfuli</span> <span class="pausa"><b>—</b></span> fiottano dentro,<br>gonfia la cintura delle grida, sugli <span class="tecnicismi">spalti</span>: forza,<br>che sei un dio:<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               con un balzo qualcuno avvinghia<br>sei l'unico:<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               la palla: <span class="tecnicismi">sifulòt</span>! <span class="pausa"><b>—</b></span> <span class="tecnicismi">dribbling</span>, <span class="tecnicismi">manager</span> ai posti,<br>i <span class="tecnicismi">cartelli spaziali</span> di hatù tesi fra folla e<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tecnicismi">campo</span>:<br><br><br>in gran vena, padrone del <span class="tecnicismi">centrocampo</span>, si gonfia,<br>eretto <span class="tecnicismi">centromediano</span> che di testa innalza, FORZA<br>CHE SEI UN DIO,<br></p>
+            <p id="dir"><span class="scenografia">D</span></p>
+            <p class="sezione">la domenica è un'ipotesi <span class="tecnicismi">fonetica</span> <span class="pausa"><b>—</b></span> avvolta<br>a ellissi attorno alle città: <span class="tecnicismi">autodicarne</span>, di sottane<br>il sole strappato teso <span class="tecnicismi">kilometrato</span>: a natura, natura <span class="pausa"><b>—</b></span><br>barcaccia è ognuno, che ritorna, cuore sul <span class="tecnicismi">paraurti</span>:<br><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <i>non amore si farà</i><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <i>così stanchi</i> <span class="pausa"><b>—</b></span><i> dopo il giorno</i><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <i>di riposo, e cena tesa</i><br><br>tutta la sera vibra dei <span class="tecnicismi">lumini televisori</span>,<span class="popup" id="popup_n22">La dimensione romantica della sera è qui dissacrata: l'uomo stanco di fronte al televisore
+                  guarda i suoi idoli. I calciatori sono i nuovi dei, moderni eroi mitologici e mitici.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n22">[19]</a><br><span class="tecnicismi">gelatina</span> diresti <span class="tecnicismi">d'oltrestrada</span> <span class="pausa"><b>—</b></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lo schianto a <span class="tecnicismi">sirena</span><br>insegue la sua morte, appena un varco si apre<br>della fitta maglia <span class="tecnicismi">urbana</span>:<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               e gli occhi semistanchi<br>semisonni a piccoli gruppi voracemente al <span class="tecnicismi">video</span><br>nel breve spazio antisonno a ventosa <span class="pausa"><b>—</b></span> contemplatori:<br>a scatti si fondono le immagini <span class="pausa"><b>—</b></span> ricordo di <span class="tecnicismi">campi</span><br>possibili, quasi luoghi paradisi, di merende ma di<br>corsa: ragguagli sul come amore, rapido sfatto<br>e <span class="tecnicismi">motor</span> timoroso: <span class="tecnicismi">video</span> nell'occhio e occhio<br>nel <span class="tecnicismi">video</span>:<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               è l'ora del <span class="tecnicismi">programma</span> nel boccone: intermezzo<br>buonasera: potrete ascoltare, a orecchio basso; ma<br>rigurgita <span class="pausa"><b>—</b></span> sera come tante <span class="pausa"><b>—</b></span><br>1.   
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               sorta da dove<br>la cantante GRASSA, materna immensa, im<br>pugnando mammelle, e ventre a fiori che si<br>sco 
+               <svg xmlns="http://www.w3.org/2000/svg" class="not_mus" width="100%">
+                  <line x1="30" x2="250" y1="40" y2="40" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="250" y1="50" y2="50" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="250" y1="60" y2="60" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="250" y1="70" y2="70" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="250" y1="80" y2="80" stroke="black" stroke-width="1"/>
+                  <rect x="247" width="3" y="40" height="40" fill="black"/>
+                  <rect x="244" width="1" y="40" height="40" fill="black"/>
+                  <image href="trebleClef.png" x="30" y="22" height="80" width="33"/>
+                  <polygon points="86,45                      86,51                      160,61                      160,55" fill="black"/>
+                  <ellipse cx="80" cy="80" rx="6" ry="5" fill="black"/>
+                  <line x1="86" x2="86" y1="80" y2="45" stroke="black" stroke-width="1.5"/>
+                  <text x="70" y="115" font-size="15" fill="black">
+                     
+                     la
+                     
+                      - 
+                     </text>
+                  <ellipse cx="117" cy="85" rx="6" ry="5" fill="black"/>
+                  <line x1="123" x2="123" y1="85" y2="50" stroke="black" stroke-width="1.5"/>
+                  <text x="107" y="115" font-size="15" fill="black">
+                     
+                     no
+                     
+                     </text>
+                  <ellipse cx="154" cy="90" rx="6" ry="5" fill="black"/>
+                  <line x1="160" x2="160" y1="90" y2="55" stroke="black" stroke-width="1.5"/>
+                  <line x1="143" x2="165" y1="90" y2="90" stroke="black" stroke-width="1.5"/>
+                  <image preserveAspectRatio="none" href="sharp.png" height="22" width="22" x="128.8" y="78.5"/>
+                  <text x="144" y="115" font-size="15" fill="black"> 
+                     
+                     d'a
+                     
+                      - 
+                     </text>
+                  <ellipse cx="228" cy="85" ry="5" rx="6" stroke="black" stroke-width="1.5" fill="none"/>
+                  <line x1="234" x2="234" y1="85" y2="50" stroke="black" stroke-width="1.5"/>
+                  <text x="223" y="115" font-size="15" fill="black"> 
+                     
+                     mor
+                     
+                     </text>
+                  <image preserveAspectRatio="none" href="legatura.png" height="23" width="15" x="204" y="85.5"/>
+                  <text x="218" y="20">Rem</text></svg>
+               con quelle rose in 
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" class="not_mus" width="100%">
+                  <line x1="30" x2="140" y1="40" y2="40" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="140" y1="50" y2="50" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="140" y1="60" y2="60" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="140" y1="70" y2="70" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="140" y1="80" y2="80" stroke="black" stroke-width="1"/>
+                  <rect x="137" width="3" y="40" height="40" fill="black"/>
+                  <rect x="134" width="1" y="40" height="40" fill="black"/>
+                  <image href="trebleClef.png" x="30" y="22" height="80" width="33"/>
+                  <ellipse cx="80" cy="85" ry="5" rx="6" fill="black"/>
+                  <line x1="86" x2="86" y1="85" y2="50" stroke="black" stroke-width="1.5"/>
+                  <image preserveAspectRatio="none" href="flat.png" height="23" width="15" x="63.8" y="70.5"/>
+                  <text x="75" y="115" font-size="15" fill="black"> 
+                     
+                     cuor?
+                     
+                     </text>
+                  <image preserveAspectRatio="none" href="legatura.png" height="23" width="15" x="56" y="85.5"/>
+                  <ellipse cx="117" cy="55" ry="5" rx="6" fill="black"/>
+                  <line x1="111" x2="111" y1="55" y2="90" stroke="black" stroke-width="1.5"/>
+                  <image preserveAspectRatio="none" href="flat.png" height="23" width="15" x="100.8" y="40.5"/>
+                  <text x="107" y="20">Rem</text></svg>
+               <span class="popup" id="popup_n16">scolando d'amor con quelle rose in cuor?<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n16">[20]</a>
+               <br>2. ma ribelle distruttrice
+               <svg xmlns="http://www.w3.org/2000/svg" class="not_mus" width="100%">
+                  <line x1="30" x2="690" y1="40" y2="40" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="690" y1="50" y2="50" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="690" y1="60" y2="60" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="690" y1="70" y2="70" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="690" y1="80" y2="80" stroke="black" stroke-width="1"/>
+                  <rect x="687" width="3" y="40" height="40" fill="black"/>
+                  <rect x="684" width="1" y="40" height="40" fill="black"/>
+                  <image href="trebleClef.png" x="30" y="22" height="80" width="33"/>
+                  <polygon points="86,26                                86,32                                308,37                                308,31" fill="black"/>
+                  <ellipse cx="80" cy="60" rx="6" ry="5" fill="black"/>
+                  <line x1="86" x2="86" y1="60" y2="25" stroke="black" stroke-width="1.5"/>
+                  <text x="80" y="20">Rem 7</text>
+                  <text x="70" y="115" font-size="15" fill="black">
+                     
+                     fol
+                     
+                      - 
+                     </text>
+                  <ellipse cx="80" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="86" x2="86" y1="70" y2="27.142857142857146" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="154" cy="60" rx="6" ry="5" fill="black"/>
+                  <line x1="160" x2="160" y1="60" y2="29.285714285714292" stroke="black" stroke-width="1.5"/>
+                  <text x="80" y="20">Rem 7</text>
+                  <text x="144" y="115" font-size="15" fill="black">
+                     
+                     le
+                     
+                     </text>
+                  <ellipse cx="154" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="160" x2="160" y1="70" y2="31.42857142857143" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="228" cy="65" rx="6" ry="5" fill="black"/>
+                  <line x1="234" x2="234" y1="65" y2="33.57142857142857" stroke="black" stroke-width="1.5"/>
+                  <text x="80" y="20">Rem 7</text>
+                  <text x="218" y="115" font-size="15" fill="black">
+                     
+                     ban
+                     
+                      - 
+                     </text>
+                  <ellipse cx="228" cy="75" rx="6" ry="5" fill="black"/>
+                  <line x1="234" x2="234" y1="75" y2="35.71428571428571" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="302" cy="65" rx="6" ry="5" fill="black"/>
+                  <line x1="308" x2="308" y1="65" y2="37.85714285714286" stroke="black" stroke-width="1.5"/>
+                  <text x="80" y="20">Rem 7</text>
+                  <text x="292" y="115" font-size="15" fill="black">
+                     
+                     de
+                     
+                      - 
+                     </text>
+                  <ellipse cx="302" cy="75" rx="6" ry="5" fill="black"/>
+                  <line x1="308" x2="308" y1="75" y2="40" stroke="black" stroke-width="1.5"/>
+                  <polygon points="419,36                                419,42                                493,52                                493,46" fill="black"/>
+                  <ellipse cx="413" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="419" x2="419" y1="70" y2="35" stroke="black" stroke-width="1.5"/>
+                  <text x="413" y="20">Sol 7</text>
+                  <text x="403" y="115" font-size="15" fill="black">
+                     
+                     ruola
+                     
+                     </text>
+                  <ellipse cx="413" cy="80" rx="6" ry="5" fill="black"/>
+                  <line x1="419" x2="419" y1="80" y2="35" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="487" cy="80" rx="6" ry="5" fill="black"/>
+                  <line x1="493" x2="493" y1="80" y2="35" stroke="black" stroke-width="1.5"/>
+                  <text x="413" y="20">Sol 7</text>
+                  <ellipse cx="487" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="493" x2="493" y1="70" y2="35" stroke="black" stroke-width="1.5"/></svg>
+               
+               tigre urlata
+               <br>schizza <span class="tecnicismi">dall'inconscio collettivo</span>
+               <svg xmlns="http://www.w3.org/2000/svg" class="not_mus" width="100%">
+                  <line x1="30" x2="525" y1="40" y2="40" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="525" y1="50" y2="50" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="525" y1="60" y2="60" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="525" y1="70" y2="70" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="525" y1="80" y2="80" stroke="black" stroke-width="1"/>
+                  <rect x="522" width="3" y="40" height="40" fill="black"/>
+                  <rect x="519" width="1" y="40" height="40" fill="black"/>
+                  <image href="trebleClef.png" x="30" y="22" height="80" width="33"/>
+                  <polygon points="86,46                                86,52                                160,52                                160,46" fill="black"/>
+                  <ellipse cx="80" cy="80" rx="6" ry="5" fill="black"/>
+                  <line x1="86" x2="86" y1="80" y2="45" stroke="black" stroke-width="1.5"/>
+                  <text x="70" y="115" font-size="15" fill="black">
+                     
+                     stra
+                     
+                      - 
+                     </text>
+                  <ellipse cx="80" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="86" x2="86" y1="70" y2="41.66666666666667" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="154" cy="80" rx="6" ry="5" fill="black"/>
+                  <line x1="160" x2="160" y1="80" y2="38.33333333333333" stroke="black" stroke-width="1.5"/>
+                  <text x="144" y="115" font-size="15" fill="black">
+                     
+                     va
+                     
+                      - 
+                     </text>
+                  <ellipse cx="154" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="160" x2="160" y1="70" y2="35" stroke="black" stroke-width="1.5"/>
+                  <polygon points="271,26                                271,32                                345,32                                345,26" fill="black"/>
+                  <ellipse cx="265" cy="60" rx="6" ry="5" fill="black"/>
+                  <line x1="271" x2="271" y1="60" y2="25" stroke="black" stroke-width="1.5"/>
+                  <text x="255" y="115" font-size="15" fill="black">
+                     
+                     gante
+                     
+                     </text>
+                  <ellipse cx="265" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="271" x2="271" y1="70" y2="28.333333333333336" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="339" cy="60" rx="6" ry="5" fill="black"/>
+                  <line x1="345" x2="345" y1="60" y2="31.66666666666667" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="339" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="345" x2="345" y1="70" y2="35" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="376" cy="60" ry="5" rx="6" fill="black"/>
+                  <line x1="382" x2="382" y1="60" y2="25" stroke="black" stroke-width="1.5"/></svg>          
+               <br>quasi a forma di baccante:<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; distruttrice controlegge,<br>madre no:<br>PALLIDA <span class="pausa"><b>—</b></span> e di forma apollinea<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sottile <span class="tecnicismi">transitiva</span><br>quasi apparente: amante ma fredda: ma<br>con bellezza semisignora, e come a gioco<br>madre: ma con bellezza e <i>tape</i> indifferenza<br>
+               <svg xmlns="http://www.w3.org/2000/svg" class="not_mus" width="100%">
+                  <line x1="30" x2="580" y1="40" y2="40" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="580" y1="50" y2="50" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="580" y1="60" y2="60" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="580" y1="70" y2="70" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="580" y1="80" y2="80" stroke="black" stroke-width="1"/>
+                  <rect x="577" width="3" y="40" height="40" fill="black"/>
+                  <rect x="574" width="1" y="40" height="40" fill="black"/>
+                  <image href="trebleClef.png" x="30" y="22" height="80" width="33"/>
+                  <polygon points="86,50                      86,56                      197,56                      197,50" fill="black"/>
+                  <ellipse cx="80" cy="85" rx="6" ry="5" fill="black"/>
+                  <line x1="86" x2="86" y1="85" y2="50" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="117" cy="85" rx="6" ry="5" fill="black"/>
+                  <line x1="123" x2="123" y1="85" y2="50" stroke="black" stroke-width="1.5"/>
+                  <text x="107" y="115" font-size="15" fill="black">
+                     
+                     se
+                     
+                     </text>
+                  <ellipse cx="154" cy="100" rx="6" ry="5" fill="black"/>
+                  <line x1="160" x2="160" y1="100" y2="50" stroke="black" stroke-width="1.5"/>
+                  <line x1="143" x2="165" y1="90" y2="90" stroke="black" stroke-width="1.5"/>
+                  <line x1="143" x2="165" y1="100" y2="100" stroke="black" stroke-width="1.5"/>
+                  <text x="144" y="115" font-size="15" fill="black">
+                     
+                     ce
+                     
+                     </text>
+                  <ellipse cx="191" cy="85" rx="6" ry="5" fill="black"/>
+                  <line x1="197" x2="197" y1="85" y2="50" stroke="black" stroke-width="1.5"/>
+                  <text x="181" y="115" font-size="15" fill="black">
+                     
+                     n'è
+                     
+                      - 
+                     </text>
+                  <path d="M199,65 C231,75 231,80 267,65" fill="transparent" stroke="black" stroke-width="2"/>
+                  <ellipse cx="265" cy="85" ry="5" rx="6" stroke="black" stroke-width="1.5" fill="none"/>
+                  <line x1="271" x2="271" y1="85" y2="50" stroke="black" stroke-width="1.5"/>
+                  <polygon points="308,45                      308,51                      419,51                      419,45" fill="black"/>
+                  <ellipse cx="302" cy="80" rx="6" ry="5" fill="black"/>
+                  <line x1="308" x2="308" y1="80" y2="45" stroke="black" stroke-width="1.5"/>
+                  <text x="302" y="20">La 7</text>
+                  <text x="292" y="115" font-size="15" fill="black">
+                     
+                     for
+                     
+                      - 
+                     </text>
+                  <ellipse cx="339" cy="80" rx="6" ry="5" fill="black"/>
+                  <line x1="345" x2="345" y1="80" y2="45" stroke="black" stroke-width="1.5"/>
+                  <text x="329" y="115" font-size="15" fill="black">
+                     
+                     se
+                     
+                     </text>
+                  <ellipse cx="376" cy="85" rx="6" ry="5" fill="black"/>
+                  <line x1="382" x2="382" y1="85" y2="45" stroke="black" stroke-width="1.5"/>
+                  <image preserveAspectRatio="none" href="sharp.png" height="22" width="22" x="350.8" y="73.5"/>
+                  <text x="366" y="115" font-size="15" fill="black">
+                     
+                     due
+                     
+                     </text>
+                  <ellipse cx="413" cy="80" rx="6" ry="5" fill="black"/>
+                  <line x1="419" x2="419" y1="80" y2="45" stroke="black" stroke-width="1.5"/>
+                  <text x="403" y="115" font-size="15" fill="black">
+                     
+                     o
+                     
+                      - 
+                     </text>
+                  <path d="M421,60 C453,70 453,70 489,60" fill="transparent" stroke="black" stroke-width="2"/>
+                  <ellipse cx="487" cy="80" ry="5" rx="6" stroke="black" stroke-width="1.5" fill="none"/>
+                  <line x1="493" x2="493" y1="80" y2="45" stroke="black" stroke-width="1.5"/>
+                  <text x="482" y="115" font-size="15" fill="black">
+                     
+                     tre
+                     
+                      -  
+                     </text></svg>
+               di uomini: e veloce
+               <br>passa<br>4. attimo, ambigua<span class="pausa"><svg xmlns="http://www.w3.org/2000/svg" width="7%" height="30px">
+                     <line x1="0" y1="29" x2="100" y2="29" stroke="black" stroke-width="2"/></svg></span>tutto è di<br>frammenti<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               ma senza memoria e immobile veloce<br>e quando il sesso sembra freddo come un<br><span class="tecnicismi">jet</span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <span class="tecnicismi">it's the hammer of justice</span> immobile<br>nel tempo<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <span class="tecnicismi">it's the bell of freedom sul punto</span><br>di scoppiare<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               quando
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               
+               <svg xmlns="http://www.w3.org/2000/svg" class="not_mus" width="100%">
+                  <line x1="30" x2="525" y1="40" y2="40" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="525" y1="50" y2="50" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="525" y1="60" y2="60" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="525" y1="70" y2="70" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="525" y1="80" y2="80" stroke="black" stroke-width="1"/>
+                  <rect x="522" width="3" y="40" height="40" fill="black"/>
+                  <rect x="519" width="1" y="40" height="40" fill="black"/>
+                  <image href="trebleClef.png" x="30" y="22" height="80" width="33"/>
+                  <polygon points="86,30                      86,36                      123,41                      123,35" fill="black"/>
+                  <ellipse cx="80" cy="65" rx="6" ry="5" fill="black"/>
+                  <line x1="86" x2="86" y1="65" y2="30" stroke="black" stroke-width="1.5"/>
+                  <text x="70" y="115" font-size="15" fill="black">
+                     
+                     ormai
+                     
+                     </text>
+                  <ellipse cx="117" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="123" x2="123" y1="70" y2="35" stroke="black" stroke-width="1.5"/>
+                  <text x="107" y="115" font-size="15" fill="black">
+                     
+                     sta
+                     
+                     </text>
+                  <polygon points="197,31                                197,37                                197,37                                197,31" fill="black"/>
+                  <ellipse cx="191" cy="65" rx="6" ry="5" fill="black"/>
+                  <line x1="197" x2="197" y1="65" y2="30" stroke="black" stroke-width="1.5"/>
+                  <text x="191" y="20">Fa 6</text>
+                  <text x="181" y="115" font-size="15" fill="black">
+                     
+                     per
+                     
+                     </text>
+                  <ellipse cx="191" cy="75" rx="6" ry="5" stroke="black" stroke-width="1.5" fill="none"/>
+                  <line x1="197" x2="197" y1="75" y2="42.5" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="191" cy="90" rx="6" ry="5" stroke="black" stroke-width="1.5" fill="none"/>
+                  <line x1="197" x2="197" y1="90" y2="55" stroke="black" stroke-width="1.5"/>
+                  <line x1="180" x2="202" y1="90" y2="90" stroke="black" stroke-width="1.5"/>
+                  <path d="M193,70 C283.5,82.5 283.5,95 381,75" fill="transparent" stroke="black" stroke-width="2"/>
+                  <ellipse cx="302" cy="65" ry="5" rx="6" fill="black"/>
+                  <line x1="308" x2="308" y1="65" y2="30" stroke="black" stroke-width="1.5"/>
+                  <text x="297" y="115" font-size="15" fill="black">
+                     
+                     tor
+                     
+                      -  
+                     </text>
+                  <ellipse cx="339" cy="70" ry="5" rx="6" fill="black"/>
+                  <line x1="345" x2="345" y1="70" y2="35" stroke="black" stroke-width="1.5"/>
+                  <text x="334" y="115" font-size="15" fill="black"> 
+                     
+                     na
+                     
+                      -  
+                     </text>
+                  <ellipse cx="376" cy="95" ry="5" rx="6" stroke="black" stroke-width="1.5" fill="none"/>
+                  <line x1="382" x2="382" y1="95" y2="60" stroke="black" stroke-width="1.5"/>
+                  <line x1="365" x2="387" y1="90" y2="90" stroke="black" stroke-width="1.5"/>
+                  <text x="366" y="20">Sol 7</text>
+                  <ellipse cx="413" cy="70" ry="5" rx="6" fill="black"/>
+                  <line x1="419" x2="419" y1="70" y2="35" stroke="black" stroke-width="1.5"/>
+                  <text x="408" y="115" font-size="15" fill="black">
+                     
+                     re
+                     
+                     </text>
+                  <text x="403" y="20">Sol 7</text></svg>        
+               <br>questa contorta svanente figura
+               <svg xmlns="http://www.w3.org/2000/svg" class="not_mus" width="100%">
+                  <line x1="30" x2="470" y1="40" y2="40" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="470" y1="50" y2="50" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="470" y1="60" y2="60" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="470" y1="70" y2="70" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="470" y1="80" y2="80" stroke="black" stroke-width="1"/>
+                  <rect x="467" width="3" y="40" height="40" fill="black"/>
+                  <rect x="464" width="1" y="40" height="40" fill="black"/>
+                  <image href="trebleClef.png" x="30" y="22" height="80" width="33"/>
+                  <ellipse cx="80" cy="60" ry="5" rx="6" fill="black"/>
+                  <line x1="86" x2="86" y1="60" y2="25" stroke="black" stroke-width="1.5"/>
+                  <polygon points="123,46                                123,52                                123,52                                123,46" fill="black"/>
+                  <ellipse cx="117" cy="80" rx="6" ry="5" stroke="black" stroke-width="1.5" fill="none"/>
+                  <line x1="123" x2="123" y1="80" y2="45" stroke="black" stroke-width="1.5"/>
+                  <image preserveAspectRatio="none" href="legatura.png" height="23" width="15" x="93" y="65.5"/>
+                  <ellipse cx="117" cy="90" rx="6" ry="5" stroke="black" stroke-width="1.5" fill="none"/>
+                  <line x1="123" x2="123" y1="90" y2="55" stroke="black" stroke-width="1.5"/>
+                  <image preserveAspectRatio="none" href="legatura.png" height="23" width="15" x="93" y="75.5"/>
+                  <ellipse cx="117" cy="100" rx="6" ry="5" stroke="black" stroke-width="1.5" fill="none"/>
+                  <line x1="123" x2="123" y1="100" y2="65" stroke="black" stroke-width="1.5"/>
+                  <line x1="106" x2="128" y1="90" y2="90" stroke="black" stroke-width="1.5"/>
+                  <line x1="106" x2="128" y1="100" y2="100" stroke="black" stroke-width="1.5"/>
+                  <image preserveAspectRatio="none" href="legatura.png" height="23" width="15" x="92" y="85.5"/>
+                  <ellipse cx="228" cy="45" ry="5" rx="6" fill="black"/>
+                  <line x1="222" x2="222" y1="45" y2="80" stroke="black" stroke-width="1.5"/>
+                  <text x="223" y="115" font-size="15" fill="black">
+                     
+                     il
+                     
+                     </text>
+                  <ellipse cx="265" cy="65" ry="5" rx="6" fill="black"/>
+                  <line x1="271" x2="271" y1="65" y2="30" stroke="black" stroke-width="1.5"/>
+                  <text x="260" y="115" font-size="15" fill="black">
+                     
+                     babbo
+                     
+                     </text>
+                  <polygon points="345,30                      345,36                      382,41                      382,35" fill="black"/>
+                  <ellipse cx="339" cy="65" rx="6" ry="5" fill="black"/>
+                  <line x1="345" x2="345" y1="65" y2="30" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="376" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="382" x2="382" y1="70" y2="35" stroke="black" stroke-width="1.5"/></svg>
+               <br>5. quasi cristiano<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                un raptus verginale<br>di una bianca debole invogliata:<br><span class="tecnicismi">telecasta</span> resa APPARSA figlia <span class="tecnicismi">osmosi</span> conclu<br>siva
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; un giglio<br>
+               <svg xmlns="http://www.w3.org/2000/svg" class="not_mus" width="100%">
+                  <line x1="30" x2="580" y1="40" y2="40" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="580" y1="50" y2="50" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="580" y1="60" y2="60" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="580" y1="70" y2="70" stroke="black" stroke-width="1"/>
+                  <line x1="30" x2="580" y1="80" y2="80" stroke="black" stroke-width="1"/>
+                  <rect x="577" width="3" y="40" height="40" fill="black"/>
+                  <rect x="574" width="1" y="40" height="40" fill="black"/>
+                  <image href="trebleClef.png" x="30" y="22" height="80" width="33"/>
+                  <polygon points="86,26                                86,32                                234,32                                234,26" fill="black"/>
+                  <ellipse cx="80" cy="60" rx="6" ry="5" fill="black"/>
+                  <line x1="86" x2="86" y1="60" y2="25" stroke="black" stroke-width="1.5"/>
+                  <text x="70" y="115" font-size="15" fill="black">
+                     
+                     per
+                     
+                     </text>
+                  <ellipse cx="80" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="86" x2="86" y1="70" y2="27" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="154" cy="65" rx="6" ry="5" fill="black"/>
+                  <line x1="160" x2="160" y1="65" y2="29" stroke="black" stroke-width="1.5"/>
+                  <text x="80" y="20">3</text>
+                  <ellipse cx="154" cy="85" rx="6" ry="5" fill="black"/>
+                  <line x1="160" x2="160" y1="85" y2="31" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="228" cy="60" rx="6" ry="5" fill="black"/>
+                  <line x1="234" x2="234" y1="60" y2="33" stroke="black" stroke-width="1.5"/>
+                  <text x="80" y="20">3</text>
+                  <text x="218" y="115" font-size="15" fill="black">
+                     
+                     a
+                     
+                      - 
+                     </text>
+                  <ellipse cx="228" cy="70" rx="6" ry="5" fill="black"/>
+                  <line x1="234" x2="234" y1="70" y2="35" stroke="black" stroke-width="1.5"/>
+                  <polygon points="345,21                                345,27                                345,27                                345,21" fill="black"/>
+                  <ellipse cx="339" cy="55" rx="6" ry="5" fill="black"/>
+                  <line x1="345" x2="345" y1="55" y2="20" stroke="black" stroke-width="1.5"/>
+                  <text x="339" y="20">Mi b</text>
+                  <text x="329" y="115" font-size="15" fill="black">
+                     
+                     mar
+                     
+                      - 
+                     </text>
+                  <ellipse cx="339" cy="80" rx="6" ry="5" fill="black"/>
+                  <line x1="345" x2="345" y1="80" y2="40" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="339" cy="95" rx="6" ry="5" stroke="black" stroke-width="1.5" fill="none"/>
+                  <line x1="345" x2="345" y1="95" y2="60" stroke="black" stroke-width="1.5"/>
+                  <line x1="328" x2="350" y1="90" y2="90" stroke="black" stroke-width="1.5"/>
+                  <ellipse cx="413" cy="60" ry="5" rx="6" stroke="black" stroke-width="1.5" fill="none"/>
+                  <line x1="419" x2="419" y1="60" y2="25" stroke="black" stroke-width="1.5"/>
+                  <text x="408" y="115" font-size="15" fill="black">
+                     
+                     ti
+                     
+                     </text>
+                  <image preserveAspectRatio="none" href="legatura.png" height="23" width="15" x="389" y="60.5"/></svg>
+               <br><span class="pausa"><svg xmlns="http://www.w3.org/2000/svg" width="7%" height="30px">
+                     <line x1="0" y1="29" x2="100" y2="29" stroke="black" stroke-width="2"/></svg></span><span class="tecnicismi">stop</span>,<br>e per i deboli implora pietà<br></p>
+            <p id="dir"><span class="scenografia">E</span></p>
+            <p class="sezione"><span class="tecnicismi">altoparlanti</span> volatili notturni <span class="pausa"><b>—</b></span> stormo,<br><span class="tecnicismi">ossidati</span>; aggrappati ai fili; dentro le <span class="tecnicismi">portinerie</span>;<br>sui <span class="tecnicismi">camion delle immondizie</span> <span class="pausa"><b>—</b></span> di <span class="tecnicismi">alluminio</span>;<br>uomini <span class="tecnicismi">trasportatori</span>. <span class="tecnicismi">RETE</span> che l'<span class="tecnicismi">arsenale</span><br>umano<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                di migliaia di bombe,<br>fasci di voci: <span class="tecnicismi">altoparlanti</span> in moto, seguendo<br>gli uomini, sufficiente, di bombe, a di<br>struggere il mondo TRE volte: su ogni uomo<br><span class="tecnicismi">altoparlante</span> custode, <span class="tecnicismi">capoturno</span>; gli <span class="tecnicismi">spazzini</span><br>raccogliendo i resti <span class="pausa"><b>—</b></span> di frutta <span class="pausa"><b>—</b></span> di pane<br>metro della notte, di vetri <span class="pausa"><b>—</b></span> di carte <span class="pausa"><b>—</b></span><br>nei bidoni se echi accoccolati, giornali sospesi;<br>di scatole <span class="pausa"><b>—</b></span> di torsoli (compagni che scrivono <br>sui muri) di frantumi <span class="pausa"><b>—</b></span> di carte scritte <span class="pausa"><b>—</b></span><br>(volti bianchi) <span class="pausa"><b>—</b></span> UCCISO dalla polizia<br>ma i portatori <span class="pausa"><b>—</b></span> dai loculi,<br>per ogni strada ogni porta ogni casa:<br>tutti:<br>ben serrati nelle case <span class="pausa"><b>—</b></span> da ogni parte racchiusi <span class="pausa"><b>—</b></span><br>l'occhio sul tetto <span class="pausa"><b>—</b></span> la corsa ininterrotta:<br>ognuno di minuto in minuto ma più<br>IPNOTICO<br></p>
+         </div>
+         <div id="tavole_fonetiche">
+            <h2>
+               <br>Coro - I vivi e i morti del Vajont: sezione prima
+               <br>dalla scena V di Un diario italiano
+               </h2>
+            <p class="sezione">niente sole oggi sulla valle<br>non c'è più niente lassù<br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="100" y1="100" x2="151" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="151" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  151,100                  146,95                  156,95 " fill="black" transform="rotate(-90, 151, 100)"/>
+                  <polygon points="                  300,100                  296,95                  306,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="80" y="90" font-size="16" text-anchor="middle">to</text>
+                  <text x="151" y="90" font-size="16" text-anchor="middle">spe</text>
+                  <text class="ferm" x="320" y="90" font-size="16" text-anchor="middle">dis</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="100" y1="100" x2="151" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="151" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  151,100                  146,95                  156,95 " fill="black" transform="rotate(-90, 151, 100)"/>
+                  <polygon points="                  300,100                  296,95                  306,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="80" y="90" font-size="16" text-anchor="middle">rte</text>
+                  <text x="151" y="90" font-size="16" text-anchor="middle">mo</text>
+                  <text class="ferm" x="320" y="90" font-size="16" text-anchor="middle">dis</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="50" y1="100" x2="149" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  151,100                  146,95                  156,95 " fill="black" transform="rotate(-90, 151, 100)"/>
+                  <text class="iniz" x="50" y="90" font-size="16" text-anchor="middle">dis</text>
+                  <text x="151" y="90" font-size="16" text-anchor="middle">vi</text>
+                  <line class="tenut" x1="98" y1="100" x2="202" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="202" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  202,100                  197,95                  207,95 " fill="black" transform="rotate(-90, 202, 100)"/>
+                  <polygon points="                      300,100                      295,95                      305,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text x="202" y="90" font-size="16" text-anchor="middle">mor</text>
+                  <text class="ferm" x="310" y="90" font-size="16" text-anchor="middle">e</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="50" y1="100" x2="149" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  151,100                  146,95                  156,95 " fill="black" transform="rotate(-90, 151, 100)"/>
+                  <text class="iniz" x="50" y="90" font-size="16" text-anchor="middle">dis</text>
+                  <text x="151" y="90" font-size="16" text-anchor="middle">vi</text>
+                  <line class="tenut" x1="98" y1="100" x2="202" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="202" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  202,100                  197,95                  207,95 " fill="black" transform="rotate(-90, 202, 100)"/>
+                  <polygon points="                      300,100                      295,95                      305,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text x="202" y="90" font-size="16" text-anchor="middle">pe</text>
+                  <text class="ferm" x="310" y="90" font-size="16" text-anchor="middle">eraz</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="100" y1="100" x2="151" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="151" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  151,100                  146,95                  156,95 " fill="black" transform="rotate(-90, 151, 100)"/>
+                  <polygon points="                  300,100                  296,95                  306,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="80" y="90" font-size="16" text-anchor="middle">dis</text>
+                  <text x="151" y="90" font-size="16" text-anchor="middle">vi</text>
+                  <text class="ferm" x="320" y="90" font-size="16" text-anchor="middle">is</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="100" y1="100" x2="151" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="151" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  151,100                  146,95                  156,95 " fill="black" transform="rotate(-90, 151, 100)"/>
+                  <polygon points="                  300,100                  296,95                  306,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="80" y="90" font-size="16" text-anchor="middle">spe</text>
+                  <text x="151" y="90" font-size="16" text-anchor="middle">pe</text>
+                  <text class="ferm" x="320" y="90" font-size="16" text-anchor="middle">eraz</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="160" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  300,100                  295,95                  305,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="150" y="100" font-size="16" text-anchor="middle">v</text>
+                  <text class="ferm" x="310" y="100" font-size="16" text-anchor="middle">spe</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="100" y1="100" x2="151" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="151" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  151,100                  146,95                  156,95 " fill="black" transform="rotate(-90, 151, 100)"/>
+                  <polygon points="                  300,100                  296,95                  306,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="80" y="90" font-size="16" text-anchor="middle">v</text>
+                  <text x="151" y="90" font-size="16" text-anchor="middle">uo</text>
+                  <text class="ferm" x="320" y="90" font-size="16" text-anchor="middle">ra</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="50" y1="100" x2="149" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  151,100                  146,95                  156,95 " fill="black" transform="rotate(-90, 151, 100)"/>
+                  <text class="iniz" x="50" y="90" font-size="16" text-anchor="middle">v</text>
+                  <text x="151" y="90" font-size="16" text-anchor="middle">uo</text>
+                  <line class="tenut" x1="98" y1="100" x2="202" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="202" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  202,100                  197,95                  207,95 " fill="black" transform="rotate(-90, 202, 100)"/>
+                  <polygon points="                      300,100                      295,95                      305,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text x="202" y="90" font-size="16" text-anchor="middle">to</text>
+                  <text class="ferm" x="310" y="90" font-size="16" text-anchor="middle">uot</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="140" y1="100" x2="100" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="160" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  100,100                  95,95                  105,95 " fill="black" transform="rotate(90, 100, 100)"/>
+                  <polygon points="                  300,100                  295,95                  305,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="150" y="100" font-size="16" text-anchor="middle">u</text>
+                  <line class="tenut" x1="160" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  300,100                  295,95                  305,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="150" y="100" font-size="16" text-anchor="middle">u</text>
+                  <text class="ferm" x="310" y="100" font-size="16" text-anchor="middle"/></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="140" y1="100" x2="100" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="160" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  100,100                  95,95                  105,95 " fill="black" transform="rotate(90, 100, 100)"/>
+                  <polygon points="                  300,100                  295,95                  305,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="150" y="100" font-size="16" text-anchor="middle">e</text>
+                  <line class="tenut" x1="160" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  300,100                  295,95                  305,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="150" y="100" font-size="16" text-anchor="middle">e</text>
+                  <text class="ferm" x="310" y="100" font-size="16" text-anchor="middle"/></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="50" y1="100" x2="149" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  151,100                  146,95                  156,95 " fill="black" transform="rotate(-90, 151, 100)"/>
+                  <text class="iniz" x="50" y="90" font-size="16" text-anchor="middle">e</text>
+                  <text x="151" y="90" font-size="16" text-anchor="middle">di</text>
+                  <line class="tenut" x1="98" y1="100" x2="202" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  202,100                  197,95                  207,95 " fill="black" transform="rotate(-90, 202, 100)"/>
+                  <text x="150" y="90" font-size="16" text-anchor="middle">di</text>
+                  <text x="207" y="90" font-size="16" text-anchor="middle">mo</text>
+                  <line class="tenut" x1="47" y1="100" x2="253" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="253" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  253,100                  248,95                  258,95 " fill="black" transform="rotate(-90, 253, 100)"/>
+                  <polygon points="                      300,100                      295,95                      305,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text x="253" y="90" font-size="16" text-anchor="middle">te</text>
+                  <text class="ferm" x="310" y="90" font-size="16" text-anchor="middle">d</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="100" y1="100" x2="151" y2="100" stroke="black" stroke-width="2"/>
+                  <line class="tenut" x1="151" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  151,100                  146,95                  156,95 " fill="black" transform="rotate(-90, 151, 100)"/>
+                  <polygon points="                  300,100                  296,95                  306,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="80" y="90" font-size="16" text-anchor="middle">vuot</text>
+                  <text x="151" y="90" font-size="16" text-anchor="middle">te</text>
+                  <text class="ferm" x="320" y="90" font-size="16" text-anchor="middle">d</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="160" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  300,100                  295,95                  305,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="150" y="100" font-size="16" text-anchor="middle">disp</text>
+                  <text class="ferm" x="310" y="100" font-size="16" text-anchor="middle">e</text></svg>
+               <br>
+               <svg xmlns="http://www.w3.org/2000/svg" width="600" height="120">
+                  <line class="tenut" x1="160" y1="100" x2="300" y2="100" stroke="black" stroke-width="2"/>
+                  <polygon points="                  300,100                  295,95                  305,95 " fill="black" transform="rotate(-90, 300, 100)"/>
+                  <text class="iniz" x="150" y="100" font-size="16" text-anchor="middle">disp</text>
+                  <text class="ferm" x="310" y="100" font-size="16" text-anchor="middle">era</text></svg>
+               <br></p>
+         </div>
+         <div id="fb_provvisorie">
+            <h2>
+               LA FABBRICA ILLUMINATA: STESURE PROVVISORIE
+               </h2>
+            <h3></h3>
+            <div id="arg">
+               
+               <p><span class="zone" id="">
+                     <br>Le diverse versioni de <i>La fabbrica illuminata</i> sono state sviluppate in collaborazione con Luigi Nono 
+                     <br>nel corso del 1964, in risposta alla necessità di ristrutturazioni musicali successive
+                     e all’espansione continua del tema.
+                     <br>La prima versione costituiva un frammento (sogno e incubo) di un testo per teatro
+                     musicale intitolato <i>Un Diario italiano</i>.
+                     <br>La seconda versione è stata concepita per l’utilizzo di una voce solista femminile
+                     e un coro di donne. 
+                     <br>Nella terza versione, gli ampliamenti (incluso l’uso di gergo tipico della fabbrica
+                     e della lingua della
+                     <br>stampa industriale, nonché l’introduzione di nuove voci) sono stati realizzati dopo
+                     una raccolta di 
+                     <br>materiali effettuata presso l’Italsider di Genova Cornigliano (questa versione non
+                     è inclusa nella raccolta Padrone e Servo). 
+                     <br>La quarta versione, divisa in cinque parti (linguisticamente molto simile alla terza),
+                     è stata creata per 
+                     <br>l’utilizzo di gruppi corali distinti, tutti attraversati da una voce femminile. 
+                     <br>La quinta versione, costruita su contrasti, prevedeva l'uso intrecciato e contrapposto
+                     di cori e della voce femminile.
+                     </span></p>
+               </div>
+            <div class="column_sx">
+               <h2>
+                  PRIMA STESTURA. Cinque donne. Sogno e incubo                  
+                  </h2>
+               <p id="dir"><span class="scenografia">a.</span></p>
+               <p class="sezione"><span class="battute">e non si fermano: <span class="umano">mani</span><span class="popup" id="popup_n17">Le figure sono ridotte alle loro voci e si esauriscono nei termini o voci verbali
+                        di rimando al contesto dell'antropos, i quali emergono sporadicamente dal testo: 'mani'
+                        e 'occhi' in particolare si ripetono ossessivamente.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n17">[21]</a> impazzite;<br>le mie <span class="umano">mani</span>, tutte le mie notti,<br>uomini contorti; gli <span class="umano">occhi</span> fissi,<br>e aridi <span class="umano">orgasmi</span>, la <span class="fabbrica">fabbrica</span> illuminata<span class="popup" id="popup_n18">L'umano è accostato alla fabbrica in modo parallelo: così come l'uomo si riduce a
+                        ciò che è umano
+                        anche la fabbrica si riduce ai suoi elementi compositivi; sono presenti non solo riferimenti
+                        alle macchine, ma anche ai processi produttivi.
+                        Il binomio tra le due sfere, ricostruisce una situazione di esistenza, ovvero, quella
+                        operaia.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n18">[22]</a><br></span></p>
+               <p id="dir"><span class="scenografia">
+                     b.
+                     </span></p>
+               <p class="sezione"><span class="battute"><span class="umano">rabbia-dolore</span> nella memoria<br>gli uccisi tornano vivi: compagni<br>uccisi dai compagni<span class="popup" id="popup_n19">La prima versione del testo presenta una denuncia verso gli
+                        omicidi commessi all'interno della Sinistra, scomparsa poi nelle versioni successive.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n19">[23]</a>; <span class="umano">occhi</span> sventrati;<br></span></p>
+               <p id="dir"><span class="scenografia">
+                     c.
+                     </span></p>
+               <p class="sezione"><span class="battute">chi mi <span class="umano">fissa</span>? Eccoli <span class="pausa"><b>—</b></span> mi <span class="umano">guardano</span>,<br><span class="umano">nuda</span> mi <span class="umano">guardano</span> <span class="pausa"><b>—</b></span> <span class="umano">correre</span>, devo; no!:<br><span class="umano">cado</span>, una <span class="fabbrica">macchina a uncini</span><br></span></p>
+               <p id="dir"><span class="scenografia">
+                     d.
+                     </span></p>
+               <p class="sezione"><span class="battute">nella stanza io e un <span class="umano">corpo</span>;<br>la folla cresce parla del morto <span class="pausa"><b>—</b></span><br>suicida <span class="pausa"><b>—</b></span> amico della rivoluzione <span class="pausa"><b>—</b></span><br></span></p>
+               <p id="dir"><span class="scenografia">
+                     e.
+                     </span></p>
+               <p class="sezione"><span class="battute">buttata in involucri deformi:<br>presa: stretta; mi cacciano indietro;<br>mi tengono <span class="pausa"><b>—</b></span> a una casa senza finestre <span class="pausa"><b>—</b></span><br><span class="fabbrica">fabbrica come lager</span> <span class="pausa"><b>—</b></span><br></span></p><br><h2>
+                  SECONDA STESURA. Una donna e coro di donne. Sogno e incubo.              
+                  </h2>
+               <p class="sezione"><span class="umano"><span class="acuto">MANI</span> impazzite</span> <span class="pausa"><b>—</b></span> <span class="umano"><span class="acuto">MANI</span></span>. E non si fermano<br>e <span class="umano">non si fermano <span class="acuto">E NON</span> si fer<span class="acuto">MANO</span></span><br>le <span class="umano"><span class="acuto">MANI</span></span>, gli uccisi tornano vivi, le <span class="acuto">MIE</span> <span class="umano"><span class="acuto">MANI</span></span><br><span class="umano">rabbia-dolore</span> nella memoria, e non <span class="acuto">SI FERMANO</span>,<br>tutte le mie notti <span class="pausa"><b>—</b></span> <span class="acuto">GLI</span> <span class="umano"><span class="acuto">OCCHI</span></span> <span class="acuto">FISSI</span> e<br>aridi <span class="umano">orgasmi</span> <span class="pausa"><b>—</b></span> <span class="umano"><span class="acuto">GLI OCCHI FISSI OCCHI FISSI</span></span><br>gli uccisi tornano vivi <span class="umano"><span class="acuto">OCCHI</span></span> <span class="acuto">FISSI</span> compagni<br>uccisi <span class="acuto">UN</span> <span class="umano"><span class="acuto">CORPO</span></span> dai compagni uccisi<br><span class="umano"><span class="acuto">OCCHI SVENTRATI OCCHI MANI</span></span> chi mi<br><span class="umano">Fissa?</span> tutte le mie notti <span class="pausa"><b>—</b></span> eccoli <span class="pausa"><b>—</b></span> <span class="acuto">MI</span> <span class="umano"><span class="acuto">GUARDANO</span></span><br>gli uccisi <span class="umano"><span class="acuto">NUDA</span></span> <span class="pausa"><b>—</b></span> correre <span class="acuto">NO</span> devo <span class="acuto">NO</span> <span class="pausa"><b>—</b></span> chi?<br><span class="acuto">GUARDANO</span> <span class="umano">cado correre</span> devo <span class="umano"><span class="acuto">CADO</span></span><br><span class="umano">chi</span> mi <span class="umano">fissa</span>? <span class="pausa"><b>—</b></span> eccoli <span class="pausa"><b>—</b></span> <span class="acuto">NO</span>! mi <span class="umano">guardano</span>, <span class="acuto">NO</span>!<br><span class="umano">nuda</span>, <span class="umano">guardano</span> <span class="pausa"><b>—</b></span> <span class="acuto">FISSI</span> uccisi dai compagni <span class="pausa"><b>—</b></span><br><span class="umano"><span class="acuto">GUARDANO</span></span> <span class="pausa"><b>—</b></span> <span class="umano">cado</span> <span class="acuto">NO</span>! una <span class="fabbrica">macchina</span> <span class="umano">chi</span>?<br>una <span class="fabbrica"><span class="acuto">MACCHINA</span></span> io e <span class="acuto">UN</span> <span class="umano"><span class="acuto">CORPO</span></span><br>nella stanza io e un <span class="umano">corpo</span> <span class="acuto">UNA</span> <span class="fabbrica"><span class="acuto">MACCHINA</span></span> a<br><span class="fabbrica"><span class="acuto">UNCINI</span></span> la folla cresce <span class="acuto">FOLLA</span> io e<br>un <span class="umano"><span class="acuto">CORPO</span></span> la folla cresce <span class="pausa"><b>—</b></span> <span class="umano">parla</span> del <span class="acuto">MORTO</span><br><span class="umano">gua<span class="acuto">RDANO</span></span> un <span class="umano"><span class="acuto">CORPO</span></span> <span class="acuto">FOLLA</span><span class="popup" id="popup_n20">A partire dalla seconda stesura, la dimensione dell'operaio è restituita nel binomio
+                     tra individuo e collettività
+                     La condizione del singolo esemplifica una situazione di vita più generale.<br> (Responsabile: Giorgia Migliorini)</span><a href="#" class="popup-trigger" id="n20">[24]</a> presa stretta <span class="umano">IO</span><br><span class="umano"><span class="acuto">IO</span></span> <span class="umano">parla</span> del <span class="acuto">MORTO</span> suicida amico <span class="umano">parla</span> del<br><span class="acuto">MORTO</span> buttata <span class="umano">chi</span> mi <span class="umano"><span class="acuto">FISSA</span></span>? amico della<br>rivoluzione buttata mi <span class="umano"><span class="acuto">TENGONO</span> mani <span class="acuto">MANI</span></span><br>presa stretta <span class="umano"><span class="acuto">IO</span> mi tengono <span class="acuto">MANI</span> e non si fermano</span><br><span class="acuto">STRETTA</span> <span class="umano">mi cacciano</span> indietro amico <span class="umano"><span class="acuto">OCCHI</span></span><br><span class="acuto">FISSI</span> buttata mi <span class="umano"><span class="acuto">TENGONO</span></span> <span class="pausa"><b>—</b></span> a una <span class="acuto">CASA</span> fissa una<br><span class="acuto">CASA</span> indietro stretta <span class="acuto">NO</span>! indietro e <span class="umano">non si <span class="acuto">FERMANO</span></span><br>indie<span class="acuto">TRO</span> <span class="pausa"><b>—</b></span> senza <span class="acuto">FINESTRE</span> a una <span class="acuto">CASA</span><br>senza finestre <span class="umano">mi <span class="acuto">TENGONO</span></span> presa stretta <span class="umano"><span class="acuto">MANI</span> occhi</span><br><span class="acuto">FISSI</span> <span class="fabbrica">fabbrica come lager</span> <span class="pausa"><b>—</b></span> <span class="acuto">SENZA FINESTRE</span> <span class="pausa"><b>—</b></span><br><span class="umano">Mi guardano</span> <span class="pausa"><b>—</b></span> <span class="acuto">FISSI</span> <span class="pausa"><b>—</b></span> la <span class="fabbrica">fabbrica illuminata</span><br><span class="umano">io</span> <span class="pausa"><b>—</b></span> e <span class="umano">non si fermano</span>: <span class="umano"><span class="acuto">MANI</span> impazzite; gli occhi</span><br><span class="acuto">FISSI</span> <span class="umano"><span class="acuto">MANI</span></span> <span class="fabbrica">fabbrica</span> <span class="pausa"><b>—</b></span> <span class="fabbrica"><span class="acuto">ILLUMINATA ILL</span>uminata</span><br></p><br><h2>
+                  QUARTA STESURA. Una donna e cori di donne e uomini contrapposti.              
+                  </h2>
+               <p id="dir"><span class="scenografia">1.</span></p>
+               <p class="sezione"><span class="fabbrica"><span class="acuto">LUCI ABBAGLIANTI</span></span> <span class="pausa"><b>—</b></span> a esalazioni <span class="acuto">ESPOSTI</span> <span class="pausa"><b>—</b></span><br><span class="fabbrica"><span class="acuto">LA POLVERE</span></span> <span class="pausa"><b>—</b></span> gli uccisi <span class="acuto">VIVI</span> <span class="pausa"><b>—</b></span><br><span class="umano">Rabbia-dolore</span> nella memoria <span class="pausa"><b>—</b></span> USTIONI esposti<br><span class="acuto">ESPOSTI</span> a cadute <span class="pausa"><b>—</b></span> <span class="fabbrica">la colata</span> <span class="fabbrica"><span class="acuto">DAI QUADRANTI</span></span><br></p>
+               <p id="dir"><span class="scenografia">2.</span></p>
+               <p class="sezione">Gli <span class="umano"><span class="acuto">OCCHI FISSI</span></span> ai <span class="fabbrica">quadranti</span>, <span class="acuto">E</span> aridi <span class="umano">orgasmi</span> <span class="pausa"><b>—</b></span><br>un giro del letto, tutte le <span class="acuto">MIE NOTTI</span> <span class="pausa"><b>—</b></span> <span class="umano"><span class="acuto">OCCHI</span></span> e <span class="umano">corpo</span><br><span class="umano">occhi</span> <span class="acuto">FISSI</span>, gli <span class="umano"><span class="acuto">OCCHI FISSI</span></span> <span class="pausa"><b>—</b></span> dal pul<span class="acuto">PITO</span><br>ci <span class="umano">guardano</span>, <span class="fabbrica">trucioli scaglie</span> <span class="umano"><span class="acuto">OCCHI</span></span> <span class="umano">occhi</span> <span class="umano"><span class="acuto">MANI</span></span> <span class="pausa"><b>—</b></span> un<br><span class="acuto">RITMO</span> infernanle <span class="pausa"><b>—</b></span> <span class="umano">mani</span>, <span class="acuto">E</span> non si fermano <span class="umano">afferare</span><br>ruotare e:<br>e <span class="acuto">NON</span> si fer<span class="acuto">MANO</span> impazzite, raggiungere,<br>muovere le <span class="umano"><span class="acuto">MANI</span></span> <span class="pausa"><b>—</b></span> le mie <span class="umano"><span class="acuto">MANI</span></span> <span class="pausa"><b>—</b></span> <span class="acuto">ORE</span> al <span class="fabbrica">laminatoio</span>,<br><span class="umano">occhi</span> <span class="umano"><span class="acuto">MANI</span></span> chi mi <span class="acuto">FISSA</span> <span class="pausa"><b>—</b></span> tutte le mie notti,<br>continuamente<br></p>
+               <p id="dir"><span class="scenografia">3.</span></p>
+               <p class="sezione">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eccolo <span class="pausa"><b>—</b></span> <span class="acuto">MI</span><br><span class="umano"><span class="acuto">GUARDANO</span></span>, esposti a cadute <span class="pausa"><b>—</b></span> <span class="umano"><span class="acuto">GUARDANO</span></span> <span class="pausa"><b>—</b></span> <span class="fabbrica">la cabina</span><br>Detta <span class="acuto">TOMBA</span>, dalle <span class="fabbrica">gru</span>, nel collo <span class="pausa"><b>—</b></span> <span class="acuto">USCITA</span>,<br><span class="umano">correre</span> <span class="acuto">NO</span> devo <span class="acuto">NO</span> <span class="pausa"><b>—</b></span> <span class="umano">chi?</span> <span class="umano"><span class="acuto">GUARDANO</span> cado correre</span><br>devo <span class="umano"><span class="acuto">CADO</span></span> <span class="pausa"><b>—</b></span> <span class="umano">chi mi <span class="acuto">FISSA</span>?</span> <span class="pausa"><b>—</b></span> <span class="umano"><span class="acuto">GUARDANO</span></span>, a cadute<br>continua, <span class="acuto">FISSI</span> <span class="umano">cado</span> <span class="acuto">NO!</span> <span class="umano"><span class="acuto">GUARDANO</span></span> <span class="pausa"><b>—</b></span> una <span class="fabbrica"><span class="acuto">MACCHINA</span></span><br>a <span class="fabbrica">quadrante</span> <span class="pausa"><b>—</b></span> <span class="umano"><span class="acuto">OSSERVA</span></span> <span class="pausa"><b>—</b></span> <span class="acuto">NON</span> so <span class="pausa"><b>—</b></span> <span class="acuto">NO</span>, <span class="umano">io</span><br>e <span class="acuto">UN</span> <span class="umano">corpo</span>: nella stanza <span class="pausa"><b>—</b></span> mi <span class="umano"><span class="acuto">GUARDANO</span></span>, <span class="umano">afferra<span class="acuto">NO</span></span> <span class="pausa"><b>—</b></span><br>in SILENZIO, SILENZIO, <span class="umano">guardano</span>, <span class="umano"><span class="acuto">GUARDA</span></span> <span class="pausa"><b>—</b></span> <span class="acuto">NOTTE</span>!<br><span class="acuto">NON</span> <span class="umano"><span class="acuto">PARLARE</span></span> <span class="pausa"><b>—</b></span> senza, <span class="umano"><span class="acuto">GUARDANO</span></span><br></p>
+               <p id="dir"><span class="scenografia">4.</span></p>
+               <p class="sezione">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  la folla <span class="acuto">CRESCE</span>,<br><span class="fabbrica">turno</span> <span class="pausa"><b>—</b></span> cresce <span class="umano">parla</span> del <span class="acuto">MORTO</span>, a ritmo<br>infernale <span class="acuto">NOSTRA</span> <span class="fabbrica">fabbrica</span> <span class="pausa"><b>—</b></span> buttata <span class="umano">mi <span class="acuto">TENGONO</span></span>,<br>di un <span class="acuto">MORTO</span> <span class="pausa"><b>—</b></span> la gente (<span class="acuto">NOSTRA</span> <span class="fabbrica"><span class="acuto">FABBRICA</span></span>) dice<br><span class="fabbrica">fabbrica</span> dei <span class="acuto">MORTI</span> <span class="pausa"><b>—</b></span> sul letto, le <span class="fabbrica"><span class="acuto">SCAGLIE</span></span>,<br>proiettate<br>nella <span class="fabbrica">polvere</span> <span class="acuto">TUTTA</span> la città <span class="pausa"><b>—</b></span> <span class="acuto">NOI</span>; parole <span class="acuto">PROTESTE</span>,<br>dai <span class="acuto">MORTI</span> 
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="acuto">VIVI</span><br></p>
+               <p id="dir"><span class="scenografia">5.</span></p>
+               <p class="sezione">(sarà) <span class="acuto">MATTINA</span> <span class="pausa"><b>—</b></span> volato, dalla <span class="fabbrica">gru</span>: a una casa <span class="pausa"><b>—</b></span> <span class="acuto">ESPOSTI</span>,<br><span class="acuto">FISSA</span> <span class="pausa"><b>—</b></span> senza <span class="acuto">FINESTRE</span>, illuminata, presa, stretta<br>mi <span class="acuto">TENGONO</span> <span class="pausa"><b>—</b></span> <span class="umano">occhi</span> <span class="acuto">FISSI</span> <span class="pausa"><b>—</b></span> <span class="umano"><span class="acuto">GUARDANO</span></span>, sarà<br>(notte) <span class="pausa"><b>—</b></span> <span class="acuto">INDIETRO!</span> <span class="pausa"><b>—</b></span> tagliano i tempi <span class="pausa"><b>—</b></span> e<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="fabbrica"><span class="acuto">FABBRICA</span> come lager</span> <span class="pausa"><b>—</b></span><br>Senza finestre, e non si fermano <span class="pausa"><b>—</b></span> <span class="fabbrica"><span class="acuto">FABBRICA ILLUMINATA</span></span><br><span class="umano">io</span> <span class="fabbrica"><span class="acuto">ILLUMINATA</span></span> <span class="pausa"><b>—</b></span> <span class="umano">io</span> <span class="pausa"><b>—</b></span> <span class="fabbrica">incandescente</span>, <span class="acuto">IMPAZZITA</span> <span class="pausa"><b>—</b></span> <span class="fabbrica">fabbrica</span><br><span class="fabbrica">illuminata</span> 
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <span class="fabbrica"><span class="acuto">ILLUMINATA</span></span><br></p><br><h2>
+                  QUINTA STESURA. A contrasto, una donna, coro di donne, coro di uomini            
+                  </h2>
+               <p id="dir"><span class="scenografia">A</span></p>
+               <p class="sezione"><span class="acuto">ININTERROTTO</span> <span class="pausa"><b>—</b></span> che vuota le ore: <span class="acuto">RITMO</span>,<br><span class="fabbrica">quadranti</span>, <span class="umano"><span class="acuto">VISI</span></span> e <span class="umano">non si fermano</span>;<br>Sera: gi<span class="acuto">RO DEL LETTO</span>: matt<span class="acuto">INA</span>;<br>nella polvere <span class="acuto">TUTTA</span> la città <span class="pausa"><b>—</b></span> <span class="acuto">NOI</span>; parole <span class="acuto">PROTESTE</span>,<br>dai <span class="acuto">MORTI VIVI</span><br>la folla cresce <span class="pausa"><b>—</b></span> <span class="umano">parla</span> del <span class="acuto">MORTO</span><br><span class="fabbrica">fabbrica come lager</span><br>tagliano i tempi <span class="pausa"><b>—</b></span> e<br>la <span class="fabbrica">cabina</span> detta <span class="acuto">TOMBA</span>;<br>per anni accumulando sconfitte,<br>spazi di giorni colpiti <span class="pausa"><b>—</b></span> cieli uguali:<br>fissati a <span class="umano"><span class="acuto">VOLTI</span></span> di guardiani<br>senza finestre,<br>e <span class="umano">non si fermano</span> <span class="pausa"><b>—</b></span> <span class="fabbrica">la fabbrica <span class="acuto">ILLUMINATA</span></span>,<br>e <span class="umano">non si fermano</span><br><span class="fabbrica">incandescente</span>, <span class="fabbrica">il<span class="acuto">L</span>umi<span class="acuto">N</span>a<span class="acuto">T</span>a ill<span class="acuto">UMINATA</span></span><br></p>
+               <p id="dir"><span class="scenografia">B</span></p>
+               <p class="sezione">e <span class="umano">non si fermano</span> <span class="pausa"><b>—</b></span> <span class="umano"><span class="acuto">MANI</span></span> di aggredire, che <span class="pausa"><b>—</b></span><br>al <span class="umano"><span class="acuto">CORPO</span></span>: e <span class="umano">nuda afferrano</span>:<br><span class="umano">guardano</span> <span class="umano"><span class="acuto">GUARDANO</span></span> <span class="umano">occhi</span> fissi: <span class="umano">occhi</span> <span class="umano">mani</span> <span class="umano">chi</span><br><span class="acuto">MI</span> <span class="umano"><span class="acuto">FISSA</span></span>? tutte le mie notti: ma aridi <span class="umano">orgasmi</span> <span class="pausa"><b>—</b></span><br>continuamente: io<br>e un <span class="umano"><span class="acuto">CORPO</span></span><br>buttata <span class="acuto">MI</span> tengono: tornano;<br>presa: stretta: <span class="umano"><span class="acuto">GUARDANO</span></span>, <span class="umano">cado</span>, <span class="acuto">DEVO</span>, <span class="umano">cado</span><br><span class="acuto">FISSI</span> <span class="pausa"><b>—</b></span> uccisi: in <span class="acuto">SILENZIO</span>, <span class="acuto">SILENZIO</span>, <span class="umano">guardano</span>,<br><span class="umano">guarda</span> <span class="pausa"><b>—</b></span> <span class="acuto">NOTTE</span>!<br><span class="umano">rabbia-dolore</span> nella memoria: una <span class="fabbrica"><span class="acuto">MACCHINA</span></span><br>a quadrante <span class="pausa"><b>—</b></span> <span class="fabbrica">illuminata</span> <span class="pausa"><b>—</b></span> <span class="umano"><span class="acuto">PARLA</span></span>: <span class="acuto">NON</span> si <span class="pausa"><b>—</b></span> <span class="acuto">NO</span>, <span class="umano">io</span><br>(sarà) <span class="acuto">MATTINA</span> <span class="pausa"><b>—</b></span> a una casa <span class="acuto">FISSA</span><br>Senza <span class="acuto">FINESTRE</span> <span class="pausa"><b>—</b></span> <span class="umano">mi <span class="acuto">TENGONO</span></span>, presa stretta<br><span class="umano">Io</span> <span class="pausa"><b>—</b></span> e <span class="umano">non si fermano</span>: gli <span class="umano">occhi</span><br><span class="acuto">FISSI</span> <span class="umano"><span class="acuto">MANI</span></span> <span class="pausa"><b>—</b></span> <span class="umano">io</span> <span class="pausa"><b>—</b></span> <span class="fabbrica">illuminata</span> <span class="pausa"><b>—</b></span> <span class="fabbrica">incandescente</span> <span class="pausa"><b>—</b></span><br></p>
+            </div>
+            <p id="back"></p>
+         </div>
+         <div id="fb_definitiva">
+            <h2>
+               LA FABBRICA ILLUMINATA: STESURA DEFINITIVA
+               </h2>
+            <p id="dir"><span class="scenografia">1.</span></p>
+            <p class="sezione">
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="solo"><b><span class="fabbrica">fabbrica</span> dei morti la chiamavano</b></span><br><span class="quotes2"><i>esposizione operaia</i></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <span class="quotes2"><i>a ustioni</i></span><br><span class="quotes2"><i>a esalazioni nocive</i></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <span class="quotes2"><i>a gran masse di <span class="fabbrica">acciaio fuso</span></i></span><br><span class="quotes2"><i>esposizione operaia</i></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <span class="quotes2"><i>a elevatissime temperature</i></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="solo"><b>relazioni umane per accelerare i tempi</b></span><br><span class="quotes2"><i>esposizione operaia</i></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <span class="quotes2"><i>a <span class="fabbrica">materiali proiettati</span></i></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="solo"><b>su otto ore due ne intasca l'operaio</b></span><br><span class="quotes2"><i>esposizione operaia</i></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <span class="quotes2"><i>a cadute</i></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <span class="quotes2"><i>a <span class="fabbrica">luci abbaglianti</span></i></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="quotes2"><i>a <span class="fabbrica">corrente ad alta tensione</span></i></span><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="solo"><b>quanti <span class="acuto">MINUTI-UOMO</span> per morire?</b></span><br></p>
+            <p id="dir"><span class="scenografia">2.</span></p>
+            <p class="sezione">e non si fermano <span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span> <span class="umano"><span class="acuto">MANI</span></span> di aggredire,<br><span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span><span class="acuto">ININTERROTTO</span><span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span>che vuota le ore<br>al <span class="umano"><span class="acuto">CORPO</span></span><span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span><span class="umano">nuda</span> afferrano:<br><span class="fabbrica">quadranti</span>, <span class="umano">visi</span>:<span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span> e <span class="umano">non si fermano</span><br><span class="umano">guardano <span class="acuto">GUARDANO</span> occhi</span> fissi: <span class="umano">occhi mani</span><br>sera <span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span> giro del letto<br>tutte le mie notti <span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span> ma aridi <span class="umano">orgasmi</span><br><span class="acuto">TUTTA</span> la città,<span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span> dai morti<span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span> <span class="umano"><span class="acuto">VIVI</span></span><br><span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span>noi<span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span> continuamente   <span class="acuto">PROTESTE</span><br>la folla cresce parla del <span class="acuto">MORTO</span><br><span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span>la <span class="fabbrica">cabina</span> detta <span class="acuto">TOMBA</span><br><span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span>tagliano i tempi<br><span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="fabbrica">fabbrica come lager</span><br><span class="spazi">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="acuto">UCCISI</span><br></p>
+            <p id="dir"><span class="scenografia">3.</span></p>
+            <p class="sezione"><span class="quotes3">passeranno i mattini</span><br><span class="quotes3">passeranno le angosce</span><br><span class="quotes3">non sarà così sempre</span><br><span class="quotes3">ritroverai qualcosa</span><br></p>
+         </div>
+      </div>
+   </body>
+</html>
