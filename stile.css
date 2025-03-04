@@ -1,0 +1,662 @@
+html, body {
+  font-family: 'Open Sans';
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+   
+
+}
+
+body {
+  max-width: 100vw; /* Impedisce che il body superi la larghezza della finestra */
+  max-height: 100vh; /* Impedisce che il body superi l'altezza della finestra */
+ 
+}
+
+
+
+#frontpage {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;  /* Imposta la larghezza massima */
+    margin: auto;
+}
+
+#frontpage img {
+    width: 100%;  
+    height: auto;      
+    margin:0;
+}
+
+/* titolo */
+#frontpage h2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 4em;          
+    color: white;          
+    font-family: 'Arial', sans-serif;
+    text-align: justify;  
+    
+    font-weight: bold;
+    text-transform: uppercase;
+   
+    line-height: 1.2; 
+}
+
+#frontpage h2:hover{
+    text-shadow: 0 0 5px #fff, 0 0 10px grey, 0 0 20px black; /* Effetto neon */
+}
+
+#nav h3{
+    font-size: 2.5em;
+    padding: 0;
+    margin: 5%;
+}
+
+#nav {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    background-color: rgba(255, 254, 254, 0.95);  /* Background traslucido */
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    width: 50%;  /* Impostato per coprire metà della pagina a destra */
+    height: 95.5%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    opacity: 0;  /* Imposta l'opacità iniziale a 0 per effetto fade-in */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Aggiungi transizioni per fade-in e movimento */
+}
+
+#nav.show {
+    opacity: 0.9;  /* Aggiungi l'opacità quando viene mostrato */
+    transform: translateX(0%); /* Posiziona il nav sulla destra con una transizione */
+    right: 0; /* Muovi il nav a destra */
+}
+
+
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 5%;
+}
+
+#nav ul li {
+    padding: 12px 0; /* Aumenta lo spazio per una maggiore leggibilità */
+    font-size: 1.2em;
+    text-align: justify;
+    cursor: pointer; /* Indica che l'elemento è cliccabile */
+    transition: color 0.3s ease, transform 0.3s ease; /* Aggiungi transizioni al colore e movimento al passaggio del mouse */
+}
+
+#nav ul li:hover {
+    text-shadow: 0 0 5px #fff, 0 0 5px grey; /* Effetto neon */
+    transform: scale(1);  /* Leggero ingrandimento al passaggio del mouse */
+}
+
+#nav ul li a {
+    color: rgb(0, 0, 0);
+    padding: 12px 0; /* Aumenta lo spazio per una maggiore leggibilità */
+    font-size: 1em;
+    text-align: justify;
+    cursor: pointer; /* Indica che l'elemento è cliccabile */
+    transition: color 0.3s ease, transform 0.3s ease; /* Aggiungi transizioni al colore e movimento al passaggio del mouse */
+    text-decoration: none;
+}
+
+#nav ul li a:hover {
+    text-shadow: 0 0 5px #fff, 0 0 5px grey; /* Effetto neon */
+    transform: scale(1);  /* Leggero ingrandimento al passaggio del mouse */
+}
+
+
+#MainTit #i1 {
+  width: 10%;
+  margin: 0 2% 0% 65%;
+}
+
+#MainTit #i2 {
+  width: 15%
+  
+}
+
+
+#MainTit {
+  height: 400px;
+  padding: 7%;
+  padding-top: 5%;
+  margin-left: 5%;
+  line-height: 1.5;
+}
+
+#MainTit h2 {
+  font-size: 25px;
+  padding-bottom: 5%;
+}
+
+
+#sez1 img, #sez2 img, #sez3 img{
+  width: 52%;
+  height: 90%;
+  z-index: 0; 
+}
+
+#sez1, #sez2 {
+  height: 900px;
+  /*background-image: url("CarmiLisetta_Italsider2.png");*/
+  background-repeat: no-repeat; /* Impedisce che l'immagine si ripeta */
+  display: flex; /* Aggiungi Flexbox per il posizionamento del contenuto */
+  align-items: center; /* Centra verticalmente il contenuto */
+}
+
+#sez1 #text_sez1, #sez2 #text_sez2{
+  width: 52%;
+  height: 90%;
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+  font-size: 15px;
+  line-height: 1.5;
+  z-index: 1;
+  padding: 25px; /* Aggiungi padding per migliorare l'aspetto del testo */
+  box-sizing: border-box; /* Assicura che il padding non influisca sulla larghezza */
+  justify-content: flex-start; /* Posiziona il contenuto a sinistra */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra sottile */
+}
+
+
+#sez1 p, #sez2 p {
+  margin: 5%;
+  width: 80%;
+  text-align: justify;
+}
+
+#sez3 {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px; /* Distanza tra i div */
+}
+
+#sez3 p {
+  height: 100%;
+  text-align: justify;
+  margin-top: 2%;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+#sez3 #text_sez3 {
+  width: 90%;
+  height: 80%;
+  margin-top: 3%;
+  font-family: 'Arial', sans-serif;
+  background: white;
+  font-size: 15px;
+  line-height: 1.5;
+  z-index: 1;
+  padding: 25px; /* Aggiungi padding per migliorare l'aspetto del testo */
+  box-sizing: border-box; /* Assicura che il padding non influisca sulla larghezza */
+  flex: 1; /* Ogni div di testo prenderà lo stesso spazio disponibile */
+  min-width: 200px;
+  
+}
+
+#sez3 #text_sez3 h2 {
+  width:350px;
+  font-size: 60px;
+  margin-top: 30%;
+  margin-left: 12%;
+  line-height: 0.9;
+}
+
+#sez4 #text_sez4 h2 {
+  width: 200px;
+  font-size: 70px;
+  margin-top: 15%;
+  margin-left: 5%;
+  margin-right: 20%;
+  line-height: 0.9;
+}
+
+#all_img {
+  display: flex;
+  margin-top: 2%;
+  /*margin-left: 10%;*/
+  
+}
+
+#all_img2 {
+  display: flex;
+
+  padding: 2%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+#all_img3 {
+  display: flex;
+
+  padding: 2%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+#all_img3 img {
+  width: 34%; /* Puoi regolare la percentuale per modificare la larghezza delle immagini */
+  height: auto;
+  padding: 3px;
+
+}
+#all_img img {
+  width: 34%; /* Puoi regolare la percentuale per modificare la larghezza delle immagini */
+  height: auto;
+
+
+}
+
+#all_img2 img {
+  width: 34%; /* Puoi regolare la percentuale per modificare la larghezza delle immagini */
+  height: auto;
+  
+}
+
+#sez4 {
+  background-color: #485d2771;
+  height: 30%;
+}
+
+#bottoni h2:hover {
+  font-size: 20px;
+  color:#5a5858;
+} 
+
+#sez4 #text_sez4 {
+  width: 80%;
+  height: 20%;
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+  font-size: 15px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-left: 5%;
+  margin-left: 12%;
+  box-sizing: border-box; 
+  justify-content: flex-start; 
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+#sez4 #text_sez4 div {
+  width:30%;
+  height: 30%;
+  
+  margin: 4%;
+  line-height: 1.2;
+  padding: 20px;
+  background-color: #485d2771;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: justify;
+}
+
+#sez4 #text_sez4 #bibl6 {
+  margin-top: 0px;
+}
+
+#sez4 #text_sez4 div:hover {
+  background-color: #95a77771;
+}
+
+#all_text h2 {
+    width:70%;
+    margin-top: 4%;
+    margin-left: 5%;
+    margin-right: 8%;
+    margin-bottom: 4%;
+    font-size: 20px;
+}
+
+#all_text h3 {
+    width:50%;
+    margin:2%;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-bottom: 0%;
+    font-size: 16px;
+}
+
+#all_text #back {
+  margin-left: 5%;
+  margin-bottom: 4%;
+  font-size: 14px;
+}
+
+
+.column_sx, .column_dx{
+    margin-bottom: 20px;
+    
+  }
+
+  #imangiatoridinebbia .sezione {
+    margin-left: 3%;
+
+  }
+
+
+  .sezione {
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding:2%;
+    padding-top:2%;
+    margin-left: 5%;
+  }
+
+
+
+  
+  .column_sx {
+    width:80%;
+    font-size: 14px;
+    padding:5%;
+    padding-top:2%;
+    margin-bottom: 10px;
+  }
+
+
+
+
+  #imangiatoridinebbia #dir {
+    margin-left: 6%;
+  }
+
+  .column_sx #dir {
+    margin-left:6%;
+ 
+  }
+  
+  .column_dx {
+    width:80%;
+    font-size: 14px;
+    padding:5%;
+  }
+
+  .column_sx .sezione {
+    margin-bottom: 5px;
+    font-size: 13px;
+    padding:2%; 
+  }
+
+  #fb_provvisorie .column_sx h2 {
+    margin-left: 2%;
+    margin-bottom: 3%;
+    font-size: 16px;    
+  }
+
+  #fb_provvisorie #arg {
+    width: 50%;
+    font-size: 14px;
+    margin-left: 7%;
+    text-align: justify;
+   } 
+
+   #arg p {
+    text-align: justify;
+   }
+
+   #tavole_fonetiche .sezione {
+    width: 50%;
+    font-size: 16px;
+ 
+   }
+
+   #tavole_fonetiche svg {
+    width: 60%;
+    height: 120px;
+   }
+
+/*POP-UP*/
+
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; 
+    border: 1px solid #4a90e2;
+    padding: 10px 15px; 
+    font-size: 1em;
+    text-align: left;
+    width: 220px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
+    color: #333; 
+    margin-top: 15px;
+}
+
+.popup.open {
+    display: block; 
+    z-index: 9999;
+    
+}
+
+.popup.close {
+    display: none; /* Nascondi il popup quando ha la classe 'close' */
+    
+}
+
+
+/* Stile per i numeri */
+      a.popup-trigger {
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+        width: 3px;
+      }
+      
+     
+ /* Stile per il pop-up (lo span) */
+      span.popup {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        padding: 10px 15px 15px 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+      
+      span.not_mus {
+        height: 150px;
+      }
+
+/* Contenitore principale */
+#all_text {
+    display: flex; 
+    flex-direction: column; 
+    width: 100%;
+    position: relative; 
+    background-color: #f4f4f4;
+  }
+  
+ 
+  #lettera1, #lettera2, #chièlafolle, #imangiatoridinebbia, #tavole_fonetiche, #fb_provvisorie, #fb_definitiva {   
+    width:80%;
+    margin-left: 10%;
+    margin-bottom: 20px; 
+    padding-top: 50px;
+    background-color: white;
+    
+  }
+
+  #chièlafolle {
+    background-color: #cec9f058;
+  }
+
+  #fb_definitiva #dir{
+    margin-left: 6%;
+  }
+  
+
+/* Contenitore dei bottoni */
+#bottoni {
+  width: 30%;
+  height: 100%;
+  max-height: 90%; /* Limita l'altezza della barra */
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: none;  
+  opacity: 0;     /* Inizialmente invisibile */
+  transition: opacity 0.7s ease-in-out;  /* Transizione di opacità */
+  display: flex;
+  flex-wrap: wrap; /* Permette ai bottoni di andare su più righe */
+  justify-content: space-around; /* Dispone i bottoni con spazio tra di loro */
+  gap: 10px; /* Spazio tra le righe e le colonne */
+  overflow-y: auto; /* Aggiunge la barra di scorrimento verticale */
+  }
+
+  #bottoni.visible {
+    display: block; /* Mostra il contenitore */
+    opacity: 1; /* Rendi visibile */
+    transition: opacity 0.7s ease-in-out; 
+}
+  
+/* Stile per i bottoni */
+#bottoni button {
+   
+    margin-bottom: 10px;           
+    width: 40%; 
+    margin-right: 2.5%;             
+    margin-left: 2.5%;                           
+    padding: 10px;          
+    font-size: 14px;               
+    color: #fff;                 
+    border: none;               
+    border-radius: 25px;          
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;              
+    transition: all 0.3s ease-in-out; 
+ 
+  }
+  
+  
+/* Stile per il titolo e il paragrafo */
+#bottoni h2, #bottoni p {
+    color: #333; /* Colore testo grigio scuro per un contrasto morbido */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Font professionale e minimale */
+  }
+  
+  #bottoni h2 {
+    margin-top: 3%;
+    margin-left: 30%;
+    font-size: 1.4rem; 
+    margin-bottom: 15px;
+  }
+
+  #bottoni p {
+    font-size: 1rem; /* Dimensione del font più piccola e moderna */
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #555; /* Colore più chiaro per il testo descrittivo */
+    font-weight: bold;
+  }
+
+  #bottoni button:hover {
+    background-color: #f0f0f0; /* Colore di sfondo chiaro al passaggio del mouse */
+    border-color: #bbb; /* Colore del bordo cambia al passaggio del mouse */
+    color: #000; /* Colore del testo cambia a nero */
+    transform: translateY(-3px); /* Leggero spostamento verso l'alto per effetto 3D */
+  }
+  
+  /* Effetto focus sui bottoni */
+  #bottoni button:focus {
+    outline: none; /* Rimuove il bordo di default */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Aggiunge una leggera ombra esterna al focus */
+  }
+      
+      .cyan{background-color: deepskyblue;}
+      .cyan:hover{background-color: cyan;}
+      
+      .gray { background-color: rgb(76, 74, 74);}
+      .gray:hover { background-color: lightgray}
+
+      .orange { background-color: rgb(187, 81, 0);}
+      .orange:hover { background-color: rgb(212, 142, 57)}
+      
+      .yellow { background-color: #FFD700; }
+      .yellow:hover { background-color: #E6C200; }
+      
+      .DarkOliveGreen { background-color: #556B2F; }
+      .DarkOliveGreen:hover { background-color: #485D27; }
+      
+      .DeepPink { background-color: #FF1493; }
+      .DeepPink:hover { background-color: #E01383; }
+
+      .Pink { background-color: #fb82c3; }
+      .Pink:hover { background-color: #ff3aa7; }
+      
+      .purple { background-color: #800080; }
+      .purple:hover { background-color: #6A006A; }
+
+      .brown { background-color: #6f2c02; }
+      .brown:hover { background-color: #522102; }
+      
+      .DarkOrange { background-color: #FF8C00; }
+      .DarkOrange:hover { background-color: #E67B00; }
+      
+      .LawnGreen { background-color: #7CFC00; }
+      .LawnGreen:hover { background-color: #6FE200; }
+      
+      .red { background-color: #FF6347; }
+      .red:hover { background-color: #E55641; }
+      
+      .DarkGreen { background-color: #006400; }
+      .DarkGreen:hover { background-color: #005700; }
+      
+      .DarkSlateBlue { background-color: #483D8B; }
+      .DarkSlateBlue:hover { background-color: #3E3477; }
+      
+      .DarkSalmon { background-color: #E9967A; }
+      .DarkSalmon:hover { background-color: #CC8467; }
+
+      .Salmon { background-color: #f36333; }
+      .Salmon:hover { background-color: #a1380f; }
+      
+      .Maroon { background-color: #800000; }
+      .Maroon:hover { background-color: #6A0000; }
+
+      .DarkCyan {
+        background-color: #008B8B !important;
+        }
+        .DarkCyan:hover {
+        background-color: #007575 !important;
+    }
+
+     .Indigo { background-color: Indigo; }
+
+     .Teal { background-color: Teal; }
+
+      .Blue { background-color: #2002cb;}
+      .Blue:hover {background-color: #7f6de6;}
+      .Tomato { background-color: Tomato; }
+      .Olive { background-color: Olive; }
+
+      span.underline {
+        text-decoration: underline;
+    }
+
