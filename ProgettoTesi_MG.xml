@@ -1,0 +1,1854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI [
+  <!ENTITY mdash '&#x2014;'>
+]>
+<?xml-stylesheet type="text/xsl" href="ProgettoTesi_MG.xsl"?>
+<?xml-model href="tei_mei.rng"?>
+<TEI xml:lang="en" 
+  xmlns="http://www.tei-c.org/ns/1.0"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:mei="http://www.music-encoding.org/ns/mei"
+  xmlns:twm="http://www.tei-c.org/ns/teiWithMusic"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<teiHeader xml:lang="it">
+
+<fileDesc>
+         <titleStmt>
+               <title type='main'>La Fabbrica Illuminata</title>
+               <title type='sub'>Integrazione degli Standard TEI e MEI nell'Analisi e Codifica del Testo</title>
+                   <principal>
+                   <persName>Giorgia Migliorini</persName> 
+                 </principal>
+                    <sponsor>
+                        <orgName ref="up">Università di Pisa</orgName> 
+                        <orgName ref="fs">Fondazione Scabia</orgName>
+                 </sponsor>
+            </titleStmt>
+
+             <editionStmt>
+              <edition>Edizione digitale a carattere didattico -  
+              <date when="2025-04"> aprile 2025 </date>
+              </edition>
+               <respStmt>
+                <resp>Responsabile di codifica -</resp><name> Giorgia Migliorini</name>
+              </respStmt>
+              <respStmt>
+                <resp>Referente universitario -</resp><name> Angelo Mario Del Grosso</name>
+              </respStmt>
+              <respStmt>
+                <resp>Referente universitario -</resp><name> Cristina Savettieri</name>
+              </respStmt>
+          </editionStmt> 
+
+           <publicationStmt>
+               <publisher>Università di Pisa</publisher>
+                <pubPlace>Pisa</pubPlace>
+                <availability status='free'><p>Documento con disponibilità di accesso libero</p></availability>
+            </publicationStmt>
+        
+        <!--NOTE-->
+          <notesStmt>
+            <noteGrp>
+               <note xml:id="organizzazioni">
+                   
+                 <listOrg>
+                    <org xml:id="NC">
+                       <orgName ref="https://it.wikipedia.org/wiki/Nuova_Corrente">Nuova Corrente</orgName>
+                    </org>
+                    <org xml:id="mei">
+                        <orgName ref="https://music-encoding.org/guidelines/v5/content/">Music Encoding Initiative</orgName>
+                    </org>
+                 
+                     <org xml:id="tei">
+                       <orgName ref="https://www.tei-c.org">Text Encoding Initiative</orgName>
+                     </org> 
+                      <org xml:id="teiSig">
+                       <orgName ref="https://github.com/TEI-Music-SIG/tei-mei">TEI-MEI</orgName>
+                     </org>      
+                       <org xml:id="Italsider">
+                       <orgName ref="https://it.wikipedia.org/wiki/Acciaierie_di_Cornigliano">Italsider</orgName>
+                     </org>    
+                      <org xml:id="up">
+                       <orgName ref="https://www.unipi.it">Unipi</orgName>
+                     </org> 
+                      <org xml:id="fb">
+                       <orgName ref="https://fondazionegiulianoscabia.it">Fondazione Scabia</orgName>
+                     </org>        
+            </listOrg>
+        </note>
+        <note xml:id="persone">
+            <!--Menzionati nel brano: IL PARASSITISMO LETTERARIO-->
+            <persName xml:id="LN" ref="https://www.luiginono.it">Luigi Nono</persName>
+            <persName xml:id="GS" ref="https://fondazionegiulianoscabia.it">Giuliano Scabia</persName>
+            <persName xml:id="M" ref="https://it.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart">Mozart</persName>  
+            <persName xml:id="Be" ref="https://it.wikipedia.org/wiki/Ludwig_van_Beethoven">Beethoven</persName>
+            <persName xml:id="V" ref="https://it.wikipedia.org/wiki/Giuseppe_Verdi">Verdi</persName>
+            <persName xml:id="Mu" ref="https://it.wikipedia.org/wiki/Modest_Petrovič_Musorgskij">Muzorskji</persName>
+            <persName xml:id="J" ref="https://cs.wikipedia.org/wiki/Leoš_Janáček">Janacek</persName>
+             <persName xml:id="B" ref="https://it.wikipedia.org/wiki/Béla_Bartók">Bartok</persName>
+             <persName xml:id="S" ref="https://it.wikipedia.org/wiki/Arnold_Schönberg">Schonberg</persName>
+             <persName xml:id="P" ref="https://it.wikipedia.org/wiki/Sergej_Sergeevič_Prokof%27ev">Prokof'ev</persName>
+             <persName xml:id="D" ref="https://it.wikipedia.org/wiki/Luigi_Dallapiccola">Dallapiccola</persName>
+             <persName xml:id="So" ref="https://it.wikipedia.org/wiki/Dmitrij_Dmitrievič_Šostakovič">Šostakovič</persName>
+             <persName xml:id="AZ" ref="https://it.wikipedia.org/wiki/Andrej_Aleksandrovič_Ždanov">Ždanov</persName>
+              <persName xml:id="PP" ref="https://it.wikipedia.org/wiki/Pablo_Picasso">Pablo Picasso</persName>
+               <persName xml:id="LP" ref="https://it.wikipedia.org/wiki/Luigi_Pestalozza">Luigi Pestalozza</persName>
+        </note>
+              <note xml:id="n1" resp="Giorgia Migliorini">Termine impiegato tra i membri del Partito Comunista, a cui è iscritto anche Luigi Nono.</note>
+              <note xml:id="n2" resp="Giorgia Migliorini">Le espressioni riportate tra virgolette fanno parte del materiale linguistico registrato durante l'esperienza di visita 
+              all'accaieria Italsider di Genova-Cornigliano, condotto dall'autore nel 1964, o tratto da giornali e testi d'inchiesta.</note>
+              <note xml:id="n3" resp="Giorgia Migliorini">L'espressione è tratta dal poeta Giuliano Scabia da un articolo di giornale. 
+              Essa, inizialmente impiegata per i testi della raccolta Padrone&amp;Servo, è divenuta centrale all'interno della Fabbrica illuminata.</note>
+              <note xml:id="n4" resp="Giorgia Migliorini">Il napalm è un derivato dell'acido naftenico e dell'acido palmitico 
+              utilizzato per costruire bombe e mine incendiarie, oltre che come combustibile per lanciafiamme.</note>
+              <note xml:id="n5" resp="Giorgia Migliorini">L'autore, come mostrato dalle prime versioni del Diario italiano e della successiva Fabbrica italiana, muove 
+              delle critiche nei confronti dell'attività della sinistra stessa.</note>
+              <note xml:id="n6" resp="Giorgia Migliorini">Compagno musicista o compagno compositore sono le espressioni che Nono utilizza per parlare della propria ricerca e, dunque, 
+              per rivolgersi all'artista contemporaneo, impegnato.</note>
+              <note xml:id="n7" resp="Giorgia Migliorini">La dimensione plurale (noi) a cui Nono fa più volte riferimento si accosta per la prima volta alla comunità socio-politica comunista, 
+              la quale si rivela come ulteriore desitinaraio del messaggio.</note>
+              <note xml:id="n8" resp="Giorgia Migliorini">Sono citati esempi di momenti storici in cui l'impegno sociale di sinistra si è tradotto in rivoluzione, in vera e propria lotta.
+              Si sottolinea, qui, il profilo di Luigi Nono come artista e intellettuali impegnato.</note>
+              <note xml:id="n9" resp="Giorgia Migliorini">La lettera si rivolge agli operai dell'accaiera Italsider di Genova-Cornigliano, aprendosi tuttavia a un
+              repertorio di interlocutori più ampio: Nono si rivolge ai compagni comunisti, siano questi operai o intellettuali. Si riconoscono: in 'voi', gli operai 
+              e la loro condizione di oppressione, che l'autore non ha vissuto e dalla quale si deve giustamente allontanare; in noi, i compagni comunisti. Tali ultimi
+              si caratterizzano ulteriormente negli iscritti al partito e, più nello specifico, negli intellettuali impegnati nella causa del partito.</note>
+              <note xml:id="n10" resp="Giorgia Migliorini">La folle è una dei cinque personaggi femminili delineati da Scabia per le scene del Diario italiano.
+              Il testo ne riporta la storia nelle sue tappe fondamentali.</note>
+              <note xml:id="n11" resp="Giorgia Migliorini">Oltre alla folle: l'amorosa, la rassegnata, la violenta e la cosciente.</note>
+              <note xml:id="n12" resp="Giorgia Migliorini">I personaggi sono restituiti nel testo poetico tramite frammenti di espressioni, accostamenti
+              evocativi di parole e suoni.</note>
+              <note xml:id="n13" resp="Giorgia Migliorini">La presenza del termine sartriano di 'situazione' nelle lettere, mostra l'influenza che
+              esso e il concetto che rappresenta hanno avuto sul lavoro poetico di Giuliano Scabia.</note>
+              <note xml:id="n14" resp="Giorgia Migliorini">L'idea di un cantus firmus circondato da un coro - dunque di una polivocalità - è 
+              fondamentale nella costruzione del testo della Fabbrica illuminata.</note>
+              <note xml:id="n15" resp="Giorgia Migliorini">La festa si riferisce alla scena prevista per la quarta situazione del Diario italiano, Correndo risalire vivere.</note>
+              <note xml:id="n16" resp="Giorgia Migliorini">scolando d'amor con quelle rose in cuor?</note>
+              <note xml:id="n17" resp="Giorgia Migliorini">Le figure sono ridotte alle loro voci e si esauriscono nei termini o voci verbali
+              di rimando al contesto dell'antropos, i quali emergono sporadicamente dal testo: 'mani' e 'occhi' in particolare si ripetono ossessivamente.</note>
+              <note xml:id="n18" resp="Giorgia Migliorini">L'umano è accostato alla fabbrica in modo parallelo: così come l'uomo si riduce a ciò che è umano
+              anche la fabbrica si riduce ai suoi elementi compositivi; sono presenti non solo riferimenti alle macchine, ma anche ai processi produttivi.
+              Il binomio tra le due sfere, ricostruisce una situazione di esistenza, ovvero, quella operaia.</note>
+              <note xml:id="n19" resp="Giorgia Migliorini">La prima versione del testo presenta una denuncia verso gli
+              omicidi commessi all'interno della Sinistra, scomparsa poi nelle versioni successive.</note>
+            </noteGrp>
+            <note xml:id="n20" resp="Giorgia Migliorini">A partire dalla seconda stesura, la dimensione dell'operaio è restituita nel binomio tra individuo e collettività
+            La condizione del singolo esemplifica una situazione di vita più generale.</note>
+            <note xml:id="n22" resp="Giorgia Migliorini">La dimensione romantica della sera è qui dissacrata: l'uomo stanco di fronte al televisore
+            guarda i suoi idoli. I calciatori sono i nuovi dei, moderni eroi mitologici e mitici.</note>
+          </notesStmt>
+
+          <sourceDesc>
+              <listBibl>
+               
+               <bibl xml:id="bibl1">
+                <title level="a" type="main">Lettera agli operai dell'Italsider di Genova-Cornigliano</title>
+                <author>Luigi Nono</author>
+                <series>
+                  <title>Nuova Musica Nuovo Teatro</title>
+                  <editor>Andrea Mancini</editor>
+                  <idno type="publisher">La conchiglia di Santiago</idno>
+                  <idno type="yearofpublication">2024</idno>
+                  <biblScope>pp. 94-95</biblScope>
+                </series>
+                <note>
+                La lettura della lettera è avvenuta in occasione dell'esecuzione della Fabbrica illuminata
+                presso l'Italsider di Genova-Cornigliano, organizzata nel 1965 da una delegazione di operai
+                iscritti al partito comunista. In seguito a questo primo incontro, l'opera è stata eseguita
+                in altre fabbriche italiane e all'interno di centri di riunione politico-sociale, creando 
+                numerose occasioni di confronto tra il compositore e gli operai.
+                </note>
+               </bibl>
+
+                  
+               <bibl xml:id="bibl2">
+                <title level="a" type="main">Chi è la folle?</title>
+                <author>Giuliano Scabia</author>
+                <date when="1964-02-23">23/02/1964</date>
+                <note>Luogo di spedizione: <placeName>Milano</placeName></note>
+                <note>Destinatario: <persName ref="#LN">Luigi Nono</persName></note>
+                <series>
+                <note>
+                La lettera appartiene allo scambio epistolare che <persName ref="#GS">Giuliano Scabia</persName> e <persName ref="#LN">Luigi Nono</persName> hanno 
+                intrapreso nel 1961 e mantenuto fino al 1966. La lettera è conservata, insieme alle altre, presso 
+                l'Archivio Scabia a Firenze.
+                Oltre al messaggio contenuto nel corpo dell'epistola, essa presenta un testo allegato redatto in un momento diverso,
+                precedente a quello della lettera stessa.
+                </note>
+                </series>
+
+               </bibl>
+
+               <bibl xml:id="bibl3">
+               <title type="main">È stato un massacro</title>
+               <title type="sub">Coro. I vivi e i morti del Vajont</title>
+               <author>Giuliano Scabia</author>
+               <editor>Luigi Nono</editor>
+               <date when="1964">1964</date>
+               <series>
+                  <title>Nuova Musica Nuovo Teatro</title>
+                  <editor>Andrea Mancini</editor>
+                  <idno type="publisher">La conchiglia di Santiago</idno>
+                  <idno type="yearofpublication">2024</idno>
+                  <biblScope>pp. 42-45</biblScope>
+               </series>
+               <note>Il brano costituisce la prima sezione del coro III, situato nella V scena del Diario italiano, mai concluso.
+               L'attività di codifica ne prende in considerazione la versione trascritta e pubblicata nel volume Nuova Musica Nuovo Teatro.</note>
+               </bibl>
+
+               <bibl xml:id="bibl4">
+               <title type="main">I mangiatori di nebbia</title>
+                <author>Giuliano Scabia</author>
+                <series>
+                 <title>Padrone&amp;Servo</title>
+                  <editor>Sciascia</editor>
+                  <idno type="author">Giuliano Scabia</idno>
+                  <idno type="yearofpublication">1965</idno>
+                  <biblScope unit="82-93">56-63</biblScope>
+                </series>
+
+                <note type="annotation">Il testo appare per la prima volta sulla rivista <orgName ref="#NC">Nuova Corrente</orgName>
+                e solo in seguito è inserito nella raccolta poetica. La prima versione conteneva anche una sezione B, poi 
+                eliminata.</note>
+               </bibl>
+
+               <bibl xml:id="bibl5">
+               <series>
+                <title>Padrone e Servo</title>
+                  <editor>Sciascia</editor>
+                  <idno type="author">Giuliano Scabia</idno>
+                  <idno type="yearofpublication">1965</idno>
+                  <biblScope unit="82-93">82-93</biblScope>
+               </series>
+               
+               <title type="main">La fabbrica illuminata</title>
+               <title type="sub">I stesura - Cinque donne. Sogno e incubo</title>
+               <title type="sub">II stesura - Una donna e coro di donne. Sogno e incubo</title>
+               <title type="sub">IV stesura - Una donna e cori di donne e uomini contrapposti</title>
+               <title type="sub">V stesura - A contrasto. Una donna. Coro di donne. Coro di uomini</title>
+
+               <note type="annotation">La terza stesura non è stata mai aggiunta alla raccolta. Essa è presente, in varie forme mai 
+               concluse, all'interno delle lettere che i due autori si scambiavano.</note>
+               </bibl>
+
+               <bibl xml:id="bibl6">
+                  <series>
+                     <title type="main">La fabbrica illuminata</title>
+                      <title type="sub">per soprano e nastro magnetico a quattro piste (1964)</title>
+                      <editor>Luca Cossettini</editor>
+                      <editor>Casa Ricordi</editor>
+                      <idno type="yearofpublication">1967</idno>  
+                      <biblScope unit="page">p. 35</biblScope> 
+                  </series>
+                  <title type="main">Stesura definitiva</title>
+
+                  <note type="annotation">La codifica della stesura definitiva della Fabbrica illuminata prende in considerazione 
+                  la versione pubblicata da Casa Ricordi all'interno dell'edizione critica del 1967.</note>                
+               </bibl>
+
+             </listBibl>
+             
+           </sourceDesc>
+  </fileDesc>
+
+  <!--Encoding Description-->
+  <encodingDesc>
+    <projectDesc>
+      <p>
+      L'attività di codifica, qui documentata nei suoi risultati, ha interessato alcuni dei testi 
+      redatti dal poeta <persName ref="#GS">Giuliano Scabia</persName> nel contesto della collaborazione artistica con il compositore
+      <persName ref="#LN">Luigi Nono</persName>. Nonostante i primi brani introduttivi (le due lettere), aggiunti in sostegno
+      dell'apparato critico e teorico situato nei capitoli primo e secondo dell'elaborato di tesi, i testi 
+      poetici successivi (I mangiatori di nebbia, I morti del Vajont e le stesure della Fabbrica illuminata) 
+      hanno sollecitato la ricerca di possibilità alternative di codifica.<lb/>
+      <lb/>
+      Fine principale del progetto, infatti, è quello di offrire una codifica il quanto più attinente possibile
+      alla natura dei testi, alla loro composizione, per come essa è stata discussa.<lb/>
+       <lb/>   
+      Oltre al repertorio <orgName ref="#tei">TEI (Text Encoding Initiative)</orgName>, infatti, la codifica ha usufruito anche dei moduli e degli elementi 
+      <orgName ref="#mei">MEI (Music Encoding Initiative)</orgName> sperimentando una integrazione tra le due. Ciò si è reso necessario al fine di 
+      preservare la natura significante della forma poetica raggiunta dall'autore, nel contesto della sfumatura
+      interpretativa proposta in questa dissertazione.<lb/> 
+      <lb/>
+      La codifica è stata intrapresa attingengo alla documentazione offerta dalle linee guida <orgName ref="#tei">TEI</orgName> e <orgName ref="#mei">MEI</orgName>.
+      Sono stati consultati anche i documenti concernenti possibili integrazioni tra gli schemi delle due Iniziative di Codifica
+      frutto del lavoro del <orgName ref="#teiSig">TEI-MUSIC-SIG</orgName> (TEI's Special Intrest Group in Music).<lb/> 
+      A partire dalle specifiche grammaticali sperimentate dai membri del <orgName ref="#teiSig">TEI-MUSIC-SIG</orgName>, sono state poi 
+      aggiunte nuove customizzazioni necessarie ad adattare la codifica alla natura e alla interpretazione dei 
+      testi poetici. In alcuni casi, si è rivelato necessario anche un semplice aggiornamento della documentazione 
+      consultata dovuto alle modifiche recenti di <orgName ref="#tei">TEI</orgName> e di <orgName ref="#mei">MEI</orgName>, successivi all'attività più datata sulla loro integrazione. 
+      </p>
+    </projectDesc>
+
+    <samplingDecl>
+      <p>
+      <emph rend="bold">SULLA SELEZIONE DEI TESTI</emph><lb/>
+      <lb/>
+      La selezione dei testi è funzionale alla comprensione delle interpretazioni critiche esposte nell'elaborato di tesi 
+      poiché costituiscono un esempio concreto di quanto discusso. La codifica delle due lettere iniziali consente di mettere in evidenza
+      il metodo di lavoro artistico di <persName ref="#GS">Giuliano Scabia</persName> e l'influenza su di esso della personalità di Luigi Nono.<lb/>
+      I testi successivi, invece, introducono gradualmente alla codifica della stesura definitiva della <emph rend="italic">Fabbrica illuminata</emph> e alla sua comprensione.
+      Le tavole fonetiche che costituiscono una sezione della parte corale della V° scena del <emph rend="italic">Diario italiano</emph> determinano la base delle soluzioni formali 
+      addottate per il coro della <emph rend="italic">Fabbrica illuminata</emph> e segnano lo sviluppo artistico del poeta.<lb/> 
+      I mangiatori di nebbia - testo che precede le sei versioni della <emph rend="italic">Fabbrica illuminata</emph> nella raccolta Padrone&amp;Servo - 
+      mostra come la crescita di Scabia non fosse circoscritta alla sola attività e collaborazione con Nono, bensì come essa si relazionasse
+      anche con altri aspetti e momenti della sua riflessione poetica.<lb/>
+      La codifica delle cinque versioni della <emph rend="italic">Fabbrica illuminata</emph> precedenti a quella definitiva, invece, è stata aggiunta per ricostruire il percorso graduale 
+      del testo dal Diario italiano fino alla forma autonoma a cui è giunta, mettendo in evidenza i punti di continuità e di distanza.   
+      </p>
+    </samplingDecl>
+
+    <editorialDecl>
+      <correction>
+         <p>La codifica delle due lettere iniziali ha messo in evidenza eventuali errori ortografici - in prevalenza
+         dovuti alla trascrizione a macchina dei testi manoscritti originali - offrendo delle alternative di marcatura
+         consultabili. Sono state riportate, inoltre, le correzioni aggiunte dagli autori stessi.</p>
+      </correction>
+      <segmentation>
+       <p>
+        I testi in prosa sono stati codificati ricalcando la struttura gerarchica reale, senza modifiche tipografiche.
+        Le porzioni testuali sono divise in frasi (distinte da punto) e in paragrafi (distinti da battute a capo).<lb/>
+        I testi poetici sono stati suddivisi per <emph rend="italic">lines groups</emph> sulla base delle divisioni
+        intraprese dall'autore.
+        Il testo del coro <emph rend="italic">I morti del Vajont</emph> è considerato come una poesia, dunque, codificato 
+        secondo le soluzioni adottate per il resto dei testi poetici. Interni agli elementi <emph rend="italic">l</emph>
+        sono stati inseriti i <emph rend="italic">verse</emph> e le <emph rend="italic">syl</emph> che costituiscono le 
+        porzioni del verso interessate dalla deflagrazione fonetica.
+       </p>
+      </segmentation>
+      <interpretation>
+       <p>
+       Il tag <emph rend="italic">term</emph> con attributo <emph rend="italic">type</emph> è stato utilizzato nel primo testo:<lb/>
+       - Per mettere in evidenza i riferimenti alla condizione lavorativa operaia e le espressioni evocative associate a essa<lb/>
+       - Per sottolineare la dialettica tra mittente (Luigi Nono), destinatario principale (operai) e destinatario secondario (gli intellettuali impegnati)<lb/>
+
+       Nel secondo testo:<lb/> 
+       - Per evidenziare le locuzioni tecniche provenienti dalla disciplina della psicologia e, dunque, l'interesse per la descrizione della vita interna del personaggio<lb/>
+       - Per identificare la varia natura (sociale, religiosa, economica) delle tappe biografiche ripercorse dall'autore<lb/>
+         nella caratterizzazione della figura<lb/>
+
+      Nei testi poetici:<lb/>
+      - Per mettere in evidenza la natura eterogenea del materiale linguistico utilizzato. Sono stati marcati tecnicismi, temrini specifici<lb/>
+        espressioni tratte dalla quitidianità, colloquiali, dialettali o forestierismi che nella loro totalità possono offrire
+        un'idea di quella <emph rend="italic">stralingua</emph> ricercata dall'autore
+      - Per sottolineare elementi di interesse nell'analisi contenutistica dei testi (es. tematiche)<lb/>
+
+      <lb/>
+      Dal reperorio <orgName ref="#mei">MEI</orgName>, integrati all'interno del contesto di struttura <orgName ref="#tei">TEI</orgName>:<lb/>
+       - <emph rend="italic">section</emph>, <emph rend="italic">measure</emph>, <emph rend="italic">staff</emph>, <emph rend="italic">layer</emph> sono stati utilizzati
+          nel caso dei frammenti di partiture musicali inseriti nel testo poetico, per identificarne la struttura<lb/>
+       - <emph rend="italic">beam</emph> è stato utilizzato per sottolineare la presenza di più eventi sonori, sia collegati da
+          legature di portamento, sia eseguiti in simultaneo (<emph rend="italic">chord</emph>)<lb/>
+      - <emph rend="italic">note</emph> per segnalare un unico evento sonoro. L'evento può essere occupato anche dalla presenza di una
+        sillaba, parola o frazione di parola, codificata sempre come <emph rend="italic">syl</emph> e allo stesso tempo come parte del verso contenitore <emph rend="italic">l</emph><lb/>
+      - <emph rend="italic">breath</emph> è utilizzato per segnalare un momento di pausa visiva e uditiva<lb/>
+      - <emph rend="italic">dir</emph> è tra gli elementi di marcatura più impiegati nel progetto; esso risulta fondamentale per
+        identificare le direttive tecniche inserite dall'autore nel testo al fine di procedere verso un allargamento scenografico
+       </p>
+      </interpretation>
+    </editorialDecl>
+
+  </encodingDesc>
+
+
+  </teiHeader>
+
+  <!--TESTI-->
+  <text xml:id="t1">
+    <front>
+    <div xml:id="tit1">
+      <head>
+        <lb/><persName ref="#LN"><forename>LUIGI</forename> <surname>NONO</surname></persName> 
+        <lb/>Lettera agli operai dell&#x27;<orgName type="factory" ref="#Italsider">Italsider</orgName> di <placeName><settlement type="city">Genova-Cornigliano</settlement></placeName><ref ana="n9"/>
+      </head>
+      
+     </div>
+    </front>
+    <body>
+      <div xml:id="sx">
+         <p xml:id="paragrafo1_t1">
+          <s>
+            <lb/>cari compagni dell&#x27;<orgName type="factory" ref="#Italsider">Italsider</orgName>
+            <lb/>
+            <lb/>giovedì pomeriggio nella vostra sezione di <placeName><settlement type="city">Cornigliano</settlement></placeName> insieme ascolteremo <title ref="#fb" rend="italic">La fabbrica illumi-
+            <lb break="no"/>nata</title> e insieme anche al <persName><term type="socio-economic">compagno</term><ref ana="n1"/> <forename ref="#LP">Luigi</forename><surname ref="#LP"> Pestalozza</surname></persName> ne discuteremo.</s><s> <choice><sic>questa</sic><corr>Questa</corr></choice> mia musica è nata da
+            <lb/>un nostro primo incontro avvenuto all&#x27;<orgName type="factory" ref="#Italsider">Italsider</orgName> di <placeName><settlement type="city">Cornigliano</settlement></placeName> nel <date>maggio del &#x27;64</date>, dalle vostre
+            <lb/>parole e dalla vostra complessa <term type="workingcond">lotta</term>; è a <term type="interlocutore">voi</term> dedicata come partecipazione e scelta determinata
+            <lb/>da un <persName ref="#LN"><term type="socio-economic">compagno</term><ref ana="n1"/></persName> verso chi lo ha ispirato: non madonne né santi né altre spiritualità
+            <lb/>astratte (ma quanto interessate!) della <term type="socio-economic">classe borghese</term>, bensì la <term type="socio-economic">classe operaia</term>, fulcro determinan-
+            <lb break="no"/>te e rivoluzionario del nostro tempo, sia pur in un drammatico momento attuale di massimo
+            <lb/>sforzo del <term type="socio-economic">neo-capitalismo</term>, che tende a imprigionare la spinta a trasformare il mondo.
+          </s>
+         </p>
+         <p xml:id="paragrafo2_t1">
+           <floatingText>
+             <body>
+               <div>                 
+                <lb/><ab><quote ana="fb">"fabbrica dei morti la chiamavano"</quote></ab> 
+                <lb/><ab><quote ana="fb">"su otto ore solo due ne intasca l&#x27;operaio"</quote></ab>
+                <lb/><ab><quote ana="fb">"relazioni umane per accelerare i tempi"</quote></ab>
+                <lb/><ab><quote ana="fb">"quanti minuti-uomo per morire"<ref ana="n2"/></quote></ab>
+               </div>
+             </body>
+           </floatingText> 
+         </p>
+         <p xml:id="paragrafo3_t1">
+          <s>
+           <lb/><choice><sic>ecco</sic><corr>Ecco</corr></choice> alcuni temi dello sfruttamento che cinicamente il <term type="socio-economic">grande capitale</term> esercita su di <term type="interlocutore">voi</term>, contro
+           <lb/><term type="interlocutore">voi</term>, e che formano il testo stesso del giovane <roleName>poeta</roleName> <persName ref="#GS"><forename>Giuliano</forename> <surname>Scabia</surname></persName>.
+          </s>
+         </p>
+         <p xml:id="paragrafo4_t1">
+          <s>
+           <lb/><quote ana="fb">"fabbrica come lager"</quote><ref ana="n3"/>: nella <term type="workingcond">realtà tumultuosa e incandescente</term> dei <placeName type="factory">laminatoi</placeName> a caldo e a freddo e
+           <lb/>negli <placeName type="factory">altoforni</placeName>, mi sconvolse la violenza con cui in quei luoghi mi si manifestò la <term type="socio-economic">presenza reale
+           <lb/>operaia</term> nella sua <term type="workingcond">drammatica condizione</term>, e mi colpì violentemente la divisione esistente tra <term type="interlocutore">voi
+           <lb/>operai</term>, sottoposti a <term type="workingcond">un&#x27;oppressione disumana</term>, finalisticamente razionalizzata.
+          </s>
+         </p>
+         <p xml:id="paragrafo5_t1">
+         <floatingText>
+           <body>
+             <div>
+               <lb/><ab><quote>“fabbrica &#x2014; appunto &#x2014; come lager”.<ref ana="n2"/></quote></ab>
+             </div>
+           </body>
+         </floatingText>
+         </p>
+         <p xml:id="paragrafo6_t1">
+          <s>
+            <lb/>il <term type="socio-economic">capitalismo</term> e l&#x27;<term type="socio-economic">imperialismo</term> colpiscono dove e come possono;
+            <lb/>anche per un&#x27;equivoca concezione della coesistenza.
+          </s>          
+         </p>
+         <p xml:id="paragrafo7_t1">
+           <s>
+            <lb/><term type="chemical">Napalm</term><ref ana="n4"/> nel <placeName><country>Vietnam</country></placeName>, nel <placeName><country>Cile</country></placeName>, assassini e torture in <placeName><country><choice><abbr>S.</abbr><expan>Santo</expan></choice> Domingo</country></placeName>, nell&#x27;<placeName><country>Angola</country></placeName>, nel <placeName><country>Congo</country></placeName>, nel
+            <lb/><placeName><country>Venezuela</country></placeName>, intervento economico <term type="geopolitical">americano</term> &#x2014; sempre quello &#x2014; come alla <orgName type="factory" ref="#SGiorgio"><choice><abbr>S.</abbr><expan>San</expan></choice> Giorgio</orgName> vostra,
+            <lb/> <term type="workingcond">licenziamenti</term> <term type="workingcond">intimidazioni</term> <term type="workingcond">discriminazioni</term> come sotto l&#x27;attuale apparentemente fallito <orgName type="role">governo</orgName>
+            <lb/>di <term type="socio-economic">centro-sinistra</term>.<ref ana="n5"/>
+           </s>
+          </p>
+          <p xml:id="paragrafo8_t1">
+            <s><lb/><choice><sic>il</sic><expan>Il</expan></choice> <placeName><country>Vietnam</country></placeName> oggi è anche in ogni <term type="comunità">nostra</term> <orgName type="factory">fabbrica</orgName>.</s>
+          </p>
+          <p xml:id="paragrafo9_t1">
+             <s>
+               <lb/><choice><sic>la</sic><corr>La</corr></choice> lotta eroica dei <orgName type="social">partigiani</orgName> e del <orgName><choice><abbr>FNL</abbr><expan>Fronte di Liberazione Nazionale</expan></choice></orgName> <term type="geopolitical">vietnamita</term> è anche in ogni <orgName type="factory">fabbrica</orgName> <term type="comunità">nostra</term>, dove si con-
+               <lb break="no"/>trasta e si contesta il <term type="socio-economic">potere del capitale</term>.
+             </s>
+          </p>
+          <p xml:id="paragrafo10_t1">
+            <s>
+               <lb/><choice><sic>e</sic><corr>E</corr></choice> come nel <placeName><country>Vietnam</country></placeName>, così da ogni <orgName type="factory">fabbrica</orgName> <term type="comunità">nostra</term> (e dall&#x27;<orgName type="factory" ref="#Italsider">Italsider</orgName>, esempio 'illuminato' di
+               <lb/><term type="workingcond">oppressione operaia</term>) si indica e si prepara la vera <term type="socio-economic">condizione comunista</term> dell&#x27;uomo finalmente
+               <lb/> libero.
+            </s>
+         </p>
+         <p xml:id="paragrafo11_t1">
+          <s>
+              <lb/><choice><sic>momenti</sic><corr>Momenti</corr></choice> di dubbio di incertezza e di sconforto sono purtroppo possibili: l&#x27;intimidatrice e
+              <lb/>ricattatoria pressione degli attuali <roleName>governanti</roleName>, che sempre più vilmente si inchinano al volere
+              <lb/>dell&#x27;attuale direzione degli <placeName><country>Stati Uniti</country></placeName>, possono determinarli.
+          </s>
+         </p>
+         <p xml:id="paragrafo12_t1">
+           <s>
+             <lb/><choice><sic>ma</sic><corr>Ma</corr></choice> in ogni momento <term type="comunità">manteniamo</term> vivo e <term type="comunità">portiamo</term> avanti l&#x27;insegnamento della grande <term type="storicalevent">rivolu-
+             <lb break="no"/>zione bolscevica</term> del &#x27;17 e della gloriosa <term type="storicalevent">rivoluzione cinese</term>.
+           </s>
+         </p>
+         <p xml:id="paragrafo13_t1">
+          <s>
+            <lb/><orgName type="factory"><choice><sic>fabbrica</sic><corr>Fabbrica</corr></choice></orgName> e <term type="socio-economic">internazionalismo operaio</term> come fonte di libertà.
+          </s>
+         </p>
+         <p xml:id="paragrafo15_t1">
+           <s>
+             <lb/><choice><sic>questa</sic><corr>Questa</corr></choice> non può non essere la convinzione del <term type="socio-economic">compagno</term> musicista<ref ana="n6"/>.
+           </s>
+         </p>
+         <p xml:id="paragrafo16_t1">
+           <s>
+             <lb/><choice><sic>una</sic><corr>Una</corr></choice> vittoria o una sconfitta di una <term type="workingcond">lotta operaia</term> è nello stesso tempo una vittoria o una sconfitta
+             <lb/>per la <term type="socio-economic">cultura rivoluzionaria</term> (ed è implicitamente in ogni caso un fatto di <term type="socio-economic">cultura rivoluziona-
+             <lb break="no"/>ria</term>), così l&#x27;affermarsi o la difficoltà di una posizione artistica, se rivoluzionaria, è nello stesso
+             <lb/>tempo affermazione o difficoltà anche per quell&#x27;operaio o contadino o tecnico, ai quali ancora
+             <lb/>oggi è reso difficile poter sapere di musica di pittura o di poesia.
+           </s>
+         </p>
+      </div>
+      <div xml:id="sx">
+         <p xml:id="paragrafo17_t1">
+           <s>
+             <lb/><choice><sic>certo</sic><corr>Certo</corr></choice> è possibile chiedere cosa può la musica in tempo di <term type="workingcond">conflitti sindacali</term>, di <term type="workingcond">rivendicazioni
+             <lb/>salariali</term>, di <term type="workingcond">lotta di classe</term>?
+           </s>
+         </p>
+         <p xml:id="paragrafo18_t1">
+           <s>
+            <lb/><persName ref="#M"><surname>Mozart</surname></persName><persName ref="#Be"><surname> Beethoven</surname></persName><persName ref="#V"><surname> Verdi</surname></persName>, <persName ref="#Mu"><surname>Musorgskij</surname></persName> <persName ref="#J"><surname>Janáček</surname></persName> <persName ref="#B"><surname>Bartók</surname></persName> <persName ref="#S"><surname>Schömberg</surname></persName> <persName ref="#D"><surname>Dallapiccola</surname></persName> possono contri-
+            <lb break="no"/>buire a rispondere a tale domanda, rapportata al <term type="socio-economic">mondo borghese</term>: impegno e partecipazione
+            <lb/>attiva allo sviluppo storico.
+           </s>
+         </p>
+         <p xml:id="paragrafo19_t1">
+           <s>
+             <lb/><choice><sic>e</sic><corr>E</corr></choice> oggi?
+           </s>
+         </p>
+         <p xml:id="paragrafo20_t1">
+           <s>
+             <lb/><persName ref="#P"><surname>Prokof&#x27;ev</surname></persName> e soprattutto <persName ref="#So"><surname>Šostakovič</surname></persName> hanno avanzato alcune proposte e realizzazioni, da considera-
+             <lb break="no"/>re naturalmente nella loro storia culturale politica.
+           </s>
+         </p>
+         <p xml:id="paragrafo21_t1">
+           <s>
+             <lb/><choice><sic>in</sic><corr>In</corr></choice> settembre a <placeName><settlement type="city">Varsavia</settlement></placeName> il <roleName>compositore</roleName> <term type="geopolitical">cinese</term> <persName ref="#Go"><surname>Go-Jen</surname></persName> di <placeName><settlement type="city">Shangai</settlement></placeName> mi raccontava la sua esperienza
+             <lb/>a diretto contatto con i contadini: a lui raccontai la mia esperienza diretta con <term type="interlocutore">voi</term>, <term type="socio-economic">operai</term> dell&#x27;<orgName ref="#Italsider">I-
+             <lb break="no"/>talsider</orgName>, per la nascita de <title ref="#fb" rend="italic">La fabbrica illuminata</title> .
+           </s>
+         </p>
+         <p xml:id="paragrafo22_t1">
+           <s>
+            <lb/><choice><sic>ritengo</sic><corr>Ritengo</corr></choice> che il rapporto diretto con <term type="interlocutore">voi operai contadini e nuovi tecnici</term> sia il punto di partenza
+             <lb/>per il <term type="socio-economic">compagno</term> <roleName>compositore</roleName>.
+           </s>
+         </p>
+         <p xml:id="paragrafo23_t1">
+           <s>
+             <lb/><choice><sic>ciò</sic><corr>Ciò</corr></choice> da solo naturalmente non garantisce la validità di una musica, ma ne è la condizione fon-
+             <lb break="no"/>damentale: per il <roleName>musicista</roleName> da realizzare con i propri mezzi linguistici, che solo a lui in quanto
+             <lb/><roleName>musicista</roleName> è possibile, esattamente come il <term type="socio-economic">sindacalista operaio</term> opera nella propria organizzazione
+             <lb/>e non in un&#x27;altra.
+           </s>
+         </p>
+         <p xml:id="paragrafo24_t1">
+           <s>
+             <lb/>Due momenti, altrimenti realizzati, di una stessa situazione o scelta o <term type="workingcond">lotta</term>, reciproci tra loro,
+             <lb/>fino alla compensazione tra loro nella <term type="workingcond">lotta comune</term>.
+           </s>
+           <s> 
+             proprio nel potenziale culturale che la
+             <lb/><term type="socio-economic">struttura neocapitalista</term> tende ad addormentare (mezzi di comunicazione nuovi radio-televi-
+             <lb break="no"/>sione-pubblicazioni di massa: la cui camera dei bottoni rappresenta un adeguamento, non una
+             <lb/>trasformazione radicale di struttura) e su cui anche <term type="comunità">noi</term> <term type="socio-economic">comunisti</term><ref ana="n7"/>, bisogna dirlo, non <term type="comunità">operiamo</term>
+             <lb/>con sufficiente inventiva e prospettiva rivoluzionaria.
+           </s>
+         </p>
+         <p xml:id="paragrafo25_t1">
+            <s>
+              <lb/>anche il <term type="socio-economic">compagno</term> <roleName>musicista</roleName> opera condizionato, ma la tensione è sempre verso il <term type="comunità">nostro</term> <term ref="storicalevent">otto-
+              <lb break="no"/>bre rivoluzionario</term>, verso la <term type="storicalevent">lunga marcia</term>, verso la <term type="comunità">nostra</term> <term type="geopolitical">Sierra</term>. <ref ana="n8"/>
+            </s>
+         </p>
+         <p xml:id="paragrafo26_t1">
+          <floatingText>
+            <body>
+               <lb/><ab>insieme uniti, <term type="socio-economic">compagni</term>!</ab>
+            </body>
+          </floatingText>
+        </p>
+      </div>
+    </body>
+    <back>
+      <closer>
+        (<dateline><placeName><settlement>Venezia</settlement></placeName> <date>21 novembre 1965</date></dateline>)
+      </closer>
+    </back>
+  </text>
+  <!--SECONDO TESTO-->
+  <text xml:id="t2">
+   <front>
+     <div xml:id="tit2">
+        <head>
+          <lb/>Da Giuliano Scabia a Luigi Nono 
+        </head>
+        <opener>
+          <dateline>Milano&#47;23&#47;2&#47;64 - <lb/>ore 11</dateline>
+        </opener>
+     </div>
+   </front>
+   <body>
+     <div>
+        <p xml:id="paragrafo1_t2">
+        <s>
+          <lb/>caro <persName ref="#LN">Nono</persName>
+          <lb/>
+          <lb/>eccoti finalmente la folle<ref ana="n10"/> con storia<gap/>(controllata su manuali di psichiatria, ma 
+          <lb/>tutta inventata per le esigenze "politiche"), e alcune possibili paro- 
+          <lb break="no"/>le. 
+       </s>
+       <s>
+       Sono frasi di una autentica schizofrenica, facilmente adattabili a
+          <lb/>un discorso anche sulla società<gap/>(<orgName>il Sistema</orgName>).
+      </s>
+      <s>
+      <choice><sic>Lo</sic><corr>Le</corr></choice> ho soltanto un <choice><sic>pò</sic><corr>po'</corr></choice> mont-
+      <lb break="no"/>montate.
+      </s>
+        </p>
+        <p xml:id="paragrafo2_t2">
+          <s>
+           <lb/>Delle altre donne<ref ana="n11"/> mi sono limitato a tracciare un profilo generale.
+          </s>
+          <s>
+            Non
+            <lb/>so se ti andranno.
+          </s>
+          <s>
+          Precisando questi profi<retrace>l</retrace>ini, stabilendo <choice><sic>cioé</sic><corr>cioè</corr></choice> le "radici"
+          <lb/>delle donne, si dovrebbero precisare meglio i frammenti di parole che
+          <lb/>dovrebbero restare, residui, cose che affiorano<ref ana="n12"/>; noi dobbiamo arrivare a 
+          <lb/>dei momenti caratterizzanti, che lascino intravedere l&#x27;arco possibile
+          <lb/>di una vicenda: <del>una</del><add>xxx</add> situazione<ref ana="n13"/> di un personaggio, che però abbiamo anche
+          <lb/>costruito, appunto per graffiarlo.
+          </s>
+        </p>
+        <p xml:id="paragrafo3_t2">
+          <s>
+            <lb/>Il coro <num>II</num><add>I</add> non ho anco<retrace>r</retrace>a riprovato.
+          </s>
+        </p>
+        <p xml:id="paragrafo4_t2">
+          <s>
+            <lb/>Ti accludo uno schema fatto prima della telefonata di stanotte. 
+          </s>
+          <s>
+          Ho visto
+          <lb/>che però lo stai superando e stai prendendo in mano tutto.
+          </s>
+          <s>
+          <add>Xxxxxxx xxxx</add>
+          <lb/><add>xxxx</add>C&#x27;è un pericolo a questo punto, di contaminare troppe cose diverse,
+          <lb/>stili e toni, che faceva un <choice><sic>pò</sic><corr>po'</corr></choice> la debolezza del testo di <title ref="#Int">Intolleranza</title>.
+          </s>
+          <s>
+          <lb/>Ne <retrace>pa</retrace>rleremo anche martedì.
+          </s>
+        </p>
+        <p xml:id="paragrafo5_t2">
+          <s>
+            <lb/>Mi pare ottimo le donne nel grem<retrace>b</retrace>o del coro, come in nicchie sonore<ref ana="n14"/>, tenute 
+            <lb/>dentro. 
+          </s>
+          <s>
+           O no?<gap/>E gli<del>o</del> uomini, o l&#x27;uomo?
+          </s>
+        </p>
+        <p xml:id="paragrafo6_t2">
+          <s>
+            <lb/>Ancora non ho pensato alla festa che vuoi:<gap/>mi sembra difficile, ma fatti- 
+            <lb break="no"/>bile<ref ana="n15"/>.
+          </s>
+          <s>
+          Per<retrace>ic</retrace>olo del personaggio positivo e negativo., di nefasta memoria <del>n</del><add> </add> uno 
+          <lb/>dei comandamenti <persName ref="#AZ"><surname>zdanoviani</surname></persName>.
+          </s>
+          <s>
+          Si potrebbe fare però una roba da matti, affi- 
+          <lb break="no"/>data soprattutto a una gioia smisurata degli strumenti, con una pioggia
+          <lb/>festosa di immagini tipo <persName ref="PP"><surname>Picasso</surname></persName> la pace, la colomba, le marine, certe
+          <lb/>donne <choice><abbr>ecc.</abbr><expan>eccetera</expan></choice>.
+          </s>
+        </p>
+        <p xml:id="paragrafo7_t2">
+          <s>
+            <lb/>Moltissime cose giuste nella tua lettera, a proposito del mio lavoro di
+            <lb/>poesie. Va bene.
+          </s>
+        </p>
+     </div>
+   </body>
+   <back>
+     <closer>
+      <salute><lb/>Non ho fatto in tempo a riprendere in mano le donne. <unclear>Tante le
+      <lb/>belle</unclear> - a domani -
+      <lb/></salute>
+      <signed>Giuliano</signed>
+      <salute><lb/>ciao a <addName ref="#NS">Nu</addName>e <addName>Di</addName></salute>
+     </closer>
+   </back>
+  </text>
+  <text xml:id="t3">
+  <front>
+   <div xml:id="tit3">
+     <head>
+    <lb/>Chi è la folle?
+     </head>
+     <argument>
+     <p>
+      <lb/>Il testo redatto da <persName ref="#GS">Giuliano Scabia</persName>  è analizzato in qualità di materiale allegato
+      <lb/>alla lettera del 23 febbraio 1964.
+     </p>
+     </argument>
+   </div>
+  </front>
+  <body>
+   <div>
+    <p xml:id="paragrafo1_t3">
+      <s>
+        <lb/><choice><sic>questa</sic><corr>Questa</corr></choice> donna può avere, ora, 30 anni. 
+      </s>
+      <s>
+      <choice><sic>E&#x27;</sic><corr>È</corr></choice> una <term type="psycological">schizofr<retrace>e</retrace>nica</term> giunta pro- 
+      <lb break="no"/>gressivamente alla <term type="psycological">schizofrenia</term>.
+      </s>
+      <s>
+      <choice><sic>la</sic><corr>La</corr></choice> sua condizione però non <choice><sic>é</sic><corr>è</corr></choice> defini- 
+      <lb break="no"/>tiva:<gap/>ha la possibilità di tornare <term type="psycological">sana di mente</term>, di rientrare nella vi- 
+      <lb break="no"/>ta normale.
+      </s>
+      <s>
+      In lei <choice><sic>c&#x27;é</sic><corr>c&#x27;è</corr></choice> il terrore di qualcosa di incombente<gap/>(<orgName>il Sistema</orgName>),
+      <lb/>ma anche la <hi rend="underline">coscienza</hi> di essere inseguita, e quindi di potersi sgarncia- 
+      <lb break="no"/>re dall&#x27;inseg<retrace>u</retrace>imento.
+      </s>
+    </p>
+    <p xml:id="paragrafo2_t3">
+     <floatingText>
+      <body>
+        <lb/><ab><choice><sic>di</sic> <corr>Di</corr></choice> che cosa è conseguenza la sua follia?</ab>
+       </body>
+     </floatingText>
+    </p>
+    <p xml:id="paragrafo3_t3">
+     <s>
+      <lb/>Si tratta di una <term type="psycological">follia</term> che sarebbe stata evitabile se fattori familia- 
+      <lb break="no"/>ri e sociali non l<retrace>&#x27;</retrace> avessero condott<unclear>a</unclear> <add place="above">la donna</add> all&#x27;attuale <term type="psycological">stato di dissociazione</term>.
+     </s>
+     <s>
+     <lb/>Ecco le tappe della sua vita<ref ana="n15"/>:
+     </s>
+    </p>
+    <p xml:id="paragrafo4_t3">
+      <s>
+        <lb/><choice><sic>é</sic><corr>È</corr></choice> una donna della <term type="geopolitical">campagna italiana</term>, del <placeName><region>Veneto</region></placeName>.
+      </s>
+      <s>
+        L&#x27;infanzia e la giovinez-
+        <lb break="no"/>za sono rivissuti come un succedersi di cambiamenti di residenza, al se- 
+        <lb break="no"/>guito dei genitori, per motivi di lavoro; i gentori non hanno avuto il 
+        <lb/>tempo di curarsi di lei, e di tutta la sua giovinezza le rimane soltanto un
+        <lb/><term type="psycological">senso di instabilità e di inadattamento</term>: i genitori sono <term type="religious">cattolici</term><retrace>,</retrace> come 
+        <lb/>lo possono essere i <roleName type="socialstatus">contadini veneti</roleName>: cercano di educare la figlia secon- 
+        <lb break="no"/>do le regole della <term type="religious">parrocchia</term> di campagna; 
+      </s>
+    </p>
+    <p xml:id="paragrafo5_t3">
+      <s>
+      <lb/>la figlia ha coscienza della limitatezza ideale di quel <term type="geopolitical">mondo contadino</term>;
+      <lb/>nell&#x27;<term type="geopolitical">emigrazione</term> viene in contatto con un altro mondo, e finisce per en- 
+      <lb break="no"/>trare nella dimensione della ribellione alla vita del <term type="geopolitical">mondo <term type="religious">cattolico</term>
+      <lb/>contadino</term>;
+      </s>
+    </p>
+    <p xml:id="paragrafo6_t3">
+      <s>
+        <lb/>da quando capisce questo fatto - se ne rende conto dapprima inconscia- 
+        <lb break="no"/>mente - la sua vita entra in una dimensione nuova; ha le prime esperienze
+        <lb/>sessuali, dapprima con un <term type="psycological">senso di colpa</term>, poi imp<retrace>a</retrace>rando a sentire il sesso 
+        <lb/>in maniera positiva - acquista una notevole <term type="psycological">sicurezza di donna</term><add>;</add> - il tra- 
+        <lb break="no"/>passo da <roleName type="socialstatus">contadina emigrante</roleName> <term type="religious">cattolica</term> <term type="psycological">angosciata dal senso di colpa</term>, al- 
+        <lb/>la scoperta della vita libera, avviene fra i 17 e i 20 anni.
+      </s>
+    </p>
+    <p xml:id="paragrafo7_t3">
+      <s>
+        <lb/><choice><sic>si</sic><corr>Si</corr></choice> innamora di un giovane dirigente operaio; vita in coppia per alcuni
+        <lb/>mesi; la ragazza non giunge a una precisa coscienza politica: percepisce
+        <lb/>e vive una <term type="psycological">dimensione di liberazione dai tab<retrace>ù</retrace> sessuali e religiosi</term>; espe- 
+        <lb break="no"/>rienza di <hi rend="underline">assestamento umano</hi> che sembra definitivo.
+      </s>
+    </p>
+    <p xml:id="paragrafo8_t3">
+      <s>
+        <lb/><choice><sic>ma</sic><corr>Ma</corr></choice> un giorno il <roleName type="socialstatus">giovane dirigente operaio</roleName> viene ucciso durante una di- 
+        <lb break="no"/>mostrazione - dalla <orgName>polizia</orgName> 
+      </s>
+      <s>
+      <choice><sic>la</sic> <corr>La</corr></choice> ragazza si trova completamente sola; osti- 
+      <lb break="no"/>lità dei genitori; ricompare il <term type="psycological">senso di colpa latente</term>; dopo qualche tem-
+      <lb break="no"/>po<add> </add>si lega a un giovane del suo paese, amico fin dall&#x27;infanzia; <choice><sic>é</sic><corr>è</corr></choice> <term type="geopolitical"> con- 
+      <lb break="no"/>tadino cattolico</term>, rappresenta il vecchio mondo <hi rend="underline">da cui la ragazza viene;</hi>
+      <lb/>ma il trauma della morte del <roleName type="socialstatus">giovane dirigente</roleName><gap/>(che era l&#x27;amore e il
+      <lb/>nuovo mondo), la ributta indietro, anziché darle la forza di fare il pas- 
+      <lb break="no"/>so decisivo e diventare una <roleName type="socialstatus">dirigente rivoluzionaria</roleName>; 
+      </s>
+    </p>
+    <p xml:id="paragrafo9_t3">
+      <s>
+        <lb/>ritorna il <term type="psycological">senso di colpa per la libertà sessuale fruita</term> - <term type="psycological">bisogno di 
+        <lb/>affetto</term>: trova affetto nel <roleName type="socialstatus">giovane contadino</roleName>.
+      </s>
+    </p>
+    <p xml:id="paragrafo10_t3">
+      <s>
+       <lb/><choice><sic>si</sic><corr>Si</corr></choice> sposano: tornano al paese;
+      </s>
+    </p>
+    <p xml:id="paragrafo11_t3">
+      <s>
+        <lb/>qui però si sente guardata, perseg<retrace>u</retrace>itata - anche il marito le rinfaccia
+        <lb/>la sua vita libera; i genitori di lui non le perdonano di essere stata
+        <lb/>la donna di un <roleName type="socialstatus">dirigente rivoluzionario</roleName>; il <roleName type="socialstatus">giovane contadino</roleName> si sente
+        <lb/>redentore, inquisitore, p<retrace>u</retrace>rificatore;
+      </s>
+    </p>
+    <p xml:id="paragrafo12_t3">
+      <s>
+        <lb/>la donna vive nel <term type="psycological">conflitto fra gioia</term> provata nel periodo "rivoluziona- 
+        <lb break="no"/>rio"<gap/>(e di scoperta sessuale), e l&#x27;attuale <term type="psycological">condizione di colpa</term> in cui è 
+        <lb/>stata fatta riprecipitare;
+      </s>
+    </p>
+    <p xml:id="paragrafo13_t3">
+      <s>
+        <lb/>questo conflitto, e la <term type="psycological">repressione violenta</term>, <term type="psycological">traumatica</term>, della vita di li- 
+        <lb break="no"/>bertà e d&#x27;amore vissuta per breve tempo, la portano alla <term type="psycological">dissociazione</term>, 
+        <lb/><term type="psycological">nevrosi</term>, <term type="psycological">stato di schizofrenia</term> -
+      </s>
+    </p>
+    <p xml:id="paragrafo14_t3">
+      <s>
+        <lb/>ritrovando quel <hi rend="underline">momento</hi>, quell&#x27;atmosfera di liberazione sessuale e poli- 
+        <lb break="no"/>tica, potrebbe ritornare normale.
+      </s>
+    </p>
+   </div>
+  </body>
+  </text>
+  <text xml:id="t4">
+    <front>
+       <div xml:id="tit4">
+         <head>
+           <lb/>I MANGIATORI DI NEBBIA
+         </head>
+       </div>
+    </front>
+    <body>
+      <div>
+      <!--sez A-->
+        <lg xml:id="A">
+        <mei:dir type="figura_scena">
+          <stage>A</stage>
+        </mei:dir>
+          <l>chi sei, <term type="tec">numero di targa</term>, <term type="tec">telefono</term>, millennio:  chi</l>
+          <l>quando come e sempre questi incontri sfai</l>
+          <l>dove accendi una furia <term type="tec">benzinara</term> <mei:breath>&mdash;</mei:breath> dove</l>
+          <l>sempre perché quieto passivo quasi umano</l>
+          <l>fili dritto <mei:breath>&mdash;</mei:breath> denso di legami <mei:breath>&mdash;</mei:breath></l>
+          <l><space quantity="10" unit="words"/> smara</l>
+          <l/>
+          <l>la breve estasi, con <term type="tec">clacson</term>, dopogiorno:</l>
+          <l>(domande che nascono. <emph rend="italic">come</emph> essere umani?</l>
+          <l>un tappo, legni, carte; alla deriva. lei che</l>
+          <l>si spazzola, a poca acqua, pocolontano. lei</l>
+          <l>che si specchia, in piedi, nera sottoveste, sul poco</l>
+          <l>lago)</l>
+          <l/>
+          <l>in quest'epoca calcistico cristiana - bei giorni,</l> 
+        </lg>
+        <!--sez C-->
+         <lg xml:id="C">
+          <mei:dir type="figura_scena">
+            <stage>C</stage>
+          </mei:dir>
+          <milestone unit="part" n="1"/>
+          <l>1.</l>
+          <l>nell'aria rattrappita lentamente <mei:breath>&mdash;</mei:breath> si smorza</l>
+          <l>il rimbombo dell'ultimo galoppo <mei:breath>&mdash;</mei:breath> la rosa degli</l>
+          <l>elementi <mei:breath>&mdash;</mei:breath> in seno alle <term type="tec">società professionistiche</term>,</l>
+          <l>una bella sorpresa:  della gente sfiorata d'orgasmo,</l>
+          <l>lieve come toccare nel <term type="tec">tram</term> un seno, e </l>
+          <l>che quasi ci stia, tra le fermate <mei:breath>&mdash;</mei:breath></l>
+          <l><space quantity="10" unit="words"/> da tutte le parti,</l>
+          <l>in vista della partita con: è un gran bel giocatore,</l>
+          <l>tenace e grintoso, a <term type="tec">controcampo</term>, in palla;</l>
+          <l>via <mei:breath>&mdash;</mei:breath> e le donne a vederne ventidue (l'arbitro</l>
+          <l>no <mei:breath>&mdash;</mei:breath> fa schifo), che bellissimi e, SEI UN DIO</l>
+          <l>pomeriggi dissacrati <mei:breath>&mdash;</mei:breath> accesi a una funzione</l>
+          <l>degli <term type="tec">stadi</term> <mei:breath>&mdash;</mei:breath> bei disseminati ristoranti <mei:breath>&mdash;</mei:breath></l>
+          <l>intestino e mente della settimana <mei:breath>&mdash;</mei:breath> festa <mei:breath>&mdash;</mei:breath></l>
+          <l/>
+          <l><space quantity="10" unit="words"/> una tesa versione</l>
+          <l>di gesti sacri, di <term type="tec">rimbalzi d'apparizioni</term>:  qui</l>
+          <l>al <term type="tec">video</term> la testa, la mano, bocca canora o piede</l>
+          <l>che insacca:</l>
+          <l><space quantity="5" unit="words"/>è tutto un apparire, un succedersi,</l>
+          <l>su chi vede corrono brividi, un soffio sul fango;</l>
+          <l><space quantity="10" unit="words"/>el <term type="tec">madùra, macelàr</term></l>
+          <l><term type="tec">el madùra</term>, E piede a scarpa, viene, e infilalo!,</l>
+          <l>alla <term type="tec">rete</term> con forza con violenza, <term type="tec">AUUUUUUUU</term></l>
+          <l><term type="tec">GREGOOOOOOTEGOOOOREEEEEEEEEEEEEEEEE</term></l>
+          <l><term type="tec">OREEEEEELLLOOOOEEEEOOOOOLLLLLTEEEEEEEEEE</term></l>
+          <l><space quantity="5" unit="words"/><said rend="italic">uno a zero</said> <term type="tec">(teletrasmessa)</term> <said rend="italic">per i padroni di casa</said></l>
+          <l><said rend="italic">i padroni di casa:</said></l>
+          <l>fanno un gioco molto coperto, con molta</l>
+          <l>disciplina tattica, ben sorretti in difesa <mei:breath>&mdash;</mei:breath> senza</l>
+          <l><term type="tec">luci abbaglianti</term>: ma fulmineo un negro salta</l>
+          <l><space quantity="10" unit="words"/>sorge</l>
+          <l>infila</l>
+          <l><space quantity="5" unit="words"/>e tutto vibra urla che SEI UN DIO</l>
+          <l>per la seconda volta, DIO, astuzia e <term type="tec">tiro fulmineo</term></l>
+          <l>APPARSO:</l>
+          <l><space quantity="5" unit="words"/>ma forse drogati, in questo <term type="tec">girone</term>,</l>
+          <l>la <term type="tec">scimmia cronista</term>, il regno dei morti, il piede biforcuto</l>
+          <l><space quantity="10" unit="words"/>portano bandiere, rossoblù</l>
+          <l>nerazzurre rossonere <mei:breath>&mdash;</mei:breath> attesa, centomila <mei:breath>&mdash;</mei:breath></l>
+          <l>lo stadio, formato, leticante, <term type="tec">mucosa</term></l>
+          <l>saranno le quindici, limitare della digestione:</l>
+          <l/>
+          <milestone unit="part" n="2"/>
+          <l>2.</l>
+          <l><mei:breath>&mdash;</mei:breath> i pivellini <mei:breath>&mdash;</mei:breath> che <term type="tec">tiri sìfuli</term> <mei:breath>&mdash;</mei:breath> fiottano dentro,</l>
+          <l>gonfia la cintura delle grida, sugli <term type="tec">spalti</term>: forza,</l>
+          <l>che sei un dio:</l>
+          <l><space quantity="5" unit="words"/>con un balzo qualcuno avvinghia</l>
+          <l>sei l'unico:</l>
+          <l><space quantity="5" unit="words"/>la palla: <term type="tec">sifulòt</term>! <mei:breath>&mdash;</mei:breath> <term type="tec">dribbling</term>, <term type="tec">manager</term> ai posti,</l>
+          <l>i <term type="tec">cartelli spaziali</term> di hatù tesi fra folla e</l>
+          <l><space quantity="10" unit="words"/><term type="tec">campo</term>:</l>
+          <l/>
+          <l/>
+          <l>in gran vena, padrone del <term type="tec">centrocampo</term>, si gonfia,</l>
+          <l>eretto <term type="tec">centromediano</term> che di testa innalza, FORZA</l>
+          <l>CHE SEI UN DIO,</l>
+        </lg>
+        <!--sez D-->
+         <lg xml:id="D">
+          <mei:dir type="figura_scena">
+            <stage>D</stage>
+          </mei:dir>
+          <l>la domenica è un'ipotesi <term type="tec">fonetica</term> <mei:breath>&mdash;</mei:breath> avvolta</l>
+          <l>a ellissi attorno alle città: <term type="tec">autodicarne</term>, di sottane</l>
+          <l>il sole strappato teso <term type="tec">kilometrato</term>: a natura, natura <mei:breath>&mdash;</mei:breath></l>
+          <l>barcaccia è ognuno, che ritorna, cuore sul <term type="tec">paraurti</term>:</l>
+          <l/>
+          <l><space quantity="5" unit="words"/><emph rend="italic">non amore si farà</emph></l>
+          <l><space quantity="5" unit="words"/><emph rend="italic">così stanchi</emph> <mei:breath>&mdash;</mei:breath><emph rend="italic"> dopo il giorno</emph></l>
+          <l><space quantity="5" unit="words"/><emph rend="italic">di riposo, e cena tesa</emph></l>
+          <l/>
+          <l>tutta la sera vibra dei <term type="tec">lumini televisori</term>,<ref ana="n22"/></l>
+          <l><term type="tec">gelatina</term> diresti <term type="tec">d'oltrestrada</term> <mei:breath>&mdash;</mei:breath></l>
+          <l><space quantity="10" unit="words"/>lo schianto a <term type="tec">sirena</term></l>
+          <l>insegue la sua morte, appena un varco si apre</l>
+          <l>della fitta maglia <term type="tec">urbana</term>:</l>
+          <l><space quantity="5" unit="words"/>e gli occhi semistanchi</l>
+          <l>semisonni a piccoli gruppi voracemente al <term type="tec">video</term></l>
+          <l>nel breve spazio antisonno a ventosa <mei:breath>&mdash;</mei:breath> contemplatori:</l>
+          <l>a scatti si fondono le immagini <mei:breath>&mdash;</mei:breath> ricordo di <term type="tec">campi</term></l>
+          <l>possibili, quasi luoghi paradisi, di merende ma di</l>
+          <l>corsa: ragguagli sul come amore, rapido sfatto</l>
+          <l>e <term type="tec">motor</term> timoroso: <term type="tec">video</term> nell'occhio e occhio</l>
+          <l>nel <term type="tec">video</term>:</l>
+          <l><space quantity="5" unit="words"/>è l'ora del <term type="tec">programma</term> nel boccone: intermezzo</l>
+          <l>buonasera: potrete ascoltare, a orecchio basso; ma</l>
+          <l>rigurgita <mei:breath>&mdash;</mei:breath> sera come tante <mei:breath>&mdash;</mei:breath></l>
+          <milestone unit="part" n="1"/>
+          <l>1.   <space quantity="5" unit="words"/>sorta da dove</l>
+          <l>la cantante GRASSA, materna immensa, im</l>
+          <l>pugnando mammelle, e ventre a fiori che si</l>
+          <l>sco 
+          <notatedMusic>
+            <!--segmento musicale è inserito all'interno del verso poetico-->
+            <mei:section>
+              <!--unità musicali-->
+              <mei:measure>
+                <!--inizio sezione di pentagramma-->
+                <mei:staff>
+                   <mei:layer>
+                     <mei:beam class="beam">
+                     <mei:note xml:id="nt1" dur="8" pname="e" oct="4">
+                       <mei:verse n="1">
+                         <mei:syl con="d" wordpos="m">la</mei:syl>
+                        </mei:verse>
+                     </mei:note>
+                     <mei:note xml:id="nt2" dur="8" pname="d" oct="4">
+                        <mei:verse n="2">
+                         <mei:syl con="s" wordpos="t">no</mei:syl>
+                        </mei:verse>
+                     </mei:note> 
+                     <mei:note xml:id="nt3" dur="8" pname="c" accid="s" oct="4" > <!--c# - DO DIESIS - più alto di un semitono -->
+                        <mei:verse n="3">
+                         <mei:syl xml:id="nt4" con="d" wordpos="i">d'a</mei:syl>
+                        </mei:verse>
+                     </mei:note>
+                     </mei:beam>
+                    
+                    <mei:harm place="above"><mei:fb><mei:f>Rem</mei:f></mei:fb></mei:harm>
+                     <mei:note xml:id="nt5" dur="2" pname="d" oct="4" tie="i"> <!--la nota presenta una legatura di portamento con una nota sconosciuta-->
+                       <mei:verse n="4">
+                         <mei:syl con="s" wordpos="t">mor</mei:syl>
+                        </mei:verse>
+                     </mei:note>
+                   </mei:layer>
+                </mei:staff>
+              </mei:measure>
+            </mei:section>
+          </notatedMusic>
+          con quelle rose in 
+          </l>
+        <l>
+          <notatedMusic>
+            <mei:section>
+              <mei:measure>
+                <mei:staff>
+                  <mei:layer>
+                     <mei:note xml:id="nt6" pname="d" dur="4" accid="f" oct="4" tie="i"> 
+                        <mei:verse n="4">
+                         <mei:syl con="s">cuor?</mei:syl>
+                        </mei:verse>
+                     </mei:note>
+            
+                      <mei:harm place="above"><mei:fb><mei:f>Rem</mei:f></mei:fb></mei:harm>
+                      <mei:note xml:id="nt7" pname="c" dur="8" oct="5" accid="f"/>
+                  </mei:layer>
+                </mei:staff>
+              </mei:measure>
+            </mei:section>
+          </notatedMusic>
+          <ref ana="n16"/>
+          </l>
+          <milestone unit="part" n="2"/>
+          <l>2. ma ribelle distruttrice
+          <notatedMusic>
+            <mei:section>
+              <mei:measure>
+                <mei:staff>
+                   <mei:layer>
+                   <mei:beam class="chord">
+                     <mei:harm place="above"><mei:fb><mei:f>Rem 7</mei:f></mei:fb></mei:harm>
+                     <mei:note xml:id="nt8" beam="i1" pname="b" dur="8" oct="4">
+                          <mei:verse n="5">
+                            <mei:syl con="d" wordpos="i">fol</mei:syl>
+                          </mei:verse>
+                     </mei:note>                    
+                       <mei:note xml:id="nt9" beam="t1" pname="g" dur="8" oct="4"/>
+                   
+                    
+                     <mei:note xml:id="nt10" beam="i1" pname="b" dur="8" oct="4">
+                         <mei:verse n="6">
+                            <mei:syl con="s" wordpos="t">le</mei:syl>
+                          </mei:verse>
+                     </mei:note>
+                       <mei:note xml:id="nt11" beam="t1" pname="g" dur="8" oct="4"/>
+                     
+                      <mei:note xml:id="nt12" beam="i1" pname="a" dur="8" oct="4">
+                        <mei:verse n="7">
+                            <mei:syl con="d" wordpos="i">ban</mei:syl>
+                          </mei:verse>
+                      </mei:note>
+                        <mei:note xml:id="nt13" beam="t1" pname="f" dur="8" oct="4"/>
+                
+                   
+                     <mei:note xml:id="nt14" beam="i1" pname="a" dur="8" oct="4">
+                      <mei:verse n="8">
+                            <mei:syl con="d" wordpos="m">de</mei:syl>
+                          </mei:verse>
+                     </mei:note>
+
+                      <mei:note xml:id="nt15" beam="t1" pname="f" dur="8" oct="4"/>    
+                
+                   </mei:beam>
+                   <mei:beam class="chord">
+                       <mei:harm place="above"><mei:fb><mei:f>Sol 7</mei:f></mei:fb></mei:harm>
+                       <mei:note xml:id="nt16" beam="i1" pname="g" dur="8" oct="4">
+                           <mei:verse n="9">
+                            <mei:syl con="s" wordpos="t">ruola</mei:syl>
+                          </mei:verse>
+                       </mei:note>  
+                         <mei:note xml:id="nt17" beam="t1" pname="e" dur="8" oct="4"/> 
+                   
+                    
+                          <mei:note xml:id="nt18" beam="i1" pname="e" dur="8" oct="4"/>  
+                          <mei:note xml:id="nt19" beam="t1" pname="g" dur="8" oct="4"/>
+                   
+                     </mei:beam>
+                   </mei:layer>
+                </mei:staff>
+              </mei:measure>
+            </mei:section>
+          
+          </notatedMusic>
+
+          tigre urlata
+          </l>
+
+          <l>schizza <term type="tec">dall'inconscio collettivo</term>
+          <notatedMusic>
+             <mei:section>
+                <mei:measure>
+                   <mei:staff>
+                      <mei:layer>
+                         <mei:beam class="chord">
+                             <mei:note xml:id="nt20" beam="i1" pname="e" dur="8" oct="4">
+                                <mei:verse n="10">
+                                   <mei:syl con="d" wordpos="i">stra</mei:syl>
+                                 </mei:verse>
+                             </mei:note>  
+                              <mei:note xml:id="nt21" beam="t1" pname="g" dur="8" oct="4"/>
+                              <mei:note xml:id="nt22" beam="i1" pname="e" dur="8" oct="4">
+                                    <mei:verse n="11">
+                                      <mei:syl con="d" wordpos="t">va</mei:syl>
+                                   </mei:verse>
+                              </mei:note>  
+                              <mei:note xml:id="nt23" beam="t1" pname="g" dur="8" oct="4"/>
+                          </mei:beam>
+
+                          <mei:beam class="chord">
+                             <mei:note xml:id="nt23" beam="i1" pname="b" dur="8" oct="4">
+                                <mei:verse n="12">
+                                   <mei:syl con="s" wordpos="i">gante</mei:syl>
+                                 </mei:verse>
+                             </mei:note>                    
+                             <mei:note xml:id="nt9" beam="t1" pname="g" dur="8" oct="4"/>
+                    
+                             <mei:note xml:id="nt24" beam="i1" pname="b" dur="8" oct="4"/>
+                            <mei:note xml:id="nt25" beam="t1" pname="g" dur="8" oct="4"/>
+                          </mei:beam>
+
+                        <mei:note xml:id="nt26" pname="b" dur="8" oct="4"/>
+                      </mei:layer>
+                    </mei:staff>
+                </mei:measure>
+              </mei:section>
+          </notatedMusic>          
+          </l>
+          <l>quasi a forma di baccante:</l>
+          <l><space quantity="10" unit="words"/> distruttrice controlegge,</l>
+          <l>madre no:</l>
+          <milestone unit="part" n="3"/>
+          <l>PALLIDA <mei:breath>&mdash;</mei:breath> e di forma apollinea</l>
+          <l><space quantity="10" unit="words"/> sottile <term type="tec">transitiva</term></l>
+          <l>quasi apparente: amante ma fredda: ma</l>
+          <l>con bellezza semisignora, e come a gioco</l>
+          <l>madre: ma con bellezza e <emph rend="italic">tape</emph> indifferenza</l>
+          <l>
+          <notatedMusic>
+           <mei:section>
+            <mei:measure>
+              <mei:staff>
+                <mei:layer>
+                  <mei:beam class="beam">
+                    <mei:note xml:id="nt27" pname="d" dur="8" oct="4"/>
+                    <mei:note xml:id="nt28" pname="d" dur="8" oct="4">
+                      <mei:verse n="13">
+                        <mei:syl con="s">se</mei:syl>
+                      </mei:verse>                
+                    </mei:note>
+                    <mei:note xml:id="nt29" pname="a" dur="8" oct="3">
+                      <mei:verse n="14">
+                        <mei:syl con="s">ce</mei:syl>
+                      </mei:verse> 
+                    </mei:note>
+                    <mei:note xml:id="nt30" pname="d" dur="8" oct="4" tie="i">
+                      <mei:verse n="15">
+                        <mei:syl con="d">n'è</mei:syl>
+                      </mei:verse> 
+                    </mei:note>
+                  </mei:beam>
+
+                     <mei:note xml:id="nt31" pname="d" dur="2" oct="4" tie="t"/>
+
+                  <mei:beam class="beam">
+                     <mei:harm place="above"><mei:fb><mei:f>La 7</mei:f></mei:fb></mei:harm>
+                     <mei:note xml:id="nt32" pname="e" dur="8" oct="4">
+                        <mei:verse n="16">
+                          <mei:syl con="d" wordpos="i">for</mei:syl>
+                        </mei:verse> 
+                     </mei:note>
+                     <mei:note xml:id="nt33" pname="e" dur="8" oct="4">
+                        <mei:verse n="17">
+                          <mei:syl con="s" wordpos="t">se</mei:syl>
+                       </mei:verse> 
+                     </mei:note>
+                    <mei:note xml:id="nt34" pname="d" accid="s" dur="8" oct="4">
+                       <mei:verse n="18">
+                          <mei:syl con="s" wordpos="i">due</mei:syl>
+                       </mei:verse>
+                    </mei:note>
+                   <mei:note xml:id="nt35" pname="e" dur="8" oct="4" tie="i">
+                      <mei:verse n="19">
+                        <mei:syl con="d">o</mei:syl>
+                      </mei:verse> 
+                    </mei:note>
+                  </mei:beam>
+
+                  <mei:note xml:id="nt36" pname="e" dur="2" oct="4" tie="t">
+                      <mei:verse n="20">
+                        <mei:syl con="d">tre</mei:syl>
+                      </mei:verse> 
+                  </mei:note>
+                </mei:layer>
+              </mei:staff>
+            </mei:measure>
+           </mei:section>         
+          </notatedMusic>
+          di uomini: e veloce
+         </l>
+         <l>passa</l>
+         <milestone unit="part" n="4"/>
+         <l>4. attimo, ambigua<mei:breath xml:id="longbreath"></mei:breath>tutto è di</l>
+         <l>frammenti</l>
+         <l><space quantity="5" unit="words"/>ma senza memoria e immobile veloce</l>
+         <l>e quando il sesso sembra freddo come un</l>
+         <l><term type="tec">jet</term></l>
+         <l><space quantity="5" unit="words"/><term type="tec">it's the hammer of justice</term> immobile</l>
+         <l>nel tempo</l>
+         <l><space quantity="5" unit="words"/><term type="tec">it's the bell of freedom sul punto</term></l>
+         <l>di scoppiare</l>
+         <l><space quantity="5" unit="words"/>quando<space quantity="5" unit="words"/>
+         <notatedMusic>
+           <mei:section>
+             <mei:measure>
+               <mei:staff>
+                 <mei:layer>
+                   <mei:beam class="beam">
+                     <mei:note xml:id="nt37" pname="a" dur="8" oct="4">
+                      <mei:verse n="21">
+                        <mei:syl con="s">ormai</mei:syl>
+                      </mei:verse> 
+                    </mei:note>
+                    <mei:note xml:id="nt38" pname="g" dur="8" oct="4">
+                      <mei:verse n="22">
+                        <mei:syl con="s">sta</mei:syl>
+                      </mei:verse> 
+                    </mei:note>
+                   </mei:beam>
+                   <mei:beam class="chord">
+                    <mei:harm place="above"><mei:fb><mei:f>Fa 6</mei:f></mei:fb></mei:harm>
+                      <mei:note xml:id="nt39" pname="a" dur="8" oct="4" beam='i1'>
+                        <mei:verse n="23">
+                          <mei:syl con="s">per</mei:syl>
+                        </mei:verse> 
+                      </mei:note>
+                      <mei:note xml:id="nt40" pname="f" dur="2" oct="4" beam='m1'/>
+                      <mei:note xml:id="nt41" pname="c" dur="2" oct="4" beam='t1' tie='i'/>
+                   </mei:beam>
+                   <mei:note xml:id="nt42" pname="a" dur="4" oct="4">
+                      <mei:verse n="24">
+                          <mei:syl con="d" wordpos="i">tor</mei:syl>
+                        </mei:verse>
+                   </mei:note>
+                   <mei:note xml:id="nt43" pname="g" dur="4" oct="4"> 
+                        <mei:verse n="25">
+                          <mei:syl con="d" wordpos="m">na</mei:syl>
+                        </mei:verse>
+                   </mei:note>
+
+                   <mei:harm place="above"><mei:fb><mei:f>Sol 7</mei:f></mei:fb></mei:harm>
+                   <mei:note xml:id="nt44" pname="b" dur="2" oct="3" tie='t'/>
+                   <mei:note xml:id="nt45" pname="g" dur="4" oct="4">
+                        <mei:verse n="26">
+                          <mei:syl con="s" wordpos="t">re</mei:syl>
+                        </mei:verse>
+                   </mei:note>
+                 </mei:layer>
+               </mei:staff>
+             </mei:measure>
+           </mei:section>
+         </notatedMusic>        
+         </l>
+         <l>questa contorta svanente figura
+         <notatedMusic>
+           <mei:section>
+             <mei:measure>
+               <mei:staff>
+                 <mei:layer>
+                   <mei:note xml:id="nt46" pname="b" dur="4" oct="4"/>
+                   <mei:beam class="chord">
+                      <mei:note xml:id="nt47" pname="e" dur="2" oct="4" beam="i1" tie='i'/>
+                      <mei:note xml:id="nt48" pname="c" dur="2" oct="4" beam="m1" tie='i'/>
+                      <mei:note xml:id="nt49" pname="a" dur="2" oct="3" beam="t1" tie='i'/>
+                   </mei:beam>
+                   <mei:note xml:id="nt50" pname="e" dur="4" oct="5">
+                        <mei:verse n="27">
+                          <mei:syl con="s">il</mei:syl>
+                        </mei:verse>
+                   </mei:note>
+                   <mei:note xml:id="nt51" pname="a" dur="4" oct="4">
+                      <mei:verse n="28">
+                          <mei:syl con="s">babbo</mei:syl>
+                        </mei:verse>  
+                   </mei:note>
+                   <mei:beam class="beam">
+                      <mei:note xml:id="nt52" pname="a" dur="4" oct="4"/>
+                      <mei:note xml:id="nt53" pname="g" dur="4" oct="4"/>
+                   </mei:beam>
+                 </mei:layer>
+               </mei:staff>
+             </mei:measure>
+           </mei:section>
+         </notatedMusic>
+         </l>
+         <milestone unit="part" n="5"/>
+         <l>5. quasi cristiano</l>
+         <l><space quantity="5" unit="words"/> un raptus verginale</l>
+         <l>di una bianca debole invogliata:</l>
+         <l><term type="tec">telecasta</term> resa APPARSA figlia <term type="tec">osmosi</term> conclu</l>
+         <l>siva<space quantity="10" unit="words"/> un giglio</l>
+         <l>
+         <notatedMusic>
+           <mei:section>
+             <mei:measure>
+               <mei:staff>
+                 <mei:layer>
+                   <mei:beam class="chord">
+                      <mei:note xml:id="nt54" pname="b" dur="4" oct="4" beam="i1">
+                         <mei:verse n="29">
+                          <mei:syl con="s">per</mei:syl>
+                        </mei:verse>
+                      </mei:note>
+                       <mei:note xml:id="nt55" pname="g" dur="4" oct="4" beam="t1"/>
+
+                     <mei:harm place="above"><mei:fb><mei:f>3</mei:f></mei:fb></mei:harm>
+                       <mei:note xml:id="nt56" pname="a" dur="4" oct="4" beam="i1"/>
+                       <mei:note xml:id="nt57" pname="d" dur="4" oct="4" beam="t1"/>
+
+                       <mei:note xml:id="nt58" pname="b" dur="4" oct="4" beam="i1">
+                         <mei:verse n="30">
+                            <mei:syl con="d" wordpos="i">a</mei:syl>
+                          </mei:verse>
+                       </mei:note>
+                       <mei:note xml:id="nt59" pname="g" dur="4" oct="4" beam="t1"/>
+                   </mei:beam>
+
+                   <mei:beam class="chord">
+                    <mei:harm place="above"><mei:fb><mei:f>Mi b</mei:f></mei:fb></mei:harm>
+                    <mei:note xml:id="nt60" pname="c" dur="4" oct="5" beam="i1">
+                        <mei:verse n="31">
+                            <mei:syl con="d" wordpos="m">mar</mei:syl>
+                          </mei:verse>
+                    </mei:note>
+                    <mei:note xml:id="nt61" pname="e" dur="4" oct="4" beam="m1"/>
+                    <mei:note xml:id="nt62" pname="b" dur="2" oct="3" beam="t1"/>
+                   </mei:beam>
+                   <mei:note xml:id="nt63" pname="b" dur="2" oct="4" tie='i'>
+                         <mei:verse n="32">
+                            <mei:syl con="s" wordpos="t">ti</mei:syl>
+                          </mei:verse>
+                   </mei:note>
+                 </mei:layer>
+               </mei:staff>
+             </mei:measure>
+           </mei:section>
+         </notatedMusic>
+         </l>
+         <l><mei:breath xml:id="longbreath"></mei:breath><term type="tec">stop</term>,</l>
+         <l>e per i deboli implora pietà</l>
+        </lg>
+        <!--sez E-->
+         <lg xml:id="E">
+          <mei:dir type="figura_scena">
+            <stage>E</stage>
+          </mei:dir>
+          <l><term type="tec">altoparlanti</term> volatili notturni <mei:breath>&mdash;</mei:breath> stormo,</l>
+          <l><term type="tec">ossidati</term>; aggrappati ai fili; dentro le <term type="tec">portinerie</term>;</l>
+          <l>sui <term type="tec">camion delle immondizie</term> <mei:breath>&mdash;</mei:breath> di <term type="tec">alluminio</term>;</l>
+          <l>uomini <term type="tec">trasportatori</term>. <term type="tec">RETE</term> che l'<term type="tec">arsenale</term></l>
+          <l>umano</l>
+          <l><space quantity="5" unit="words"/> di migliaia di bombe,</l>
+          <l>fasci di voci: <term type="tec">altoparlanti</term> in moto, seguendo</l>
+          <l>gli uomini, sufficiente, di bombe, a di</l>
+          <l>struggere il mondo TRE volte: su ogni uomo</l>
+          <l><term type="tec">altoparlante</term> custode, <term type="tec">capoturno</term>; gli <term type="tec">spazzini</term></l>
+          <l>raccogliendo i resti <mei:breath>&mdash;</mei:breath> di frutta <mei:breath>&mdash;</mei:breath> di pane</l>
+          <l>metro della notte, di vetri <mei:breath>&mdash;</mei:breath> di carte <mei:breath>&mdash;</mei:breath></l>
+          <l>nei bidoni se echi accoccolati, giornali sospesi;</l>
+          <l>di scatole <mei:breath>&mdash;</mei:breath> di torsoli (compagni che scrivono </l>
+          <l>sui muri) di frantumi <mei:breath>&mdash;</mei:breath> di carte scritte <mei:breath>&mdash;</mei:breath></l>
+          <l>(volti bianchi) <mei:breath>&mdash;</mei:breath> UCCISO dalla polizia</l>
+          <l>ma i portatori <mei:breath>&mdash;</mei:breath> dai loculi,</l>
+          <l>per ogni strada ogni porta ogni casa:</l>
+          <l>tutti:</l>
+          <l>ben serrati nelle case <mei:breath>&mdash;</mei:breath> da ogni parte racchiusi <mei:breath>&mdash;</mei:breath></l>
+          <l>l'occhio sul tetto <mei:breath>&mdash;</mei:breath> la corsa ininterrotta:</l>
+          <l>ognuno di minuto in minuto ma più</l>
+          <l>IPNOTICO</l>
+
+        </lg>
+      </div>
+    </body>
+  </text>
+
+  <!--TESTO CINQUE: CORO III SCENA V DI UN DIARIO ITALIANO-->
+  <text xml:id="t5">
+    <front>
+        <div xml:id="tit6">
+         <head>
+           <lb/>Coro - I vivi e i morti del Vajont: sezione prima
+           <lb/>dalla scena V di Un diario italiano
+          </head>
+        </div>
+    </front>
+    <body>
+      <div>
+       <lg>
+           <l>niente sole oggi sulla valle</l>
+           <l>non c&#x27;è più niente lassù</l>
+           <l>
+              <mei:verse type="tf">
+                  <mei:syl wordpos="i">to</mei:syl>
+                  <mei:syl wordpos="m">spe</mei:syl>
+                  <mei:syl wordpos="t">dis</mei:syl>
+               </mei:verse>
+          </l>
+          <l>
+             <mei:verse type="tf">
+                 <mei:syl  wordpos="i">rte</mei:syl>
+                  <mei:syl wordpos="m">mo</mei:syl>
+                  <mei:syl wordpos="t">dis</mei:syl>
+             </mei:verse>
+          </l>
+            <l>
+             <mei:verse  type="tf">
+                 <mei:syl wordpos="i">dis</mei:syl>
+                  <mei:syl wordpos="m">vi</mei:syl>
+                  <mei:syl wordpos="m">mor</mei:syl>
+                  <mei:syl wordpos="t">e</mei:syl>
+             </mei:verse>
+          </l>
+           <l>
+             <mei:verse  type="tf">
+                <mei:syl  wordpos="i">dis</mei:syl>              
+                  <mei:syl  wordpos="m">vi</mei:syl>
+                 <mei:syl  wordpos="m">pe</mei:syl>
+                   <mei:syl  wordpos="t">eraz</mei:syl>
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl  wordpos="i">dis</mei:syl>              
+                  <mei:syl  wordpos="m">vi</mei:syl>
+                 <mei:syl  wordpos="t">is</mei:syl>
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl  wordpos="i">spe</mei:syl>              
+                  <mei:syl  wordpos="m">pe</mei:syl>
+                 <mei:syl  wordpos="t">eraz</mei:syl>
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl  wordpos="i">v</mei:syl>                               
+                 <mei:syl  wordpos="t">spe</mei:syl>
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl  wordpos="i">v</mei:syl>              
+                  <mei:syl  wordpos="m">uo</mei:syl>
+                 <mei:syl  wordpos="t">ra</mei:syl>
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl  wordpos="i">v</mei:syl>              
+                  <mei:syl  wordpos="m">uo</mei:syl>
+                 <mei:syl  wordpos="m">to</mei:syl>
+                 <mei:syl  wordpos="t">uot</mei:syl>
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl type="lunga" wordpos="i">u</mei:syl>              
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl type="lunga" wordpos="i">e</mei:syl>              
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl wordpos="i">e</mei:syl> 
+                 <mei:syl  wordpos="m">di</mei:syl>
+                 <mei:syl  wordpos="m">mo</mei:syl>
+                 <mei:syl  wordpos="m">te</mei:syl> 
+                 <mei:syl  wordpos="t">d</mei:syl>              
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl  wordpos="i">vuot</mei:syl>              
+                  <mei:syl  wordpos="m">te</mei:syl>           
+                 <mei:syl  wordpos="t">d</mei:syl>
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl  wordpos="i">disp</mei:syl>              
+                 <mei:syl  wordpos="t">e</mei:syl>
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl  wordpos="i">disp</mei:syl>              
+                 <mei:syl  wordpos="t">era</mei:syl>
+             </mei:verse>
+          </l>
+       </lg>
+    </div>   
+    </body>
+  </text>
+
+  <!--TESTO SEI: LE STESURE PROVVISORIE DELLA FABBRICA ILLUMINATA-->
+  <text xml:id="t6">
+    <front>
+      <div xml:id="tit6">
+       <head>
+         <lb/>LA FABBRICA ILLUMINATA: STESURE PROVVISORIE
+        </head>
+        <argument>
+          <p>
+            <lb/>Le diverse versioni de <emph rend="italic">La fabbrica illuminata</emph> sono state sviluppate in collaborazione con Luigi Nono 
+            <lb/>nel corso del 1964, in risposta alla necessità di ristrutturazioni musicali successive e all’espansione continua del tema.
+            <lb/>La prima versione costituiva un frammento (sogno e incubo) di un testo per teatro musicale intitolato <emph rend="italic">Un Diario italiano</emph>.
+            <lb/>La seconda versione è stata concepita per l’utilizzo di una voce solista femminile e un coro di donne. 
+            <lb/>Nella terza versione, gli ampliamenti (incluso l’uso di gergo tipico della fabbrica e della lingua della
+            <lb/>stampa industriale, nonché l’introduzione di nuove voci) sono stati realizzati dopo una raccolta di 
+            <lb/>materiali effettuata presso l’Italsider di Genova Cornigliano (questa versione non è inclusa nella raccolta Padrone e Servo). 
+            <lb/>La quarta versione, divisa in cinque parti (linguisticamente molto simile alla terza), è stata creata per 
+            <lb/>l’utilizzo di gruppi corali distinti, tutti attraversati da una voce femminile. 
+            <lb/>La quinta versione, costruita su contrasti, prevedeva l'uso intrecciato e contrapposto di cori e della voce femminile.
+          </p>
+        </argument>      
+      </div>
+    </front>
+    <group>
+       <text xml:id="t6.1">
+           <front>
+              <div xml:id="tit6.1">
+                 <head>
+                   <lb/>PRIMA STESTURA. Cinque donne. Sogno e incubo                  
+                  </head>
+             </div>
+           </front>
+           <body>
+             <div>
+               <lg xml:id="a">
+                 <mei:dir type="figure_voice">
+                   <stage>a.</stage>
+                 </mei:dir>
+                 <sp>
+                 <l>e non si fermano: <term type="uomo">mani</term><ref ana="n17"/> impazzite;</l>
+                 <l>le mie <term type="uomo">mani</term>, tutte le mie notti,</l>
+                 <l>uomini contorti; gli <term type="uomo">occhi</term> fissi,</l>
+                 <l>e aridi <term type="uomo">orgasmi</term>, la <term type="fabbrica">fabbrica</term> illuminata<ref ana="n18"/></l>
+                 </sp>
+               </lg>               
+               <lg xml:id="b">
+                 <mei:dir type="figure-voice">
+                   <stage>
+                    b.
+                   </stage>
+                 </mei:dir>
+                 <sp>
+                 <l><term type="uomo">rabbia-dolore</term> nella memoria</l>
+                 <l>gli uccisi tornano vivi: compagni</l>
+                 <l>uccisi dai compagni<ref ana="n19"/>; <term type="uomo">occhi</term> sventrati;</l>
+                 </sp>
+               </lg>               
+                <lg xml:id="c">
+                 <mei:dir type="figure-voice">
+                   <stage>
+                    c.
+                   </stage>
+                 </mei:dir>
+                 <sp>
+                 <l>chi mi <term type="uomo">fissa</term>? Eccoli <mei:breath>&mdash;</mei:breath> mi <term type="uomo">guardano</term>,</l>
+                 <l><term type="uomo">nuda</term> mi <term type="uomo">guardano</term> <mei:breath>&mdash;</mei:breath> <term type="uomo">correre</term>, devo; no!:</l>
+                 <l><term type="uomo">cado</term>, una <term type="fabbrica">macchina a uncini</term></l> 
+                 </sp>
+               </lg>  
+                <lg xml:id="d">               
+                 <mei:dir type="figure-voice">
+                   <stage>
+                    d.
+                   </stage>
+                 </mei:dir>
+                 <sp>
+                 <l>nella stanza io e un <term type="uomo">corpo</term>;</l> 
+                 <l>la folla cresce parla del morto <mei:breath>&mdash;</mei:breath></l>
+                 <l>suicida <mei:breath>&mdash;</mei:breath> amico della rivoluzione <mei:breath>&mdash;</mei:breath></l>
+                 </sp>
+               </lg>  
+                <lg xml:id="e">
+                 <mei:dir type="figure-voice">
+                   <stage>
+                    e.
+                   </stage>
+                 </mei:dir>
+                 <sp>
+                 <l>buttata in involucri deformi:</l>
+                 <l>presa: stretta; mi cacciano indietro;</l>
+                 <l>mi tengono <mei:breath>&mdash;</mei:breath> a una casa senza finestre <mei:breath>&mdash;</mei:breath></l>
+                 <l><term type="fabbrica">fabbrica come lager</term> <mei:breath>&mdash;</mei:breath></l>
+                 </sp>
+               </lg>  
+             </div>              
+           </body>
+       </text>
+       <!--SECONDA STESURA-->
+       <text xml:id="t6.2">
+           <front>
+              <div xml:id="tit6.2">
+                 <head>
+                   <lb/>SECONDA STESURA. Una donna e coro di donne. Sogno e incubo.              
+                  </head>
+             </div>
+           </front>
+           <body>
+             <div>
+                <lg>                
+                <l><term type="uomo"><mei:dir type="loud">MANI</mei:dir> impazzite</term> <mei:breath>&mdash;</mei:breath> <term type="uomo"><mei:dir type="loud">MANI</mei:dir></term>. E non si fermano</l>
+                <l>e <term type="uomo">non si fermano <mei:dir type="loud">E NON</mei:dir> si fer<mei:dir type="loud">MANO</mei:dir></term></l>
+                <l>le <term type="uomo"><mei:dir type="loud">MANI</mei:dir></term>, gli uccisi tornano vivi, le <mei:dir type="loud">MIE</mei:dir> <term type="uomo"><mei:dir type="loud">MANI</mei:dir></term></l>
+                <l><term type="uomo">rabbia-dolore</term> nella memoria, e non <mei:dir type="loud">SI FERMANO</mei:dir>,</l>
+                <l>tutte le mie notti <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">GLI</mei:dir> <term type="uomo"><mei:dir type="loud">OCCHI</mei:dir></term> <mei:dir type="loud">FISSI</mei:dir> e</l>
+                <l>aridi <term type="uomo">orgasmi</term> <mei:breath>&mdash;</mei:breath> <term type="uomo"><mei:dir type="loud">GLI OCCHI FISSI OCCHI FISSI</mei:dir></term></l>
+                <l>gli uccisi tornano vivi <term type="uomo"><mei:dir type="loud">OCCHI</mei:dir></term> <mei:dir type="loud">FISSI</mei:dir> compagni</l>
+                <l>uccisi <mei:dir type="loud">UN</mei:dir> <term type="uomo"><mei:dir type="loud">CORPO</mei:dir></term> dai compagni uccisi</l>
+               <l><term type="uomo"><mei:dir type="loud">OCCHI SVENTRATI OCCHI MANI</mei:dir></term> chi mi</l>
+               <l><term type="uomo">Fissa?</term> tutte le mie notti <mei:breath>&mdash;</mei:breath> eccoli <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">MI</mei:dir> <term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir></term></l>
+               <l>gli uccisi <term type="uomo"><mei:dir type="loud">NUDA</mei:dir></term> <mei:breath>&mdash;</mei:breath> correre <mei:dir type="loud">NO</mei:dir> devo <mei:dir type="loud">NO</mei:dir> <mei:breath>&mdash;</mei:breath> chi?</l>
+               <l><mei:dir type="loud">GUARDANO</mei:dir> <term type="uomo">cado correre</term> devo <term type="uomo"><mei:dir type="loud">CADO</mei:dir></term></l>
+               <l><term type="uomo">chi</term> mi <term type="uomo">fissa</term>? <mei:breath>&mdash;</mei:breath> eccoli <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">NO</mei:dir>! mi <term type="uomo">guardano</term>, <mei:dir type="loud">NO</mei:dir>!</l>
+               <l><term type="uomo">nuda</term>, <term type="uomo">guardano</term> <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">FISSI</mei:dir> uccisi dai compagni <mei:breath>&mdash;</mei:breath></l>
+               <l><term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir></term> <mei:breath>&mdash;</mei:breath> <term type="uomo">cado</term> <mei:dir type="loud">NO</mei:dir>! una <term type="fabbrica">macchina</term> <term type="uomo">chi</term>?</l>
+               <l>una <term type="fabbrica"><mei:dir type="loud">MACCHINA</mei:dir></term> io e <mei:dir type="loud">UN</mei:dir> <term type="uomo"><mei:dir type="loud">CORPO</mei:dir></term></l>
+               <l>nella stanza io e un <term type="uomo">corpo</term> <mei:dir type="loud">UNA</mei:dir> <term type="fabbrica"><mei:dir type="loud">MACCHINA</mei:dir></term> a</l>
+               <l><term type="fabbrica"><mei:dir type="loud">UNCINI</mei:dir></term> la folla cresce <mei:dir type="loud">FOLLA</mei:dir> io e</l>
+               <l>un <term type="uomo"><mei:dir type="loud">CORPO</mei:dir></term> la folla cresce <mei:breath>&mdash;</mei:breath> <term type="uomo">parla</term> del <mei:dir type="loud">MORTO</mei:dir></l>
+               <l><term type="uomo">gua<mei:dir type="loud">RDANO</mei:dir></term> un <term type="uomo"><mei:dir type="loud">CORPO</mei:dir></term> <mei:dir type="loud">FOLLA</mei:dir><ref ana="n20"/> presa stretta <term type="uomo">IO</term></l>
+                <l><term type="uomo"><mei:dir type="loud">IO</mei:dir></term> <term type="uomo">parla</term> del <mei:dir type="loud">MORTO</mei:dir> suicida amico <term type="uomo">parla</term> del</l>
+                <l><mei:dir type="loud">MORTO</mei:dir> buttata <term type="uomo">chi</term> mi <term type="uomo"><mei:dir type="loud">FISSA</mei:dir></term>? amico della</l>
+                <l>rivoluzione buttata mi <term type="uomo"><mei:dir type="loud">TENGONO</mei:dir> mani <mei:dir type="loud">MANI</mei:dir></term></l>
+               <l>presa stretta <term type="uomo"><mei:dir type="loud">IO</mei:dir> mi tengono <mei:dir type="loud">MANI</mei:dir> e non si fermano</term></l>
+                <l><mei:dir type="loud">STRETTA</mei:dir> <term type="uomo">mi cacciano</term> indietro amico <term type="uomo"><mei:dir type="loud">OCCHI</mei:dir></term></l>
+                <l><mei:dir type="loud">FISSI</mei:dir> buttata mi <term type="uomo"><mei:dir type="loud">TENGONO</mei:dir></term> <mei:breath>&mdash;</mei:breath> a una <mei:dir type="loud">CASA</mei:dir> fissa una</l>
+                <l><mei:dir type="loud">CASA</mei:dir> indietro stretta <mei:dir type="loud">NO</mei:dir>! indietro e <term type="uomo">non si <mei:dir type="loud">FERMANO</mei:dir></term></l>
+               <l>indie<mei:dir type="loud">TRO</mei:dir> <mei:breath>&mdash;</mei:breath> senza <mei:dir type="loud">FINESTRE</mei:dir> a una <mei:dir type="loud">CASA</mei:dir></l>
+                <l>senza finestre <term type="uomo">mi <mei:dir type="loud">TENGONO</mei:dir></term> presa stretta <term type="uomo"><mei:dir type="loud">MANI</mei:dir> occhi</term></l>
+                <l><mei:dir type="loud">FISSI</mei:dir> <term type="fabbrica">fabbrica come lager</term> <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">SENZA FINESTRE</mei:dir> <mei:breath>&mdash;</mei:breath></l>
+                <l><term type="uomo">Mi guardano</term> <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">FISSI</mei:dir> <mei:breath>&mdash;</mei:breath> la <term type="fabbrica">fabbrica illuminata</term></l>
+               <l><term type="uomo">io</term> <mei:breath>&mdash;</mei:breath> e <term type="uomo">non si fermano</term>: <term type="uomo"><mei:dir type="loud">MANI</mei:dir> impazzite; gli occhi</term></l>
+               <l><mei:dir type="loud">FISSI</mei:dir> <term type="uomo"><mei:dir type="loud">MANI</mei:dir></term> <term type="fabbrica">fabbrica</term> <mei:breath>&mdash;</mei:breath> <term type="fabbrica"><mei:dir type="loud">ILLUMINATA ILL</mei:dir>uminata</term></l>
+               </lg>
+             </div>         
+           </body>
+        </text>
+        <text xml:id="t6.3">
+           <front>
+              <div xml:id="tit6.3">
+                 <head>
+                   <lb/>QUARTA STESURA. Una donna e cori di donne e uomini contrapposti.              
+                  </head>
+             </div>
+           </front> 
+           <body>
+             <div>
+               <lg>
+                 <mei:dir>
+                   <stage>1.</stage>
+                 </mei:dir>
+                 <l><term type="fabbrica"><mei:dir type="loud">LUCI ABBAGLIANTI</mei:dir></term> <mei:breath>&mdash;</mei:breath> a esalazioni <mei:dir type="loud">ESPOSTI</mei:dir> <mei:breath>&mdash;</mei:breath></l>
+                 <l><term type="fabbrica"><mei:dir type="loud">LA POLVERE</mei:dir></term> <mei:breath>&mdash;</mei:breath> gli uccisi <mei:dir type="loud">VIVI</mei:dir> <mei:breath>&mdash;</mei:breath></l>
+                 <l><term type="uomo">Rabbia-dolore</term> nella memoria <mei:breath>&mdash;</mei:breath> USTIONI esposti</l>
+                 <l><mei:dir type="loud">ESPOSTI</mei:dir> a cadute <mei:breath>&mdash;</mei:breath> <term type="fabbrica">la colata</term> <term type="fabbrica"><mei:dir type="loud">DAI QUADRANTI</mei:dir></term></l>
+               </lg>
+               <lg>
+                  <mei:dir>
+                   <stage>2.</stage>
+                 </mei:dir>
+                 <l>Gli <term type="uomo"><mei:dir type="loud">OCCHI FISSI</mei:dir></term> ai <term type="fabbrica">quadranti</term>, <mei:dir type="loud">E</mei:dir> aridi <term type="uomo">orgasmi</term> <mei:breath>&mdash;</mei:breath></l>
+                 <l>un giro del letto, tutte le <mei:dir type="loud">MIE NOTTI</mei:dir> <mei:breath>&mdash;</mei:breath> <term type="uomo"><mei:dir type="loud">OCCHI</mei:dir></term> e <term type="uomo">corpo</term></l> 
+                 <l><term type="uomo">occhi</term> <mei:dir type="loud">FISSI</mei:dir>, gli <term type="uomo"><mei:dir type="loud">OCCHI FISSI</mei:dir></term> <mei:breath>&mdash;</mei:breath> dal pul<mei:dir type="loud">PITO</mei:dir></l> 
+                 <l>ci <term type="uomo">guardano</term>, <term type="fabbrica">trucioli scaglie</term> <term type="uomo"><mei:dir type="loud">OCCHI</mei:dir></term> <term type="uomo">occhi</term> <term type="uomo"><mei:dir type="loud">MANI</mei:dir></term> <mei:breath>&mdash;</mei:breath> un</l>
+                 <l><mei:dir type="loud">RITMO</mei:dir> infernanle <mei:breath>&mdash;</mei:breath> <term type="uomo">mani</term>, <mei:dir type="loud">E</mei:dir> non si fermano <term type="uomo">afferare</term></l>
+                 <l>ruotare e:</l>
+                 <l>e <mei:dir type="loud">NON</mei:dir> si fer<mei:dir type="loud">MANO</mei:dir> impazzite, raggiungere,</l>
+                 <l>muovere le <term type="uomo"><mei:dir type="loud">MANI</mei:dir></term> <mei:breath>&mdash;</mei:breath> le mie <term type="uomo"><mei:dir type="loud">MANI</mei:dir></term> <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">ORE</mei:dir> al <term type="fabbrica">laminatoio</term>,</l>
+                 <l><term type="uomo">occhi</term> <term type="uomo"><mei:dir type="loud">MANI</mei:dir></term> chi mi <mei:dir type="loud">FISSA</mei:dir> <mei:breath>&mdash;</mei:breath> tutte le mie notti,</l>
+                 <l>continuamente</l>
+               </lg>
+               <lg>
+                  <mei:dir>
+                   <stage>3.</stage>
+                 </mei:dir>
+                  <l><space quantity="10" unit="words"/>eccolo <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">MI</mei:dir></l>
+                  <l><term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir></term>, esposti a cadute <mei:breath>&mdash;</mei:breath> <term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir></term> <mei:breath>&mdash;</mei:breath> <term type="fabbrica">la cabina</term></l>
+                  <l>Detta <mei:dir type="loud">TOMBA</mei:dir>, dalle <term type="fabbrica">gru</term>, nel collo <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">USCITA</mei:dir>,</l>
+                  <l><term type="uomo">correre</term> <mei:dir type="loud">NO</mei:dir> devo <mei:dir type="loud">NO</mei:dir> <mei:breath>&mdash;</mei:breath> <term type="uomo">chi?</term> <term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir> cado correre</term></l>
+                  <l>devo <term type="uomo"><mei:dir type="loud">CADO</mei:dir></term> <mei:breath>&mdash;</mei:breath> <term type="uomo">chi mi <mei:dir type="loud">FISSA</mei:dir>?</term> <mei:breath>&mdash;</mei:breath> <term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir></term>, a cadute</l>
+                  <l>continua, <mei:dir type="loud">FISSI</mei:dir> <term type="uomo">cado</term> <mei:dir type="loud">NO!</mei:dir> <term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir></term> <mei:breath>&mdash;</mei:breath> una <term type="fabbrica"><mei:dir type="loud">MACCHINA</mei:dir></term></l>
+                  <l>a <term type="fabbrica">quadrante</term> <mei:breath>&mdash;</mei:breath> <term type="uomo"><mei:dir type="loud">OSSERVA</mei:dir></term> <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">NON</mei:dir> so <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">NO</mei:dir>, <term type="uomo">io</term></l>
+                  <l>e <mei:dir type="loud">UN</mei:dir> <term type="uomo">corpo</term>: nella stanza <mei:breath>&mdash;</mei:breath> mi <term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir></term>, <term type="uomo">afferra<mei:dir type="loud">NO</mei:dir></term> <mei:breath>&mdash;</mei:breath></l>
+                  <l>in SILENZIO, SILENZIO, <term type="uomo">guardano</term>, <term type="uomo"><mei:dir type="loud">GUARDA</mei:dir></term> <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">NOTTE</mei:dir>!</l>
+                  <l><mei:dir type="loud">NON</mei:dir> <term type="uomo"><mei:dir type="loud">PARLARE</mei:dir></term> <mei:breath>&mdash;</mei:breath> senza, <term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir></term></l>
+               </lg>
+               <lg>
+                  <mei:dir>
+                     <stage>4.</stage>
+                 </mei:dir>
+                <l><space quantity="5" unit="words"/>la folla <mei:dir type="loud">CRESCE</mei:dir>,</l>
+                <l><term type="fabbrica">turno</term> <mei:breath>&mdash;</mei:breath> cresce <term type="uomo">parla</term> del <mei:dir type="loud">MORTO</mei:dir>, a ritmo</l>
+                <l>infernale <mei:dir type="loud">NOSTRA</mei:dir> <term type="fabbrica">fabbrica</term> <mei:breath>&mdash;</mei:breath> buttata <term type="uomo">mi <mei:dir type="loud">TENGONO</mei:dir></term>,</l>
+                <l>di un <mei:dir type="loud">MORTO</mei:dir> <mei:breath>&mdash;</mei:breath> la gente (<mei:dir type="loud">NOSTRA</mei:dir> <term type="fabbrica"><mei:dir type="loud">FABBRICA</mei:dir></term>) dice</l>
+                <l><term type="fabbrica">fabbrica</term> dei <mei:dir type="loud">MORTI</mei:dir> <mei:breath>&mdash;</mei:breath> sul letto, le <term type="fabbrica"><mei:dir type="loud">SCAGLIE</mei:dir></term>,</l>
+                <l>proiettate</l>
+                <l>nella <term type="fabbrica">polvere</term> <mei:dir type="loud">TUTTA</mei:dir> la città <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">NOI</mei:dir>; parole <mei:dir type="loud">PROTESTE</mei:dir>,</l>
+                <l>dai <mei:dir type="loud">MORTI</mei:dir> <space quantity="10" unit="words"/> <mei:dir type="loud">VIVI</mei:dir></l>
+               </lg>
+               <lg>
+                  <mei:dir>
+                     <stage>5.</stage>
+                 </mei:dir>
+                 <l>(sarà) <mei:dir type="loud">MATTINA</mei:dir> <mei:breath>&mdash;</mei:breath> volato, dalla <term type="fabbrica">gru</term>: a una casa <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">ESPOSTI</mei:dir>,</l>
+                 <l><mei:dir type="loud">FISSA</mei:dir> <mei:breath>&mdash;</mei:breath> senza <mei:dir type="loud">FINESTRE</mei:dir>, illuminata, presa, stretta</l>
+                 <l>mi <mei:dir type="loud">TENGONO</mei:dir> <mei:breath>&mdash;</mei:breath> <term type="uomo">occhi</term> <mei:dir type="loud">FISSI</mei:dir> <mei:breath>&mdash;</mei:breath> <term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir></term>, sarà</l>
+                 <l>(notte) <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">INDIETRO!</mei:dir> <mei:breath>&mdash;</mei:breath> tagliano i tempi <mei:breath>&mdash;</mei:breath> e</l>
+                 <l><space quantity="5" unit="words"/><term type="fabbrica"><mei:dir type="loud">FABBRICA</mei:dir> come lager</term> <mei:breath>&mdash;</mei:breath></l>
+                 <l>Senza finestre, e non si fermano <mei:breath>&mdash;</mei:breath> <term type="fabbrica"><mei:dir type="loud">FABBRICA ILLUMINATA</mei:dir></term></l>
+                 <l><term type="uomo">io</term> <term type="fabbrica"><mei:dir type="loud">ILLUMINATA</mei:dir></term> <mei:breath>&mdash;</mei:breath> <term type="uomo">io</term> <mei:breath>&mdash;</mei:breath> <term type="fabbrica">incandescente</term>, <mei:dir type="loud">IMPAZZITA</mei:dir> <mei:breath>&mdash;</mei:breath> <term type="fabbrica">fabbrica</term></l>
+                 <l><term type="fabbrica">illuminata</term> <space quantity="5" unit="words"/> <term type="fabbrica"><mei:dir type="loud">ILLUMINATA</mei:dir></term></l>
+               </lg>
+             </div>
+           </body>         
+        </text>
+        <text xml:id="t6.4">
+            <front>
+              <div xml:id="tit6.4">
+                 <head>
+                   <lb/>QUINTA STESURA. A contrasto, una donna, coro di donne, coro di uomini            
+                  </head>
+             </div>
+           </front> 
+           <body>
+             <div>
+                <lg>
+                   <mei:dir>
+                     <stage>A</stage>
+                 </mei:dir>
+                  <l><mei:dir type="loud">ININTERROTTO</mei:dir> <mei:breath>&mdash;</mei:breath> che vuota le ore: <mei:dir type="loud">RITMO</mei:dir>,</l>
+                  <l><term type="fabbrica">quadranti</term>, <term type="uomo"><mei:dir type="loud">VISI</mei:dir></term> e <term type="uomo">non si fermano</term>;</l>
+                  <l>Sera: gi<mei:dir type="loud">RO DEL LETTO</mei:dir>: matt<mei:dir type="loud">INA</mei:dir>;</l>
+                  <l>nella polvere <mei:dir type="loud">TUTTA</mei:dir> la città <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">NOI</mei:dir>; parole <mei:dir type="loud">PROTESTE</mei:dir>,</l>
+                  <l>dai <mei:dir type="loud">MORTI VIVI</mei:dir></l>
+                  <l>la folla cresce <mei:breath>&mdash;</mei:breath> <term type="uomo">parla</term> del <mei:dir type="loud">MORTO</mei:dir></l>
+                  <l><term type="fabbrica">fabbrica come lager</term></l>
+                  <l>tagliano i tempi <mei:breath>&mdash;</mei:breath> e</l>
+                  <l>la <term type="fabbrica">cabina</term> detta <mei:dir type="loud">TOMBA</mei:dir>;</l>
+                  <l>per anni accumulando sconfitte,</l>
+                  <l>spazi di giorni colpiti <mei:breath>&mdash;</mei:breath> cieli uguali:</l>
+                  <l>fissati a <term type="uomo"><mei:dir type="loud">VOLTI</mei:dir></term> di guardiani</l>
+                  <l>senza finestre,</l>
+                  <l>e <term type="uomo">non si fermano</term> <mei:breath>&mdash;</mei:breath> <term type="fabbrica">la fabbrica <mei:dir type="loud">ILLUMINATA</mei:dir></term>,</l>
+                  <l>e <term type="uomo">non si fermano</term></l>
+                  <l><term type="fabbrica">incandescente</term>, <term type="fabbrica">il<mei:dir type="loud">L</mei:dir>umi<mei:dir type="loud">N</mei:dir>a<mei:dir type="loud">T</mei:dir>a ill<mei:dir type="loud">UMINATA</mei:dir></term></l>
+                </lg>
+                   <lg>
+                   <mei:dir>
+                     <stage>B</stage>
+                 </mei:dir>
+                   <l>e <term type="uomo">non si fermano</term> <mei:breath>&mdash;</mei:breath> <term type="uomo"><mei:dir type="loud">MANI</mei:dir></term> di aggredire, che <mei:breath>&mdash;</mei:breath></l>
+                   <l>al <term type="uomo"><mei:dir type="loud">CORPO</mei:dir></term>: e <term type="uomo">nuda afferrano</term>:</l>
+                   <l><term type="uomo">guardano</term> <term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir></term> <term type="uomo">occhi</term> fissi: <term type="uomo">occhi</term> <term type="uomo">mani</term> <term type="uomo">chi</term></l>
+                   <l><mei:dir type="loud">MI</mei:dir> <term type="uomo"><mei:dir type="loud">FISSA</mei:dir></term>? tutte le mie notti: ma aridi <term type="uomo">orgasmi</term> <mei:breath>&mdash;</mei:breath></l>
+                   <l>continuamente: io</l>
+                   <l>e un <term type="uomo"><mei:dir type="loud">CORPO</mei:dir></term></l>
+                   <l>buttata <mei:dir type="loud">MI</mei:dir> tengono: tornano;</l>
+                   <l>presa: stretta: <term type="uomo"><mei:dir type="loud">GUARDANO</mei:dir></term>, <term type="uomo">cado</term>, <mei:dir type="loud">DEVO</mei:dir>, <term type="uomo">cado</term></l>
+                   <l><mei:dir type="loud">FISSI</mei:dir> <mei:breath>&mdash;</mei:breath> uccisi: in <mei:dir type="loud">SILENZIO</mei:dir>, <mei:dir type="loud">SILENZIO</mei:dir>, <term type="uomo">guardano</term>,</l>
+                   <l><term type="uomo">guarda</term> <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">NOTTE</mei:dir>!</l>
+                   <l><term type="uomo">rabbia-dolore</term> nella memoria: una <term type="fabbrica"><mei:dir type="loud">MACCHINA</mei:dir></term></l>
+                   <l>a quadrante <mei:breath>&mdash;</mei:breath> <term type="fabbrica">illuminata</term> <mei:breath>&mdash;</mei:breath> <term type="uomo"><mei:dir type="loud">PARLA</mei:dir></term>: <mei:dir type="loud">NON</mei:dir> si <mei:breath>&mdash;</mei:breath> <mei:dir type="loud">NO</mei:dir>, <term type="uomo">io</term></l>
+                   <l>(sarà) <mei:dir type="loud">MATTINA</mei:dir> <mei:breath>&mdash;</mei:breath> a una casa <mei:dir type="loud">FISSA</mei:dir></l>
+                   <l>Senza <mei:dir type="loud">FINESTRE</mei:dir> <mei:breath>&mdash;</mei:breath> <term type="uomo">mi <mei:dir type="loud">TENGONO</mei:dir></term>, presa stretta</l>
+                   <l><term type="uomo">Io</term> <mei:breath>&mdash;</mei:breath> e <term type="uomo">non si fermano</term>: gli <term type="uomo">occhi</term></l>
+                   <l><mei:dir type="loud">FISSI</mei:dir> <term type="uomo"><mei:dir type="loud">MANI</mei:dir></term> <mei:breath>&mdash;</mei:breath> <term type="uomo">io</term> <mei:breath>&mdash;</mei:breath> <term type="fabbrica">illuminata</term> <mei:breath>&mdash;</mei:breath> <term type="fabbrica">incandescente</term> <mei:breath>&mdash;</mei:breath></l>
+                </lg>
+             </div>
+           </body>
+        </text>
+    </group>
+  </text>
+  <text xml:id="t7">
+    <front>
+      <div xml:id="tit7">
+       <head>
+         <lb/>LA FABBRICA ILLUMINATA: STESURA DEFINITIVA
+        </head>
+        <argument>
+          <p>
+            <lb/>La stesura definitiva non è altro che la trascrizione del risultato musicale de-
+            <lb/>finitivo, e va considerata come risultato finale anche del materiale linguistico.
+            <lb/>Oltre che a una ulteriore elaborazione del materiale precedente, il testo accoglie
+            <lb/>frammenti del contratto sindacale dei metallurgici.
+            <lb/>Si aggiungono in chiusura alcuni versi tratti da Due poesie a T. di Cesare Pavese, presenti
+            <lb/>solo nella seconda scena di Un diario italiano. 
+          </p>
+        </argument>      
+      </div>
+    </front>
+    <body>
+       <div>
+         <lg>
+           <mei:dir type="figura_scena">
+             <stage>1.</stage>
+           </mei:dir>
+           <l><space quantity="10" unit="words"/><mei:dir type="solo"><emph rend="bold"><term type="fabbrica">fabbrica</term> dei morti la chiamavano</emph></mei:dir></l>
+           <l><quote type="inchiesta"><emph rend="italic">esposizione operaia</emph></quote></l>
+           <l><space quantity="5" unit="words"/><quote type="inchiesta"><emph rend="italic">a ustioni</emph></quote></l>
+           <l><quote type="inchiesta"><emph rend="italic">a esalazioni nocive</emph></quote></l>
+           <l><space quantity="5" unit="words"/><quote type="inchiesta"><emph rend="italic">a gran masse di <term type="fabbrica">acciaio fuso</term></emph></quote></l>
+           <l><quote type="inchiesta"><emph rend="italic">esposizione operaia</emph></quote></l>
+           <l><space quantity="5" unit="words"/><quote type="inchiesta"><emph rend="italic">a elevatissime temperature</emph></quote></l>
+           <l><space quantity="10" unit="words"/><mei:dir type="solo"><emph rend="bold">relazioni umane per accelerare i tempi</emph></mei:dir></l>
+           <l><quote type="inchiesta"><emph rend="italic">esposizione operaia</emph></quote></l>
+           <l><space quantity="5" unit="words"/><quote type="inchiesta"><emph rend="italic">a <term type="fabbrica">materiali proiettati</term></emph></quote></l>
+          <l><space quantity="10" unit="words"/><mei:dir type="solo"><emph rend="bold">su otto ore due ne intasca l'operaio</emph></mei:dir></l>
+          <l><quote type="inchiesta"><emph rend="italic">esposizione operaia</emph></quote></l>
+          <l><space quantity="5" unit="words"/><quote type="inchiesta"><emph rend="italic">a cadute</emph></quote></l>
+          <l><space quantity="5" unit="words"/><quote type="inchiesta"><emph rend="italic">a <term type="fabbrica">luci abbaglianti</term></emph></quote></l>
+          <l><space quantity="10" unit="words"/><quote type="inchiesta"><emph rend="italic">a <term type="fabbrica">corrente ad alta tensione</term></emph></quote></l>
+          <l><space quantity="10" unit="words"/><mei:dir type="solo"><emph rend="bold">quanti <mei:dir type="loud">MINUTI-UOMO</mei:dir> per morire?</emph></mei:dir></l>
+         </lg>
+         <lg>
+           <mei:dir type="figura_scena">
+             <stage>2.</stage>
+           </mei:dir>
+           <l>e non si fermano <mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir> <term type="uomo"><mei:dir type="loud">MANI</mei:dir></term> di aggredire,</l>
+           <l><mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir><mei:dir type="loud">ININTERROTTO</mei:dir><mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir>che vuota le ore</l>
+           <l>al <term type="uomo"><mei:dir type="loud">CORPO</mei:dir></term><mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir><term type="uomo">nuda</term> afferrano:</l>
+           <l><term type="fabbrica">quadranti</term>, <term type="uomo">visi</term>:<mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir> e <term type="uomo">non si fermano</term></l>
+           <l><term type="uomo">guardano <mei:dir type="loud">GUARDANO</mei:dir> occhi</term> fissi: <term type="uomo">occhi mani</term></l>
+           <l>sera <mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir> giro del letto</l>
+           <l>tutte le mie notti <mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir> ma aridi <term type="uomo">orgasmi</term></l>
+           <l><mei:dir type="loud">TUTTA</mei:dir> la città,<mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir> dai morti<mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir> <term type="uomo"><mei:dir type="loud">VIVI</mei:dir></term></l>
+           <l><mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir>noi<mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir> continuamente   <mei:dir type="loud">PROTESTE</mei:dir></l>
+           <l>la folla cresce parla del <mei:dir type="loud">MORTO</mei:dir></l>
+           <l><mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir>la <term type="fabbrica">cabina</term> detta <mei:dir type="loud">TOMBA</mei:dir></l>
+           <l><mei:dir type="spazi"><space quantity="5" unit="words"/></mei:dir>tagliano i tempi</l>
+           <l><mei:dir type="spazi"><space quantity="10" unit="words"/></mei:dir><term type="fabbrica">fabbrica come lager</term></l>
+           <l><mei:dir type="spazi"><space quantity="10" unit="words"/></mei:dir><mei:dir type="loud">UCCISI</mei:dir></l>
+         </lg>
+         <lg>
+           <mei:dir type="figura_scena">
+             <stage>3.</stage>
+           </mei:dir>
+           <l><quote type="cp">passeranno i mattini</quote></l>
+           <l><quote type="cp">passeranno le angosce</quote></l>
+           <l><quote type="cp">non sarà così sempre</quote></l>
+           <l><quote type="cp">ritroverai qualcosa</quote></l>
+         </lg>
+       </div>
+    </body>
+  </text>
+  
+</TEI>
