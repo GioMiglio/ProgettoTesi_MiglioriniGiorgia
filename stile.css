@@ -9,8 +9,8 @@ html, body {
 }
 
 body {
-  max-width: 100vw; /* Impedisce che il body superi la larghezza della finestra */
-  max-height: 100vh; /* Impedisce che il body superi l'altezza della finestra */
+  max-width: 100vw; 
+  max-height: 100vh; 
  
 }
 
@@ -19,7 +19,7 @@ body {
 #frontpage {
     position: relative;
     width: 100%;
-    max-width: 1920px;  /* Imposta la larghezza massima */
+    max-width: 1920px;  
     margin: auto;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 #frontpage h2:hover{
-    text-shadow: 0 0 5px #fff, 0 0 10px grey, 0 0 20px black; /* Effetto neon */
+    text-shadow: 0 0 5px #fff, 0 0 10px grey, 0 0 20px black; 
 }
 
 #nav h3{
@@ -64,22 +64,22 @@ body {
     top: 0;
     left: 50%;
     display: none;
-    background-color: rgba(255, 254, 254, 0.95);  /* Background traslucido */
+    background-color: rgba(255, 254, 254, 0.95); 
     color: rgb(0, 0, 0);
     padding: 20px;
-    width: 50%;  /* Impostato per coprire metà della pagina a destra */
+    width: 50%; 
     height: 95.5%; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
-    opacity: 0;  /* Imposta l'opacità iniziale a 0 per effetto fade-in */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Aggiungi transizioni per fade-in e movimento */
+    opacity: 0;  
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
 }
 
 #nav.show {
     display: block;
-    opacity: 0.9;  /* Aggiungi l'opacità quando viene mostrato */
-    transform: translateX(0%); /* Posiziona il nav sulla destra con una transizione */
-    right: 0; /* Muovi il nav a destra */
+    opacity: 0.9; 
+    transform: translateX(0%);
+    right: 0; 
 }
 
 
@@ -90,31 +90,31 @@ body {
 }
 
 #nav ul li {
-    padding: 12px 0; /* Aumenta lo spazio per una maggiore leggibilità */
+    padding: 12px 0; 
     font-size: 1.2em;
     text-align: justify;
-    cursor: pointer; /* Indica che l'elemento è cliccabile */
-    transition: color 0.3s ease, transform 0.3s ease; /* Aggiungi transizioni al colore e movimento al passaggio del mouse */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; 
 }
 
 #nav ul li:hover {
-    text-shadow: 0 0 5px #fff, 0 0 5px grey; /* Effetto neon */
-    transform: scale(1);  /* Leggero ingrandimento al passaggio del mouse */
+    text-shadow: 0 0 5px #fff, 0 0 5px grey; 
+    transform: scale(1); 
 }
 
 #nav ul li a {
     color: rgb(0, 0, 0);
-    padding: 12px 0; /* Aumenta lo spazio per una maggiore leggibilità */
+    padding: 12px 0; 
     font-size: 1em;
     text-align: justify;
-    cursor: pointer; /* Indica che l'elemento è cliccabile */
-    transition: color 0.3s ease, transform 0.3s ease; /* Aggiungi transizioni al colore e movimento al passaggio del mouse */
+    cursor: pointer; 
+    transition: color 0.3s ease, transform 0.3s ease; 
     text-decoration: none;
 }
 
 #nav ul li a:hover {
-    text-shadow: 0 0 5px #fff, 0 0 5px grey; /* Effetto neon */
-    transform: scale(1);  /* Leggero ingrandimento al passaggio del mouse */
+    text-shadow: 0 0 5px #fff, 0 0 5px grey; 
+    transform: scale(1);  
 }
 
 
@@ -151,10 +151,9 @@ body {
 
 #sez1, #sez2 {
   height: 900px;
-  /*background-image: url("CarmiLisetta_Italsider2.png");*/
-  background-repeat: no-repeat; /* Impedisce che l'immagine si ripeta */
-  display: flex; /* Aggiungi Flexbox per il posizionamento del contenuto */
-  align-items: center; /* Centra verticalmente il contenuto */
+  background-repeat: no-repeat; 
+  display: flex; 
+  align-items: center; 
 }
 
 #sez1 #text_sez1, #sez2 #text_sez2{
@@ -165,11 +164,11 @@ body {
   font-size: 15px;
   line-height: 1.5;
   z-index: 1;
-  padding: 25px; /* Aggiungi padding per migliorare l'aspetto del testo */
-  box-sizing: border-box; /* Assicura che il padding non influisca sulla larghezza */
-  justify-content: flex-start; /* Posiziona il contenuto a sinistra */
+  padding: 25px; 
+  box-sizing: border-box; 
+  justify-content: flex-start; 
 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra sottile */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -202,9 +201,9 @@ body {
   font-size: 15px;
   line-height: 1.5;
   z-index: 1;
-  padding: 25px; /* Aggiungi padding per migliorare l'aspetto del testo */
-  box-sizing: border-box; /* Assicura che il padding non influisca sulla larghezza */
-  flex: 1; /* Ogni div di testo prenderà lo stesso spazio disponibile */
+  padding: 25px; 
+  box-sizing: border-box; 
+  flex: 1; 
   min-width: 200px;
   
 }
@@ -229,7 +228,6 @@ body {
 #all_img {
   display: flex;
   margin-top: 2%;
-  /*margin-left: 10%;*/
   
 }
 
@@ -250,20 +248,20 @@ body {
 }
 
 #all_img3 img {
-  width: 34%; /* Puoi regolare la percentuale per modificare la larghezza delle immagini */
+  width: 34%; 
   height: auto;
   padding: 3px;
 
 }
 #all_img img {
-  width: 34%; /* Puoi regolare la percentuale per modificare la larghezza delle immagini */
+  width: 34%; 
   height: auto;
 
 
 }
 
 #all_img2 img {
-  width: 34%; /* Puoi regolare la percentuale per modificare la larghezza delle immagini */
+  width: 34%; 
   height: auto;
   
 }
@@ -415,14 +413,24 @@ body {
    }
 
    #tavole_fonetiche .sezione {
-    width: 50%;
+    width: 80%;
     font-size: 16px;
+ 
+   }
+
+   #rilevanti {
+    margin-left: 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    color:blue;
  
    }
 
    #tavole_fonetiche svg {
     width: 60%;
-    height: 120px;
+    max-height: 980px;
+
    }
 
 /*POP-UP*/
@@ -449,7 +457,7 @@ body {
 }
 
 .popup.close {
-    display: none; /* Nascondi il popup quando ha la classe 'close' */
+    display: none; /* Nasconde il popup quando ha la classe 'close' */
     
 }
 
@@ -510,7 +518,7 @@ body {
 #bottoni {
   width: 30%;
   height: 100%;
-  max-height: 90%; /* Limita l'altezza della barra */
+  max-height: 90%; 
   position: fixed;
   top: 50%;
   right: 0;
@@ -521,22 +529,23 @@ body {
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   display: none;  
-  opacity: 0;     /* Inizialmente invisibile */
-  transition: opacity 0.7s ease-in-out;  /* Transizione di opacità */
+  opacity: 0;    
+  transition: opacity 0.7s ease-in-out;  
   display: flex;
-  flex-wrap: wrap; /* Permette ai bottoni di andare su più righe */
-  justify-content: space-around; /* Dispone i bottoni con spazio tra di loro */
-  gap: 10px; /* Spazio tra le righe e le colonne */
-  overflow-y: auto; /* Aggiunge la barra di scorrimento verticale */
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  gap: 10px; 
+  overflow-y: auto; 
   }
 
+/* Mostra il contenitore per effetto di scroll down*/
   #bottoni.visible {
-    display: block; /* Mostra il contenitore */
-    opacity: 1; /* Rendi visibile */
+    display: block; 
+    opacity: 1; 
     transition: opacity 0.7s ease-in-out; 
 }
   
-/* Stile per i bottoni */
+/* bottoni */
 #bottoni button {
    
     margin-bottom: 10px;           
@@ -555,10 +564,10 @@ body {
   }
   
   
-/* Stile per il titolo e il paragrafo */
+
 #bottoni h2, #bottoni p {
-    color: #333; /* Colore testo grigio scuro per un contrasto morbido */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Font professionale e minimale */
+    color: #333; 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
   }
   
   #bottoni h2 {
@@ -569,25 +578,25 @@ body {
   }
 
   #bottoni p {
-    font-size: 1rem; /* Dimensione del font più piccola e moderna */
+    font-size: 1rem; 
     text-align: center;
     margin-bottom: 20px;
     line-height: 1.5;
-    color: #555; /* Colore più chiaro per il testo descrittivo */
+    color: #555; 
     font-weight: bold;
   }
 
   #bottoni button:hover {
-    background-color: #f0f0f0; /* Colore di sfondo chiaro al passaggio del mouse */
-    border-color: #bbb; /* Colore del bordo cambia al passaggio del mouse */
-    color: #000; /* Colore del testo cambia a nero */
-    transform: translateY(-3px); /* Leggero spostamento verso l'alto per effetto 3D */
+    background-color: #f0f0f0; 
+    border-color: #bbb; 
+    color: #000; 
+    transform: translateY(-3px); 
   }
   
   /* Effetto focus sui bottoni */
   #bottoni button:focus {
-    outline: none; /* Rimuove il bordo di default */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Aggiunge una leggera ombra esterna al focus */
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
   }
       
       .cyan{background-color: deepskyblue;}
