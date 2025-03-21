@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+    //inizialmente nascoste al caricamento della pagina
     $('.correzioni').hide();
     $display=false;
     $('.correzioni_manoscritte').hide();

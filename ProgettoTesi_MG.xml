@@ -354,6 +354,53 @@
 
   </teiHeader>
 
+  <!--FACSIMILE: TAVOLE FONETICHE, Coro III, Scena V di Un diario italiano-->
+  <facsimile>
+     <surface xml:id="tavfo1">
+        <graphic url='SDIM3894_copia.jpg' width='896px' height='1868px' />
+<zone ulx="260" uly="71" lrx="361" lry="71" corresp="s1"/> <!--to-->
+<zone ulx="380" uly="71" lrx="523" lry="71" corresp="s2"/> <!--spe-->
+<zone ulx="523" uly="71" lrx="523" lry="71" corresp="s3" /> <!--dis-->
+<zone ulx="321" uly="132" lrx="425" lry="132" corresp="s4"/> <!--rte-->
+<zone ulx="321" uly="135" lrx="380" lry="233"/>
+<zone ulx="435" uly="132" lrx="380" lry="233" corresp="s5"/> <!--mo-->
+<zone ulx="380" uly="270" lrx="609" lry="260" corresp="s6"/> <!--dis-->
+<zone ulx="380" uly="270" lrx="460" lry="320"/>
+<zone ulx="609" uly="260" lrx="480" lry="320" corresp="s7"/> <!--vi-->
+<zone ulx="480" uly="320" lrx="480" lry="320" corresp="s8"/> <!--is-->
+<zone ulx="609" uly="260" lrx="630" lry="320"/>
+<zone ulx="630" uly="350" lrx="329" lry="513" corresp="s9"/> <!--pe-->
+<zone ulx="329" uly="513" lrx="329" lry="513" corresp="s10"/> <!--eraz-->
+<zone ulx="570" uly="325" lrx="615" lry="330" corresp="s11"/>  <!--spe-->
+<zone ulx="500" uly="369" lrx="570" lry="325" corresp="s12"/>  <!--v-->
+<zone ulx="490" uly="369" lrx="430" lry="400"/>
+<zone ulx="430" uly="400" lrx="470" lry="426" corresp="s13"/> <!--uo-->
+<zone ulx="470" uly="426" lrx="470" lry="426" corresp="s14"/> <!--to-->
+<zone ulx="430" uly="400" lrx="605" lry="400"/>
+<zone ulx="605" uly="400" lrx="605" lry="400" corresp="s15"/> <!--ra-->
+<zone ulx="380" uly="270" lrx="290" lry="350"/>
+<zone ulx="276" uly="370" lrx="395" lry="577" corresp="s16"/> <!--vi-->
+<zone ulx="395" uly="577" lrx="350" lry="585" corresp="s17"/> <!--mor-->
+<zone ulx="454" uly="500" lrx="454" lry="500" corresp="s19"/> <!--uot-->
+<zone ulx="350" uly="585" lrx="400" lry="629" corresp="s18"/> <!--e-->
+<zone ulx="350" uly="585" lrx="600" lry="585"/>
+<zone ulx="350" uly="585" lrx="180" lry="585"/>
+<zone ulx="350" uly="585" lrx="350" lry="900"/>
+<zone ulx="350" uly="585" lrx="345" lry="550"/>
+<zone ulx="345" uly="540" lrx="345" lry="60"/>
+<zone ulx="400" uly="629" lrx="455" lry="610" corresp="s20"/> <!--di-->
+<zone ulx="455" uly="610" lrx="468" lry="648" corresp="s21"/> <!--vuo-->
+<zone ulx="468" uly="648" lrx="511" lry="635" corresp="s22"/> <!--te-->
+<zone ulx="511" uly="635" lrx="600" lry="635" corresp="s23"/> <!--d-->
+<zone ulx="380" uly="770" lrx="468" lry="648" corresp="s24"/> <!--vuot-->
+<zone ulx="350" uly="545" lrx="600" lry="545" corresp="s25"/>  <!--u-->
+<zone ulx="335" uly="545" lrx="180" lry="545"/>
+<zone ulx="450" uly="795" lrx="350" lry="585" corresp="s26"/>
+<zone ulx="450" uly="795" lrx="400" lry="820"/>
+<zone ulx="400" uly="820" lrx="400" lry="820" corresp="s27"/>
+     </surface>
+  </facsimile>
+
   <!--TESTI-->
   <text xml:id="t1">
     <front>
@@ -1391,24 +1438,25 @@
            <l>non c&#x27;è più niente lassù</l>
            <l>
               <mei:verse type="tf">
-                  <mei:syl wordpos="i">to</mei:syl>
-                  <mei:syl wordpos="m">spe</mei:syl>
-                  <mei:syl wordpos="t">dis</mei:syl>
+                  <mei:syl wordpos="i" xml:id="s1">to</mei:syl>
+                  <mei:syl wordpos="m" xml:id="s2">spe</mei:syl>
+                  <mei:syl wordpos="t" xml:id="s3">dis</mei:syl>
                </mei:verse>
           </l>
           <l>
              <mei:verse type="tf">
-                 <mei:syl  wordpos="i">rte</mei:syl>
-                  <mei:syl wordpos="m">mo</mei:syl>
-                  <mei:syl wordpos="t">dis</mei:syl>
+                 <mei:syl  wordpos="i" xml:id="s4">rte</mei:syl>
+                  <mei:syl wordpos="m" xml:id="s5">mo</mei:syl>
+                  <mei:syl wordpos="t" xml:id="s6">dis</mei:syl>
              </mei:verse>
           </l>
             <l>
              <mei:verse  type="tf">
                  <mei:syl wordpos="i">dis</mei:syl>
-                  <mei:syl wordpos="m">vi</mei:syl>
-                  <mei:syl wordpos="m">mor</mei:syl>
-                  <mei:syl wordpos="t">e</mei:syl>
+                  <mei:syl wordpos="m" xml:id="s16">vi</mei:syl>
+                  <mei:syl wordpos="m" xml:id="s17">mor</mei:syl>
+                  <mei:syl wordpos="t" xml:id="s18">e</mei:syl>
+                 
              </mei:verse>
           </l>
            <l>
@@ -1422,41 +1470,41 @@
           <l>
              <mei:verse  type="tf">
                 <mei:syl  wordpos="i">dis</mei:syl>              
-                  <mei:syl  wordpos="m">vi</mei:syl>
-                 <mei:syl  wordpos="t">is</mei:syl>
+                  <mei:syl  wordpos="m" xml:id="s7">vi</mei:syl>
+                 <mei:syl  wordpos="t" xml:id="s8">is</mei:syl>
              </mei:verse>
           </l>
           <l>
              <mei:verse  type="tf">
                 <mei:syl  wordpos="i">spe</mei:syl>              
-                  <mei:syl  wordpos="m">pe</mei:syl>
-                 <mei:syl  wordpos="t">eraz</mei:syl>
+                  <mei:syl  wordpos="m" xml:id="s9">pe</mei:syl>
+                 <mei:syl  wordpos="t" xml:id="s10">eraz</mei:syl>
              </mei:verse>
           </l>
           <l>
              <mei:verse  type="tf">
-                <mei:syl  wordpos="i">v</mei:syl>                               
-                 <mei:syl  wordpos="t">spe</mei:syl>
-             </mei:verse>
-          </l>
-          <l>
-             <mei:verse  type="tf">
-                <mei:syl  wordpos="i">v</mei:syl>              
-                  <mei:syl  wordpos="m">uo</mei:syl>
-                 <mei:syl  wordpos="t">ra</mei:syl>
+                <mei:syl  wordpos="i" xml:id="s12">v</mei:syl>                               
+                 <mei:syl  wordpos="t"  xml:id="s11">spe</mei:syl>
              </mei:verse>
           </l>
           <l>
              <mei:verse  type="tf">
                 <mei:syl  wordpos="i">v</mei:syl>              
                   <mei:syl  wordpos="m">uo</mei:syl>
-                 <mei:syl  wordpos="m">to</mei:syl>
-                 <mei:syl  wordpos="t">uot</mei:syl>
+                 <mei:syl  wordpos="t" xml:id="s15">ra</mei:syl>
              </mei:verse>
           </l>
           <l>
              <mei:verse  type="tf">
-                <mei:syl type="lunga" wordpos="i">u</mei:syl>              
+                <mei:syl  wordpos="i">v</mei:syl>              
+                  <mei:syl  wordpos="m" xml:id="s13">uo</mei:syl>
+                 <mei:syl  wordpos="m" xml:id="s14">to</mei:syl>
+                 <mei:syl  wordpos="t" xml:id="s19">uot</mei:syl>
+             </mei:verse>
+          </l>
+          <l>
+             <mei:verse  type="tf">
+                <mei:syl type="lunga" wordpos="i" xml:id="s25">u</mei:syl>              
              </mei:verse>
           </l>
           <l>
@@ -1467,29 +1515,29 @@
           <l>
              <mei:verse  type="tf">
                 <mei:syl wordpos="i">e</mei:syl> 
-                 <mei:syl  wordpos="m">di</mei:syl>
-                 <mei:syl  wordpos="m">mo</mei:syl>
-                 <mei:syl  wordpos="m">te</mei:syl> 
-                 <mei:syl  wordpos="t">d</mei:syl>              
+                 <mei:syl  wordpos="m" xml:id="s20">di</mei:syl>
+                 <mei:syl  wordpos="m" xml:id="s21">vuo</mei:syl>
+                 <mei:syl  wordpos="m" xml:id="s22">te</mei:syl> 
+                 <mei:syl  wordpos="t" xml:id="s23">d</mei:syl>              
              </mei:verse>
           </l>
           <l>
              <mei:verse  type="tf">
-                <mei:syl  wordpos="i">vuot</mei:syl>              
+                <mei:syl  wordpos="i" xml:id="s24">vuot</mei:syl>              
                   <mei:syl  wordpos="m">te</mei:syl>           
                  <mei:syl  wordpos="t">d</mei:syl>
              </mei:verse>
           </l>
           <l>
              <mei:verse  type="tf">
-                <mei:syl  wordpos="i">disp</mei:syl>              
+                <mei:syl  wordpos="i" xml:id="s26">disp</mei:syl>              
                  <mei:syl  wordpos="t">e</mei:syl>
              </mei:verse>
           </l>
           <l>
              <mei:verse  type="tf">
                 <mei:syl  wordpos="i">disp</mei:syl>              
-                 <mei:syl  wordpos="t">era</mei:syl>
+                 <mei:syl  wordpos="t" xml:id="s27">era</mei:syl>
              </mei:verse>
           </l>
        </lg>

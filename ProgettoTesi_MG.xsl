@@ -198,11 +198,18 @@
                 </div>
 
                   <div id="lettera1">
-
+                  <p id="rilevanti">#persone #destinatario #condizioneoperaia <br/>
+                  #terminipsicologici #condizionesocio-economica <br/> 
+                  #correzionimanoscritte #abbreviazioni
+                  </p>
                    <xsl:apply-templates select="//tei:text[@xml:id='t1']"/>
                    
                   </div>
                   <div id="lettera2">
+                  <p id="rilevanti">#persone #destinatario #condizioneoperaia <br/>
+                  #terminipsicologici #condizionesocio-economica <br/>
+                  #correzionimanoscritte #abbreviazioni
+                  </p>
                     <xsl:apply-templates select="//tei:text[@xml:id='t2']"/>
                   </div>
                 <div id="all_img3">
@@ -214,18 +221,21 @@
                      <xsl:apply-templates select="//tei:text[@xml:id='t3']"/>                   
                   </div>
                   <div id="imangiatoridinebbia">
+                  <p id="rilevanti">#scenografia #frammentimusicali #pause #lastralingua #battute</p>
                      <xsl:apply-templates select="//tei:text[@xml:id='t4']"/>
                   </div>
                   <div id="tavole_fonetiche">
                      <xsl:apply-templates select="//tei:text[@xml:id='t5']"/>
+                     <xsl:apply-templates select="tei:TEI/tei:facsimile"/>  
                   </div>
                   <div id="fb_provvisorie">
                     <xsl:apply-templates select="//tei:text[@xml:id='t6']"/>
                   </div>
                    <div id="fb_definitiva">
+                   <p id="rilevanti">#l'uomo #lafabbrica #scenografia #materialeinchiesta #pause #cantusfirmus #solista #CesarePavese #pienisonori</p>
                      <xsl:apply-templates select="//tei:text[@xml:id='t7']"/>                
                    </div>
-                  
+            
                 </div>
                
             </body>
@@ -324,6 +334,7 @@
       </xsl:template>
 
          <xsl:template match="tei:text[@xml:id='t6']">
+         <p id="rilevanti">#l'uomo #lafabbrica #scenografia #materialeinchiesta #pause #cantusfirmus</p>
   
          <h2><xsl:value-of select="tei:front/tei:div/tei:head"/></h2>
          <h3><xsl:value-of select="tei:front/tei:div/tei:opener"/></h3>
@@ -365,14 +376,17 @@
       </xsl:template>
 
     <xsl:template match="tei:text[@xml:id='t5']">
+    <p id="rilevanti">#attacco #fermata #tenuta #cantusfirmus</p>
     <h2><xsl:apply-templates select="tei:front/tei:div/tei:head"/></h2>
-
           <xsl:for-each select="tei:body/tei:div/tei:lg"> 
               <p class="sezione">
-               <xsl:for-each select="tei:l">
+               <xsl:for-each select="tei:l[position() &lt;= 2]">
+                  <span class="acuto">
                   <xsl:apply-templates />  
                   <br />
+                  </span>  
                </xsl:for-each>
+            
               </p>       
           </xsl:for-each>  
      </xsl:template>
@@ -393,6 +407,7 @@
                            <xsl:apply-templates />  
                        <br />
                  </xsl:for-each>
+                 
                 </xsl:element>    
                </xsl:for-each>
         
@@ -1662,188 +1677,170 @@
 
 </xsl:template>
 
+<!--TAVOLE FONETICHE: GESTIONE MAPPATURA-->  
 
- <!--INTEGRAZIONI MUSICALI: TAVOLA FONETICA--> 
-  <xsl:template match="mei:verse[@type='tf']">
-   
-        
-        <svg width="600" height="120" xmlns="http://www.w3.org/2000/svg">
-         
-          <!-- Definiamo le coordinate per le sillabe -->
-          <xsl:variable name="iX" select="100"/>
-          <xsl:variable name="iY" select="100"/>
-          
-          <xsl:variable name="tX" select="300"/>
-          <xsl:variable name="tY" select="100"/>
-          
-          <!-- Calcola le coordinate per ogni sillaba m -->
-          <xsl:variable name="mX" select="150"/>
-          <xsl:variable name="mY" select="100"/>
-          
-          <!-- DisegnA le frecce da i a m, poi da m a t -->
-          <xsl:variable name="ms" select="mei:syl[@wordpos='m']"/>
-        
-          
-          <!-- Gestisci il caso con più sillabe m -->
-          <xsl:for-each select="mei:syl[@wordpos='m']">
-    <!-- Calcola il progresso per ogni m -->
-    <xsl:variable name="xprog" select="((position() - 1) * 50) + count(preceding-sibling::mei:syl)" />
-    <xsl:variable name="currentM" select="." />
-    <xsl:variable name="prevM" select="preceding-sibling::mei:syl[@wordpos='m'][1]" />
+   <!-- Template di applicazione al facsimile -->
+  <xsl:template match="//tei:facsimile">
+   <xsl:message>in facsimile</xsl:message>
+    <svg:svg xmlns:svg="http://www.w3.org/2000/svg" width="900px" height="1868px">
+      <xsl:apply-templates select="tei:surface/tei:zone" />
+    </svg:svg>
+  </xsl:template>
+
+  <!-- Template per elaborare ogni zona e disegnare una freccia tra zone -->
+  <xsl:template match="//tei:zone">
+   <xsl:message>in zone</xsl:message>
+
+    <xsl:variable name="ulx" select="@ulx" />
+    <xsl:variable name="uly" select="@uly" />
+    <xsl:variable name="lrx" select="@lrx" />
+    <xsl:variable name="lry" select="@lry" />
+
+     <xsl:variable name="corresp" select="@corresp" />
+    <xsl:variable name="sylText" select="//mei:syl[@xml:id=$corresp]/text()" />
+    <xsl:variable name="posizioneSyl" select="//mei:syl[@xml:id=$corresp]/@wordpos"/>
+
+    <xsl:variable name="spazio" select="10" />
     
-    <!-- Se è la prima sillaba m: freccia da i a m -->
-    <xsl:choose>
-        <xsl:when test="position() = 1 and position() != last()">
-        <xsl:message>seconda condizione</xsl:message>
-        <xsl:variable name="xprog" select="((position() - 1) * 50) + count(preceding-sibling::mei:syl)" />
-            <line class="tenut" x1="{ $iX - 50}" y1="{ $iY }" x2="{ $mX - $xprog}" y2="{ $mY }" stroke="black" stroke-width="2"/>
-            <polygon points=" 
-                { $mX + $xprog },{ $mY } 
-                { $mX + $xprog -5},{ $mY - 5 } 
-                { $mX + $xprog +5},{ $mY - 5 } "
-                fill="black"
-                transform="rotate(-90, { $mX + $xprog }, { $mY })"/>
+      
+      <xsl:variable name="startX" select="($ulx)" />
+      <xsl:variable name="startY" select="($uly)" />
+      <xsl:variable name="endX" select="($lrx)" />
+      <xsl:variable name="endY" select="($lry)" />
 
-            <text class="iniz" x="{ $iX - 50 }" y="{ $iY - 10 }" font-size="16" text-anchor="middle">
-                <xsl:value-of select="preceding-sibling::mei:syl[@wordpos='i']"/>
-            </text>
+   <!-- Verifiche direzione freccia -->
+    <xsl:variable name="isHorizontal" select="($startY = $endY)" />
+    <xsl:variable name="left" select="($startX gt $endX)" />
+    <xsl:variable name="point" select="($startX = $endX) and ($startY = $endY)" />
+    <xsl:variable name="vertical" select="(number($startY) lt number($endY)) and not($startX = $endX)" />
+    <xsl:variable name="verticalup" select="(number($startY) gt number($endY)) and not($startX = $endX)" />
+    <xsl:variable name="perfvertical" select="($startX = $endX) and (number($startY) gt number($endY))" />
+    <xsl:variable name="perfverticaldown" select="($startX = $endX) and (number($startY) lt number($endY))" />
 
-            <text x="{  $mX + $xprog}" y="{ $mY - 10 }" font-size="16" text-anchor="middle">
-                <xsl:value-of select="."/>
-            </text>
-       
-        </xsl:when>
-
-        <!--nel caso di una ultima syl media, in una serie di syl medie precedenti-->
-         <xsl:when test="position() != 1 and position() = last() and preceding-sibling::mei:syl[@wordpos='m']">
-          <xsl:message>terzultima condizione</xsl:message>
-           <xsl:variable name="xprog" select="((position() - 1) * 50) + count(preceding-sibling::mei:syl)" />
-           <xsl:variable name="prevMX" select="($mX - $xprog)" />
-            <line class="tenut" x1="{ $prevMX }" y1="{ $mY }" x2="{ $mX + $xprog }" y2="{ $mY }" stroke="black" stroke-width="2"/>
-            <line class="tenut" x1="{ $mX+ $xprog}" y1="{ $mY }" x2="{ $tX}" y2="{ $mY }" stroke="black" stroke-width="2"/>
-            <polygon points=" 
-                { $mX + $xprog },{ $mY } 
-                { $mX + $xprog -5},{ $mY - 5 } 
-                { $mX + $xprog +5},{ $mY - 5 } "
-                fill="black"
-                transform="rotate(-90, { $mX + $xprog }, { $mY })"/>
-
-                <polygon points=" 
-                    { $tX },{ $tY } 
-                    { $tX - 5 },{ $tY - 5 } 
-                    { $tX + 5 },{ $tY - 5 } "
-                fill="black"
-                transform="rotate(-90, { $tX }, { $tY })"/>
-
+      <!-- controllo -->
+    <xsl:message>
+        Verticale: <xsl:value-of select="$vertical" />
+        Perf Vertical: <xsl:value-of select="$perfvertical" />
+        Perf Vertical Down: <xsl:value-of select="$perfverticaldown" />
+    </xsl:message>
 
       
-            <text x="{ $mX+ $xprog}" y="{ $mY - 10}" font-size="16" text-anchor="middle">
-                <xsl:value-of select="."/>
-            </text>
-            <text class="ferm" x="{ $tX +10}" y="{ $iY - 10}" font-size="16" text-anchor="middle">
-                <xsl:value-of select="following-sibling::mei:syl[@wordpos='t']"/>
-            </text>
-        </xsl:when>
 
-        <xsl:when test="(position() = 1 and position() = last() and not(preceding-sibling::mei:syl[@wordpos='m']))">
-        <xsl:message>penultima condizione</xsl:message>
-        <xsl:variable name="xprog" select="((position() - 1) * 50) + count(preceding-sibling::mei:syl)" />
-            <line class="tenut" x1="{ $iX}" y1="{ $iY }" x2="{ $mX + $xprog}" y2="{ $mY }" stroke="black" stroke-width="2"/>
-            <line class="tenut" x1="{ $mX + $xprog }" y1="{ $mY }" x2="{$tX}" y2="{ $tY }" stroke="black" stroke-width="2"/>
-            <polygon points=" 
-                { $mX + $xprog },{ $mY } 
-                { $mX + $xprog -5},{ $mY - 5 } 
-                { $mX + $xprog +5},{ $mY - 5 } "
-                fill="black"
-                transform="rotate(-90, { $mX + $xprog }, { $mY })"/>
-            <polygon points=" 
-                { $tX },{ $tY } 
-                { $tX + $xprog -5},{ $tY - 5 } 
-                { $tX + $xprog +5},{ $tY - 5 } "
-                fill="black"
-                transform="rotate(-90, { $tX }, { $tY })"/>
+         <!-- punta della freccia -->
+    <xsl:if test="$isHorizontal and $left">
 
-            <text class="iniz" x="{ $iX -20}" y="{ $iY - 10}" font-size="16" text-anchor="middle">
-                <xsl:value-of select="preceding-sibling::mei:syl[@wordpos='i'][1]"/>
-            </text>
-            <text x="{ $mX + $xprog}" y="{ $mY - 10 }" font-size="16" text-anchor="middle">
-                <xsl:value-of select="."/>
-            </text>
-            <text class="ferm" x="{ $tX +20}" y="{ $tY - 10 }" font-size="16" text-anchor="middle">
-                <xsl:value-of select="following-sibling::mei:syl[@wordpos='t']"/>
-            </text>
-        </xsl:when>
+        <line class="tenut" x1="{$startX}" y1="{$startY}" x2="{$endX}" y2="{$endY}" 
+                style="stroke:black;stroke-width:2" />
 
-        <xsl:otherwise>
-           <xsl:if test="following-sibling::mei:syl[@wordpos='m'] and preceding-sibling::mei:syl[@wordpos='m']">
-           <xsl:message>ok ultima condizione</xsl:message>
-              <xsl:variable name="xprog" select="((position() - 1) * 50) + count(preceding-sibling::mei:syl)" />
-            <!-- Traccia la freccia tra sillabe m -->
-            <xsl:variable name="prevMX" select="($mX - $xprog)" />
-            <line class="tenut" x1="{ $prevMX }" y1="{ $mY }" x2="{ $mX + $xprog}" y2="{ $mY }" stroke="black" stroke-width="2"/>
-            <polygon points=" 
-                { $mX + $xprog },{ $mY } 
-                { $mX + $xprog -5},{ $mY - 5 } 
-                { $mX + $xprog +5},{ $mY - 5 } "
-                fill="black"
-                transform="rotate(-90, { $mX + $xprog }, { $mY })"/>
-            
-            <text x="{ $prevMX + 52}" y="{ $mY - 10 }" font-size="16" text-anchor="middle">
-                <xsl:value-of select="preceding-sibling::mei:syl[@wordpos='m']"/>
-            </text>
+        <!-- Se la freccia è orizzontale, disegna la punta orizzontale -->
+        <polygon points="
+                {$endX}, {$endY}
+                {$endX +5}, {$endY -5}
+                {$endX +5}, {$endY +5}
+            " style="fill:black" />
+
+    </xsl:if>
+    <xsl:if test="$isHorizontal and not($left) and not($point)">
+
+       <line class="tenut" x1="{$startX}" y1="{$startY}" x2="{$endX}" y2="{$endY}" 
+                style="stroke:black;stroke-width:2" />
+
+        <!-- Se la freccia è orizzontale, disegna la punta orizzontale -->
+        <polygon points="
+            {$endX}, {$endY}
+            {$endX -5}, {$endY -5}
+            {$endX -5}, {$endY +5}
+        " style="fill:black" />
+    </xsl:if>
+
+    <xsl:if test="$perfverticaldown">
+
+       <line class="iniz" x1="{$startX}" y1="{$startY}" x2="{$endX}" y2="{$endY}" 
+                style="stroke:black;stroke-width:2" />
+
+             <polygon points="
+            {$endX}, {$endY}
+            {$endX - 5}, {$endY - 5}
+            {$endX + 5}, {$endY - 5}
+        " style="fill:black" />         
+    
+    </xsl:if>
+
+     <!-- Disegna la punta della freccia se è verticale verso l'alto -->
+    <xsl:if test="$perfvertical">
+
+    <line class="iniz" x1="{$startX}" y1="{$startY}" x2="{$endX}" y2="{$endY}" 
+                style="stroke:black;stroke-width:2" />
+
+        <polygon points="
+            {$endX}, {$endY}
+            {$endX - 5}, {$endY + 5}
+            {$endX + 5}, {$endY + 5}
+        " style="fill:black" />
+    </xsl:if>
+
+
+
+    <xsl:if test="$point">
         
-            <text x="{ $mX + $xprog +5}" y="{ $mY - 10}" font-size="16" text-anchor="middle">
-                <xsl:value-of select="."/>
-            </text>
-           </xsl:if>       
-        </xsl:otherwise>
-    </xsl:choose>
-</xsl:for-each>
+    </xsl:if>
 
-    <xsl:for-each select="mei:syl[@type='lunga']">
-        <line class="tenut" x1="{ $mX -10}" y1="{ $mY }" x2="{ $iX}" y2="{ $iY }" stroke="black" stroke-width="2"/>
-        <line class="tenut" x1="{ $mX +10}" y1="{ $mY }" x2="{ $tX}" y2="{ $tY }" stroke="black" stroke-width="2"/>
+ <!-- Se la freccia è verticale o inclinata, la punta è disegnata verso il basso -->
+    <xsl:if test="$vertical">
 
-        <polygon points=" 
-                { $iX },{ $mY } 
-                { $iX -5},{ $mY - 5 } 
-                { $iX  +5},{ $mY - 5 } "
-                fill="black"
-                transform="rotate(90, { $iX }, { $mY })"/>
+    <line class="iniz" x1="{$startX}" y1="{$startY}" x2="{$endX}" y2="{$endY}" 
+                style="stroke:black;stroke-width:2" />
+        <!-- Punta verso il basso (adattata alla direzione) -->
+        <polygon points="
+            {$endX }, {$endY+2}
+            {$endX +5}, {$endY -5}
+            {$endX -5}, {$endY -5}
+        " style="fill:black" transform="rotate(-45, {$endX}, {$endY})" />
+    </xsl:if>
 
-                <polygon points=" 
-                { $tX },{ $mY } 
-                { $tX -5},{ $mY - 5 } 
-                { $tX  +5},{ $mY - 5 } "
-                fill="black"
-                transform="rotate(-90, { $tX }, { $mY })"/>
+    <xsl:if test="$verticalup">
 
-        <text class="iniz" x="{ $mX }" y="{ $mY }" font-size="16" text-anchor="middle"><xsl:value-of select="."/></text>
-    </xsl:for-each>
+    <line class="iniz" x1="{$startX}" y1="{$startY}" x2="{$endX}" y2="{$endY}" 
+                style="stroke:black;stroke-width:2" />
+ <xsl:choose>
+ <xsl:when test="number($startX) gt number($endX)">
 
-    <xsl:for-each select="mei:syl[@wordpos='i']">
-      <xsl:if test="not(following-sibling::mei:syl[@wordpos='m'])">
+ <polygon points="
+            {$endX }, {$endY}
+            {$endX +5}, {$endY -5}
+            {$endX -5}, {$endY -5}
+        " style="fill:black" transform="rotate(-180, {$endX}, {$endY})" />
 
-         <line class="tenut" x1="{ $mX +10}" y1="{ $mY }" x2="{ $tX}" y2="{ $tY }" stroke="black" stroke-width="2"/>
-
-
-                <polygon points=" 
-                { $tX },{ $mY } 
-                { $tX -5},{ $mY - 5 } 
-                { $tX  +5},{ $mY - 5 } "
-                fill="black"
-                transform="rotate(-90, { $tX }, { $mY })"/>
-
-        <text class="iniz" x="{ $mX }" y="{ $mY }" font-size="16" text-anchor="middle"><xsl:value-of select="."/></text>
-         <text class="ferm" x="{ $tX +10 }" y="{ $tY }" font-size="16" text-anchor="middle"><xsl:value-of select="following-sibling::mei:syl[@wordpos='t']"/></text>
-
-      </xsl:if>
-        
+ </xsl:when>
+ <xsl:otherwise>
+     <polygon points="
+            {$endX }, {$endY}
+            {$endX +5}, {$endY -5}
+            {$endX -5}, {$endY -5}
+        " style="fill:black" transform="rotate(-90, {$endX}, {$endY})" />
+ </xsl:otherwise>
+ </xsl:choose>
        
-    </xsl:for-each>
-          
-        </svg>
-  
+    </xsl:if>
+
+<xsl:choose>
+  <xsl:when test="$posizioneSyl = 'i'">
+      <text class="iniz" x="{$startX - 10}" y="{$startY - 10}" font-size="20" fill="black">
+        <xsl:value-of select="$sylText" />
+      </text>
+  </xsl:when>
+  <xsl:when test="$posizioneSyl = 'm'">
+        <text class="tenut" x="{$startX - 10}" y="{$startY - 10}" font-size="20" fill="black">
+        <xsl:value-of select="$sylText" />
+      </text>
+  </xsl:when>
+  <xsl:otherwise>
+    <text class="ferm" x="{$startX - 10}" y="{$startY - 10}" font-size="20" fill="black">
+        <xsl:value-of select="$sylText" />
+    </text>
+  </xsl:otherwise>
+</xsl:choose>
+
   </xsl:template>
   
 
